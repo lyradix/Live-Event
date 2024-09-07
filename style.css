@@ -1,3 +1,17 @@
+@import 'font.css';
+
 body{
     background-color: #012B28;
 }
+
+.programmation-text{
+    color:#4CB8DA;
+    font-family:Black And White Picture, Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    stroke-width: 50px;
+    text-align:center;
+    text-shadow: -4px 0 #673CAE, 0 5px #673CAE, 4px 0 #673CAE, 0 -4px #673CAE;
+}
+
