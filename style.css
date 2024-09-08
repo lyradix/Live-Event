@@ -10,10 +10,14 @@ body{
     }  
 }
 
-.logo{
- z-index: 1;
- position:relative;
+header{
+    position:relative;
 }
+
+.logo{
+    z-index: 1;
+    position:relative;
+   }
 
 .programmation-text{
     color:#4CB8DA;
@@ -24,26 +28,57 @@ body{
     stroke-width: 50px;
     text-align:center;
     position:relative;
-    z-index:2;
+    z-index:1;
     text-shadow: -4px 0 #673CAE, 0 4px #673CAE, 4px 0 #673CAE, 0 -4px #673CAE;
 }
-aside{
-    position:relative;
-}
+
 .sideMenu{
-    height: 120%;
+    align-content: flex-start;
+    height: 800%;
     width:230px;
-    z-index:1;
+    z-index:2;
     position: absolute; 
     right: 0;
     top:0;
     background-color: #096662;
-    padding-top:600px;
+    padding-top:100px;
 
 }
 
-.box{
-    background-color: red;
-    width:20px;
-    float:right;
+.sideMenu a{
+    text-decoration: none;
+    color:white;
+    font-size:15px;
+    font-family: bungee, Arial, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+ul {
+    list-style-type: none;
+    }
+
+li{
+    margin:15px 50px 15px 10px;
+    text-align: right;
+
+}
+h2, p{
+    text-align: center;
+    margin:5px 30px 5px 30px;
+    font-family: bungee,Arial, sans-serif;
+    color: #E5C8C8;
+    font-size: inherit;
+}
+
+h2{
+    font-size:15px;
+    margin-top:30px;
+    margin-bottom: 30px;;
+}
+
+p{
+    font-size: 10px;
+    line-height: 1.6; /* Ajuste l'espacement entre les lignes */
+    letter-spacing: 0.11em; /* Ajuste l'espacement entre les lettres */
 }
