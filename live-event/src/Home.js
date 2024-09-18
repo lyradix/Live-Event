@@ -1,6 +1,10 @@
-{
-    "concerts": [
-       {
+import { useState } from "react";
+
+import ConcertList from "./ConcertList";
+
+const Home = () => {
+
+    const[concerts, setConcerts] = useState ([{
         "artist": "Camille Cour",
         "jour": "Vendredi",
         "date": "9/13/24",
@@ -145,7 +149,7 @@
     },
     {
         "artist": "Samir Sadaoui",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scène eXageras",
         "horaire": "14:00 à 15:20",
@@ -156,7 +160,7 @@
     },
     {
         "artist": "Santa",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scéne eXodius",
         "horaire": "15:20 à 17:40",
@@ -167,7 +171,7 @@
     },
     {
         "artist": "Girl In Red ",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scène eXageras",
         "horaire": "17:15 à 18:35",
@@ -178,7 +182,7 @@
     },
     {
         "artist": "SDM",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scène eXperienza",
         "horaire": "18:10 à 19:30",
@@ -189,7 +193,7 @@
     },
     {
         "artist": "Jain",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scène eXageras",
         "horaire": "19:05 à 20: 10",
@@ -200,7 +204,7 @@
     },
     {
         "artist": "Bruno Mars",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scéne eXclammation !",
         "horaire": "19:30 à 20: 30",
@@ -211,7 +215,7 @@
     },
     {
         "artist": "Mc Solaar",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scéne eXodius",
         "horaire": "20:30 à 21:25",
@@ -222,7 +226,7 @@
     },
     {
         "artist": "Stromae",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scéne eXclammation !",
         "horaire": "21:25 à 22:05",
@@ -233,7 +237,7 @@
     },
     {
         "artist": "Hoshi",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scène eXperienza",
         "horaire": "22:00 à 23:05",
@@ -244,7 +248,7 @@
     },
     {
         "artist": "Bianca Costa",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scène eXpassa",
         "horaire": "23:00 à 00:30",
@@ -255,7 +259,7 @@
     },
     {
         "artist": "Cerone",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scéne eXodius",
         "horaire": "00:00 à 01:00",
@@ -266,7 +270,7 @@
     },
     {
         "artist": "La Fève",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scène eXageras",
         "horaire": "00:50 à 02:25",
@@ -277,7 +281,7 @@
     },
     {
         "artist": "Trinix",
-        "jour": "Samedi ",
+        "jour": "Samedi",
         "date": "9/14/24",
         "scène": "Scène eXpassa",
         "horaire": "02:10 à 03:00",
@@ -428,192 +432,21 @@
         "genre": "Electro",
         "filename": "image-39.jpg",
         "id": "39"
+    }]);
+
+    const handleDelete = (id) => {
+        const newConcerts = concerts.filter(concert => concert.id == id);
+        setConcerts(newConcerts);
     }
+    return ( 
+      <div className="home">
+        
 
-    ],
-
-
-"map_poi": [
-    {
-        "Nom": "Entrée/sortie",
-        "Type": "Entrée festival",
-        "latitude": "48.830472487041700",
-        "longitude": "2.1948409080505300",
-        "description": "Accés au festival et point de contrôle"
-    },
-    {
-        "Nom": "Entré scènes",
-        "Type": "Entré scène",
-        "latitude": "48.833565844027000",
-        "longitude": "2.1950340270996100",
-        "description": "Pour accéder aux différents scènes"
-    },
-    {
-        "Nom": "Point restauration A",
-        "Type": "Fast food",
-        "latitude": "48.834130820109200",
-        "longitude": "2.1964287757873500",
-        "description": "Pour se restaurer"
-    },
-    {
-        "Nom": "Point restauration B",
-        "Type": "Fast food",
-        "latitude": "48.836150557499690",
-        "longitude": "2.1968579292297300",
-        "description": "Pour se restaurer"
-    },
-    {
-        "Nom": "Point restauration C",
-        "Type": "Fast food",
-        "latitude": "48.833113858573800",
-        "longitude": "2.1940469741821200",
-        "description": "Pour se restaurer"
-    },
-    {
-        "Nom": "Scéne eXclammation !",
-        "Type": "Scène principale",
-        "latitude": "48.835642099812200",
-        "longitude": "2.1948838233947700",
-        "description": "Scène impressionante"
-    },
-    {
-        "Nom": "Scène eXageras",
-        "Type": "Scène 2",
-        "latitude": "48.835656223706500",
-        "longitude": "2.1919441223144500",
-        "description": "Scène 2"
-    },
-    {
-        "Nom": "Scéne eXodius",
-        "Type": "Scène 3",
-        "latitude": "48.836094062456000",
-        "longitude": "2.1986603736877400",
-        "description": "Scène 3"
-    },
-    {
-        "Nom": "Scène eXperienza",
-        "Type": "Scène 4",
-        "latitude": "48.834893527713700",
-        "longitude": "2.1987891197204500",
-        "description": "Scène 4"
-    },
-    {
-        "Nom": "Scène eXpassa",
-        "Type": "Scène 5",
-        "latitude": "48.834356808758200",
-        "longitude": "2.1940040588378900",
-        "description": "Scène 5"
-    },
-    {
-        "Nom": "Toilettes zone scène a",
-        "Type": "Toilettes",
-        "latitude": "48.834385057267600",
-        "longitude": "2.1975445747375400",
-        "description": "Toilettes situés à côté dans la zone des scènes"
-    },
-    {
-        "Nom": "Toilettes zone scène b",
-        "Type": "Toilettes",
-        "latitude": "48.834865279491000",
-        "longitude": "2.1930384635925200",
-        "description": "Toilettes situés à côté dans la zone des scènes"
-    },
-    {
-        "Nom": "Toilettes zone scène c",
-        "Type": "Toilettes",
-        "latitude": "48.835387869033100",
-        "longitude": "2.1989178657531700",
-        "description": "Toilettes situés à côté dans la zone des scènes"
-    },
-    {
-        "Nom": "Zone camping a",
-        "Type": "camping",
-        "latitude": "48.833481097065100",
-        "longitude": "2.1918797492980900",
-        "description": "Camping pour dormir ou se reposer"
-    },
-    {
-        "Nom": "Zone camping b",
-        "Type": "camping",
-        "latitude": "48.832845490281600",
-        "longitude": "2.1920514106750400",
-        "description": "Camping pour dormir ou se reposer"
-    },
-    {
-        "Nom": "Zone camping c",
-        "Type": "camping",
-        "latitude": "48.833481097065100",
-        "longitude": "2.1909999847412100",
-        "description": "Camping pour dormir ou se reposer"
-    },
-    {
-        "Nom": "Zone camping d",
-        "Type": "camping",
-        "latitude": "48.832831365594900",
-        "longitude": "2.1911072731018000",
-        "description": "Camping pour dormir ou se reposer"
-    },
-    {
-        "Nom": "Toilettes zone entrée/sortie",
-        "Type": "Toilettes",
-        "latitude": "48.830006348198500",
-        "longitude": "2.1941971778869600",
-        "description": "Toilettes situés à côté dans la zone du camping"
-    },
-    {
-        "Nom": "Toilettes zone Camping a et b",
-        "Type": "Toilettes",
-        "latitude": "48.833311602711300",
-        "longitude": "2.1926522254943800",
-        "description": "Toilettes situés à côté dans la zone du camping"
-    },
-    {
-        "Nom": "Toilettes zone Camping c et d",
-        "Type": "Toilettes",
-        "latitude": "48.833325727262700",
-        "longitude": "2.1902918815612700",
-        "description": "Toilettes situés à côté dans la zone du camping"
-    },
-    {
-        "Nom": "Coin médical a",
-        "Type": "Aide premier secours/urgence médicale",
-        "latitude": "48.833678839753100",
-        "longitude": "2.1963000297546300",
-        "description": "Pour les personnes ayant besoin de soin"
-    },
-    {
-        "Nom": "Coin médical b",
-        "Type": "Aide premier secours/urgence médicale",
-        "latitude": "48.833156232383200",
-        "longitude": "2.1928024291992100",
-        "description": "Pour les personnes ayant besoin de soin"
-    },
-    {
-        "Nom": "Coin médical c",
-        "Type": "Aide premier secours/urgence médicale",
-        "latitude": "48.830924496324000",
-        "longitude": "2.1952271461486800",
-        "description": "Pour les personnes ayant besoin de soin"
-    },
-    {
-        "Nom": "Exit -Sortie de secours a",
-        "Type": "Exit",
-        "latitude": "48.835274877161600",
-        "longitude": "2.1923947334289500",
-        "description": "Sortie de secours"
-    },
-    {
-        "Nom": "Exit -Sortie de secours b",
-        "Type": "Exit",
-        "latitude": "48.836037567348500",
-        "longitude": "2.1990466117858800",
-        "description": "Sortie de secours"
-    },
-    {
-        "Nom": "Exit -Sortie de secours c",
-        "Type": "Exit",
-        "latitude": "48.834257938849700",
-        "longitude": "2.1971797943115200",
-        "description": "Sortie de secours"
-    }
-]} 
+        <ConcertList concerts={concerts.filter((concert)=> concert.jour === 'Vendredi')} jour = "une liste du vendredi" handleDelete = {handleDelete}/>       
+        
+        
+      </div>  
+    );
+}
+ 
+export default Home;
