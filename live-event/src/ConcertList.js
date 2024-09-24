@@ -1,10 +1,19 @@
+import { useState } from "react";
+
 const ConcertList = ({concerts, artist,jour,date}) => {
     
 
     return ( 
+
+
     <div className="concert">
         <h2>{artist}</h2>
-        {/* <button>Click</button> */}
+        
+        
+       
+
+      
+
         {concerts.map((concert) => (
             <div className="concert-preview" key = {concert.id}>                
             <h2>{concert.jour}</h2>
