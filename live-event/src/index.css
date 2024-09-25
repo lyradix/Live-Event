@@ -6,6 +6,29 @@
   font-family: "Quicksand";
   color: #333;
 }
+
+.sideMenu{
+  align-content: flex-start;
+  height: 800%;
+  width:230px;
+  z-index:2;
+  position: absolute; 
+  right: 0;
+  top:0;
+  background-color: #096662;
+  padding-top:100px;
+padding-top:100px;
+}
+
+.sideMenu a{
+  text-decoration: none;
+  color:white;
+  font-size:15px;
+  font-family: bungee, Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .sidebar {
   padding: 20px;
   display: flex;

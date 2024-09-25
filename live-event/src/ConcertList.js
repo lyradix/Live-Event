@@ -8,13 +8,7 @@ const ConcertList = ({concerts, artist,jour,date}) => {
 
     <div className="concert">
         <h2>{artist}</h2>
-        
-        
-       
-
-      
-
-        {concerts.map((concert) => (
+         {concerts.map((concert) => (
             <div className="concert-preview" key = {concert.id}>                
             <h2>{concert.jour}</h2>
             <p>{concert.date}</p>
