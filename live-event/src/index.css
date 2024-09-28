@@ -5,7 +5,7 @@
 @import 'font.css';
 
 body{
-    background-color: white;
+    background-color: #143d3b;
 }
 
 @media screen and (max-width: 530px){
