@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import {StyleSheet, Switch, View, Text, FlatList, SafeAreaView,Pressable, TouchableOpacity, Button} from 'react-native';
-import ConcertList from './concertList';
+
 
 
 
@@ -444,7 +444,7 @@ let concert = [
 }
 ]
 
-
+const [toggle, setToggle] = useState(null);
 
 // filtre pour retourner la liste pour un jour spécifique
 
@@ -465,6 +465,8 @@ const ListHeader = () =>{
         </View>
     );
 };
+
+
 
 
 const ConcertListfriday =
@@ -491,8 +493,50 @@ renderItem={({item})=>(
 </View> 
 
 
+//filtre pour le jour de samedi
+const concertFilterSaturday = concert.filter(function(item){
+    return item.jour == 'Samedi';
+ }).map(function({artist,horaire}){
+     return {artist,horaire};
+ });
+ 
+ const ListHeadersaturday = () =>{
+     return (
+         <View>
+             <Text style={styles.labelDay}>Samedi<>                                        </>
+             30 août 2024
+             </Text>
+             
+         </View>
+     );
+ };
+ 
+ 
+ const ConcertListSaturday =
+ 
+ <View>
+ 
+ 
+ <SafeAreaView>
+ <FlatList
+ // numColumns={2} pour diviser en deux colonnes
+ keyExtractor={(item) => item.id}
+ data={concertFilterSaturday}
+ // destructuré le item
+ ListHeaderComponent={ListHeadersaturday}
+ renderItem={({item})=>(
+    
+ <TouchableOpacity onPress={() => pressHandler(item.id)}>
+ 
+ <Text style={styles.item}>{item.artist} {item.horaire} </Text>
+ </TouchableOpacity>
+ )}
+ />
+ </SafeAreaView>
+ </View> 
+ 
+ 
 
-const [toggle, setToggle] = useState(null);
 
 
 
@@ -523,6 +567,7 @@ const pressHandler = () =>{
                       color:'#096662',
                       backgroundColor: pressed ? '#096662' : '#E5C8C8', 
                       padding:10,
+                      margin:5,
                       borderRadius:5,
                     },
                     
@@ -530,7 +575,26 @@ const pressHandler = () =>{
                 
                 
                      
-                <Text style={styles.buttonText}>Horaires</Text>
+                <Text style={styles.buttonText}>Vendredi</Text>
+            </Pressable>
+
+            <Pressable onPress = {() => {setToggle(ConcertListSaturday)}}
+       
+           
+                style={({pressed}) => [
+                    {
+                      color:'#096662',
+                      backgroundColor: pressed ? '#096662' : '#E5C8C8', 
+                      padding:10,
+                      margin:5,
+                      borderRadius:5,
+                    },
+                    
+                  ]}   >
+                
+                
+                     
+                <Text style={styles.buttonText}>Samedi</Text>
             </Pressable>
         </View>
 
@@ -538,9 +602,7 @@ const pressHandler = () =>{
           {toggle}
         </View>   
            
-        {/* {ConcertListfriday} */}
-        {/* {ConcertListSaturday}
-        {ConcertListSunday} */}
+      
   
       </View>
       
