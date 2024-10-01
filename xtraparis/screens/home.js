@@ -23,7 +23,8 @@ export default function Home() {
   const styles = StyleSheet.create({
    
     ProgrammationText:{
-        padding:50,
+      flex:0.4,
+        marginBottom:-350,
         color: '#4CB8DA',    
         fontSize: 20,      
         fontStyle: 'normal',
