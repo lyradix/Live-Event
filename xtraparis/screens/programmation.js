@@ -437,8 +437,8 @@ let concert = [
 }
 ]
 
-
-export default function Programmation(Navigation) {
+//destructurer navigation
+export default function Programmation({navigation}) {
 
 
 
@@ -484,7 +484,7 @@ data={concertFilterFriday}
 ListHeaderComponent={ListHeader}
 renderItem={({item})=>(
    
-<TouchableOpacity onPress={() => pressHandler(item.id)}>
+<TouchableOpacity onPress={() => navigation.navigate('Details', {itemID: item.id})}>
 
 <Text style={styles.item}>{item.artist} {item.horaire} </Text>
 </TouchableOpacity>
@@ -585,9 +585,7 @@ const concertFilterSunday = concert.filter(function(item){
 
 
 
-const pressHandler = () =>{
-    Navigation.navigate('details',{id:0})
-  };
+
 
 
 
@@ -681,7 +679,8 @@ const pressHandler = () =>{
   
   const styles = StyleSheet.create({
     container: {
-   
+      flex:1,
+      paddingTop:100,
       textAlign:'center',
       justifyContent:'center',
       backgroundColor: '#012B29',

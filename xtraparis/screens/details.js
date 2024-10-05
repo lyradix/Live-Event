@@ -1,36 +1,44 @@
-import React, {useState} from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View} from 'react-native';
+import { useEffect, useState } from 'react';
+import {StyleSheet, Switch, View, Text, FlatList, SafeAreaView,Pressable, TouchableOpacity, Button} from 'react-native';
 
 
-export default function Details() {
+export default function Details(){
 
 
-  
-    return (
+        return (
   
    
+            
       <View style={styles.container}>
-        <View>
-            <Text>Details</Text>
-            <StatusBar style='auto'/>
-        </View>
-  
+      <View>
+          <Text style={styles.ProgrammationText}>Details</Text>
       </View>
-      
-    );
-  }
-  
-  const styles = StyleSheet.create({
-    container: {
-   
-        textAlign:'center',
-        justifyContent:'center',
-        backgroundColor: '#012B29',
-        paddingBottom:90,
-      },
 
-  
-  
-   });
-  
+    </View>
+      
+      );
+      
+      
+      
+           }
+        
+        const styles = StyleSheet.create({
+          container: {
+              
+            textAlign:'right',
+            justifyContent:'left',
+            backgroundColor: '#096662',
+            paddingBottom:90,
+          },
+        
+        link:{
+          color:'#fff',
+          marginTop:24,
+          padding:10,
+          fontSize:24,
+        
+          
+        },
+        
+         });
+        
