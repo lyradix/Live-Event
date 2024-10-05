@@ -5,7 +5,7 @@ import ConcertList from '../components/concertList';
 
 
 
-let concert = [
+const concert= [
   {
       'artist': 'Camille Cour',
       'jour': 'Vendredi',
@@ -437,7 +437,7 @@ let concert = [
 }
 ]
 
-//destructurer navigation
+//destructur navigation
 export default function Programmation({navigation}) {
 
 
@@ -484,7 +484,7 @@ data={concertFilterFriday}
 ListHeaderComponent={ListHeader}
 renderItem={({item})=>(
    
-<TouchableOpacity onPress={() => navigation.navigate('Details', {itemID: item.id})}>
+<TouchableOpacity onPress={() => navigation.navigate('Details', item)}>
 
 <Text style={styles.item}>{item.artist} {item.horaire} </Text>
 </TouchableOpacity>

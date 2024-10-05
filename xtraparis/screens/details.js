@@ -1,19 +1,22 @@
 import { useEffect, useState } from 'react';
-import {StyleSheet, Switch, View, Text, FlatList, SafeAreaView,Pressable, TouchableOpacity, Button} from 'react-native';
+import {StyleSheet, Switch, View, Text, route, Button} from 'react-native';
 
 
-export default function Details(){
+export default function Details({route,navigation}){
+    const { artist} = route.params;
 
-
+const pressHandler = () => {
+    navigation.goBack()
+}
         return (
   
    
             
       <View style={styles.container}>
       <View>
-          <Text style={styles.ProgrammationText}>Details</Text>
+          <Text style={styles.ProgrammationText}>{(artist)}</Text>
       </View>
-
+        <Button title='Retour' onPress={pressHandler}/>
     </View>
       
       );
