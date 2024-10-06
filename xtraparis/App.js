@@ -1,54 +1,55 @@
-import React, {useState} from 'react';
+import * as React from 'react';
+import { StyleSheet, Button, View } from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-// import Navigator from './routes/homestack';
-
-import { StyleSheet, View, } from 'react-native';
 import Programmation from './screens/programmation';
-import Details from './screens/details';
 import Home from './screens/home';
-import SideBar from './screens/sideBar';
-import About from './screens/about';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import ProgrammationStack from './routes/programmationStack';
+import Map from './screens/map';
+
+
 
 const Stack = createNativeStackNavigator();
 
+
+
+
+const Drawer = createDrawerNavigator();
+
 export default function App() {
-
-
   return (
-
-    // <Navigator/>
-
     <NavigationContainer>
-    <Stack.Navigator>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen style={styles.link} name="Home" component={Home} />
+        <Drawer.Screen name="Programmation" component={Programmation} />
+        <Drawer.Screen name="Map" component={Map} />
+      </Drawer.Navigator>
 
-      <Stack.Screen
-        name="SideBar"
-        component={SideBar}
-        options={{title: 'SideBar'}}
-      />
+   
 
+    </NavigationContainer>
 
-      <Stack.Screen name='Home' component={Home}/>
-      <Stack.Screen name="Programmation" component={Programmation} />
-      <Stack.Screen name='Details' component={Details}/>
-      <Stack.Screen name="About" component={About} />
- 
-    </Stack.Navigator>
-  </NavigationContainer>
-
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    // marginTop:50,
-    flex:1,
-    backgroundColor: '#012B29',
-    
-  
+      
+    textAlign:'right',
+    justifyContent:'left',
+    backgroundColor: '#096662',
+    paddingBottom:90,
   },
 
+link:{
+  color:'#fff',
+  marginTop:24,
+  padding:10,
+  fontSize:24,
 
+  
+},
 
- });
+ })

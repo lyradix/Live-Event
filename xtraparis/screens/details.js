@@ -14,6 +14,7 @@ const pressHandler = () => {
             
       <View style={styles.container}>
       <View>
+        {/* placer les détails entre () et {} et déclarer  en const route.param pour passer la donnée */}
           <Text style={styles.ProgrammationText}>{(artist)}</Text>
       </View>
         <Button title='Retour' onPress={pressHandler}/>

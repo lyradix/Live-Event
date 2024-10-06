@@ -5,6 +5,7 @@ import ConcertList from '../components/concertList';
 
 
 
+
 const concert= [
   {
       'artist': 'Camille Cour',
@@ -472,6 +473,7 @@ const ListHeader = () =>{
 
 const ConcertListfriday =
 
+
 <View>
 
 
@@ -491,7 +493,9 @@ renderItem={({item})=>(
 )}
 />
 </SafeAreaView>
+
 </View> 
+
 
 
 //filtre pour le jour de samedi
@@ -527,7 +531,7 @@ const concertFilterSaturday = concert.filter(function(item){
  ListHeaderComponent={ListHeadersaturday}
  renderItem={({item})=>(
     
- <TouchableOpacity onPress={() => pressHandler(item.id)}>
+ <TouchableOpacity onPress={() => navigation.navigate('Details', item)}>
  
  <Text style={styles.item}>{item.artist} {item.horaire} </Text>
  </TouchableOpacity>
@@ -571,7 +575,7 @@ const concertFilterSunday = concert.filter(function(item){
  ListHeaderComponent={ListHeaderSunday}
  renderItem={({item})=>(
     
- <TouchableOpacity onPress={() => pressHandler(item.id)}>
+ <TouchableOpacity onPress={() => navigation.navigate('Details', item)}>
  
  <Text style={styles.item}>{item.artist} {item.horaire} </Text>
  </TouchableOpacity>
