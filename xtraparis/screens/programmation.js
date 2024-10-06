@@ -439,7 +439,7 @@ const concert= [
 ]
 
 //destructur navigation
-export default function Programmation({navigation}) {
+export default function Programmation({route,navigation}) {
 
 
 

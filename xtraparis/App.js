@@ -22,7 +22,7 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen style={styles.link} name="Home" component={Home} />
-        <Drawer.Screen name="Programmation" component={Programmation} />
+        <Drawer.Screen name="Programmation" component={ProgrammationStack} />
         <Drawer.Screen name="Map" component={Map} />
       </Drawer.Navigator>
 
