@@ -11,6 +11,8 @@ const Programmation = () => {
     const[concerts, setConcerts] = useState (null);
     const[toggle, setToggle] = useState (null);
 
+    
+
 
      useEffect(() => {
 
@@ -21,10 +23,15 @@ const Programmation = () => {
             setConcerts(data);
         })
     })
+
+   
+
+
+
     const filterLineUp = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !')} scene = "filtre pour jour"/>
-    const filterFriday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.jour === 'Vendredi')} jour = "filtre pour jour"/>
-    const filterSaturday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.jour === 'Samedi')} jour = "filtre pour jour"/>
-    const filterSunday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.jour === 'Dimanche')} jour = "filtre pour jour"/>
+    const filterFriday = concerts && <ConcertList concerts={concerts.filter(concert=> concert.startTime.startsWith('2024-09-13'))} jour = "filtre pour jour"/>
+    const filterSaturday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2024-09-14'))} jour = "filtre pour jour"/>
+    const filterSunday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2024-09-15'))} jour = "filtre pour jour"/>
 
     // const filterSunday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.jour === 'Dimanche')} jour = "filtre pour jour"/>
 

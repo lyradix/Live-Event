@@ -23,7 +23,7 @@ header{
   height: 800%;
   width:230px;
   z-index:2;
-  position: absolute; 
+  position: relative; 
   right: 0;
   top:0;
   background-color: #096662;
@@ -39,6 +39,7 @@ padding-top:100px;
   font-weight: 400;
   font-style: normal;
 }
+
 
 .sidebar {
   padding: 20px;
@@ -97,8 +98,27 @@ h2{
   margin-top:30px;
   margin-bottom: 30px;;
 }
+
+h3{
+  font-size:15px;
+  margin-top:30px;
+  margin-bottom: 30px;;
+}
 p{
   font-size: 10px;
   line-height: 1.6; /* Ajuste l'espacement entre les lignes */
   letter-spacing: 0.11em; /* Ajuste l'espacement entre les lettres */
+}
+
+.detailsPicture{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.scenePicture{
+  color:#F8FD04;
+  outline: 10px #f1356d;
+
+  position: absolute;
+  transform: translate(-50%, -50%);
 }

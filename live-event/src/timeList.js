@@ -1,7 +1,10 @@
 import { useState } from "react";
 
-const ConcertList = ({concerts, artist,jour,date,horaire,scène}) => {
+const TimeList = ({concerts, artist,startTime}) => {
     
+  
+
+
 
     return ( 
 
@@ -12,13 +15,11 @@ const ConcertList = ({concerts, artist,jour,date,horaire,scène}) => {
             <div className="concert-preview" key = {concert.id}>                
             <h2 className="artistName">{concert.artist}</h2>
             {/* pour récuperer la date seulement */}
-            <p className="detailsPicture">{concert.startTime.substring(0, 10)}</p>
-            <h3 className="scenePicture">{concert.scène}</h3>
-            <img src={`image-${concert.id}.jpg`} alt="artist" height='600px' width='480px'/> 
+            <p>{concert.startTime.substring(0, 10)}</p>
+            <img src={`image-${concert.id}.jpg`} width='100%'/> 
               {/*template string pour extraire l'image correspondante  */}
-           
+            <p>`image-${concerts.id}.jpg`</p>
             {/* <button onClick={() => handleDelete (concert.id)}>Plus d'infos</button>       */}
-                
                   
             </div>
         ))}
@@ -27,4 +28,4 @@ const ConcertList = ({concerts, artist,jour,date,horaire,scène}) => {
      );
 }
  
-export default ConcertList;
+export default TimeList;

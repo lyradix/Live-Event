@@ -5,6 +5,8 @@ const SideBar = () => {
                     <li><a href="/">Accueil</a></li> 
                     <li> <a href="/Programmation">Programmation</a></li>
                     <li> <a href="/Map">Où suis-je?</a></li>
+                 
+                
                 </ul>
             </div>
      );

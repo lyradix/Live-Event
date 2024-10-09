@@ -82,3 +82,8 @@ p{
     line-height: 1.6; /* Ajuste l'espacement entre les lignes */
     letter-spacing: 0.11em; /* Ajuste l'espacement entre les lettres */
 }
+
+img{
+    height:50px;
+    width:50px;
+}
