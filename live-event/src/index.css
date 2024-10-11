@@ -23,7 +23,7 @@ header{
   height: 800%;
   width:230px;
   z-index:2;
-  position: relative; 
+  position: absolute; 
   right: 0;
   top:0;
   background-color: #096662;
@@ -63,27 +63,16 @@ padding-top:100px;
 .sidebar a:hover {
   color: #f1356d;
 }
+
 .content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+  align-items: center;
+
+
 }
 
-concert-preview{
-  padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
-}
 
-.concert-preview:hover{
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
-}
 
-.concert-preview h2{
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
-}
+
 
 h2, p{
   text-align: center;
@@ -115,10 +104,24 @@ p{
     transform: translate(-50%, -50%);
 }
 
+
 .scenePicture{
   color:#F8FD04;
   outline: 10px #f1356d;
 
   position: absolute;
   transform: translate(-50%, -50%);
+}
+
+.imgConcert{
+border-radius: 10%;
+align-items: center;
+padding: 10px;
+
+}
+
+.menuBurger{
+   float: left;
+position: relative;
+margin-left: 4%;
 }

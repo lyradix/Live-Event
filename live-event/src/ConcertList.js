@@ -14,7 +14,7 @@ const ConcertList = ({concerts, artist,jour,date,horaire,scène}) => {
             {/* pour récuperer la date seulement */}
             <p className="detailsPicture">{concert.startTime.substring(0, 10)}</p>
             <h3 className="scenePicture">{concert.scène}</h3>
-            <img src={`image-${concert.id}.jpg`} alt="artist" height='600px' width='480px'/> 
+            <img className="imgConcert" src={`image-${concert.id}.jpg`} alt="artist" height='600px' width='380px'/> 
               {/*template string pour extraire l'image correspondante  */}
            
             {/* <button onClick={() => handleDelete (concert.id)}>Plus d'infos</button>       */}
