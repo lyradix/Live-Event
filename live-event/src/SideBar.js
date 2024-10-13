@@ -11,7 +11,7 @@ const Sidebar = () => {
     return ( 
 <div >
 <Menu>
-     <Card>
+     <Card style= { { width: "0rem" }}>
     
                 <ul  className="navbar-nav">
                     <li className="nav-item"><a className="nav-link" href="/">Accueil</a></li> 

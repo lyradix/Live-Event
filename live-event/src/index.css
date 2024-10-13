@@ -5,7 +5,11 @@
 @import 'font.css';
 
 @import 'posters.css';
+
+@import 'sidebar.css';
+
 .App{
+ 
   position: relative;
     background-color: #143d3b;
     display:flex;
@@ -16,86 +20,13 @@
     height: 100%;
 }
 
-@media screen and (max-width: 530px){
-    body{
+/* @media screen and (max-width: 530px){
+    .body{
         background-color: #012B28;
     }  
-}
+} */
 
 
-
-.navbar-toggler{
-  align-content: flex-end;
-  margin-left: 80%;
-  display: flex;
-  flex-direction: row;
-}
-
-
-.navbar-toggler-icon{
-  position: relative;
-  display: flex;
-  align-items: right;
-  justify-content: right;
-  margin-right: 0px;
-}
-
-
-.navbar-nav{
-  align-content: flex-start;
-  height: 800%;
-  width:230px;
-  z-index:2;
-  position: absolute; 
-  right: 0;
-  top:0;
-
-  padding-top:100px;
-padding-top:100px;
-}
-
-.navbar-nav {
-  text-decoration: none;
-  color:white;
-  font-size:15px;
-  font-family: bungee, Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.nav-link{
-  background-color: #096662;
-  
-}
-
-.collapse:not(.show){
- flex:row;
-}
-
-.sidebar {
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-  background-color: #096662;
-}
-
-.navbar-nav {
-  margin-left: auto;
-  background-color: #096662;
-  margin: 1rem;
-  flex:1;
-  z-index: 0;
-}
-.nav-item {
- flex:row;
-  padding:10px;
-  background-color: #096662;
-  text-decoration: none;
- 
-}
 .card {
   height:0px;
   color: #143d3b;
@@ -113,11 +44,14 @@ padding-top:100px;
 }
 .content {
   align-items: center;
+  z-index:3;
 
 
 }
 
-
+.programmation{
+  z-index:1;
+}
 
 
 
@@ -125,25 +59,34 @@ padding-top:100px;
   text-align: center;
   margin:5px 30px 5px 30px;
   font-family: bungee,Arial, sans-serif;
-  color: #E5C8C8;
+  color: #ffffff;
   font-size: inherit;
 }
+.h1{
+background-color: #143d3b;
+}
 
-h2{
+.h2{
   font-size:15px;
   margin-top:30px;
   margin-bottom: 30px;;
 }
 
-h3{
+.h3{
   font-size:15px;
   margin-top:30px;
   margin-bottom: 30px;;
 }
-p{
+
+.paragraphe{
   font-size: 10px;
   line-height: 1.6; /* Ajuste l'espacement entre les lignes */
   letter-spacing: 0.11em; /* Ajuste l'espacement entre les lettres */
+align-items: center;
+justify-content: center;
+
+font-family: bungee,Arial, sans-serif;
+color: #911818;
 }
 
 .detailsPicture{
@@ -178,107 +121,9 @@ border-radius: 10%;
 align-items: center;
 padding: 10px;
 
+
 }
 
-
-
-.bm-item {
-  display: inline-block;
-
-  /* Our sidebar item styling */
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: #d1d1d1;
-  transition: color 0.2s;
-  
-}
-
-
-
-/* The rest copied directly from react-burger-menu docs */
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-  align-items: right;
-  justify-content: right;
-  margin-right: 0px;
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-}
-
-/* Position and sizing of clickable cross button */
-
-/* Color/shape of close button cross */
-/* General sidebar styles */
-.bm-menu {
-   padding: 0em 0em 0 0;
-  font-size: 0em;
-  flex-direction: right;
-  width:100%;
-}
-
-.bm-menu-wrap{
-  flex-direction: right;
-  width:100%;
-  padding: 0px;
-  padding: 100px, 0px,0px;
-}
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #b8b7ad;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.bm-overlay{
-  width: 50%;
-}
-
-
-.container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  text-align: center;
-  justify-items: center;
-
-  margin-top: 50px;
-
-  margin-bottom: 230px;
-}
-
-.previousbtn{
-   z-index: 2;
-  opacity:70%;
-  transform: translate(110px,100px)  
-}
-
-.nextbtn{
-   z-index: 2S;
-  opacity:70%;
-  transform: translate(-120px,100px)
-}
-
-.imgPoster{
-  border-radius: 20%;
-}
 
 /* .currentImage{
    z-index: 1;

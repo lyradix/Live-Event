@@ -3,6 +3,8 @@ import { Button,Stack} from 'react-bootstrap';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
+
+
 let $num = $('.cardImage').length;
 
 let $even = $num / 2;
@@ -47,18 +49,12 @@ $('html body').keydown(function(e) {
 
 });
 
-const Posters = ({concerts, artist}) => {
+const Posters = () => {
 
 
 
 
-let num = 6
-
-
- const image = `image-${num}.jpg`
- console.log(num)
-
-    return ( 
+ return ( 
 
   <div className="posters">
    
@@ -67,28 +63,28 @@ let num = 6
 
 
   
-  <div className="cardImage"><img src="image-1.jpg" className="imgPoster" alt="artist" height='300px' width='100px'/>  
+  <div className="cardImage"><img src="image-6.jpg" className="imgPoster" alt="artist" height='300px' width='50px'/>  
 
   </div>  
 
-    <div className="cardImage"><img src="image-2.jpg" className="imgPoster" alt="artist" height='300px' width='150px'/>  
+    <div className="cardImage"><img src="image-8.jpg" className="imgPoster" alt="artist" height='300px' width='50px'/>  
 
   </div>       
                
   
-  <div className="cardImage"> <img className="imgPoster"src="image-3.jpg" alt="artist" height='300px' width='150px'/>
+  <div className="cardImage"> <img className="imgPoster"src="image-19.jpg" alt="artist" height='300px' width='150px'/>
 
   </div> 
 
-  <div className="cardImage"> <img src={image} className="imgPoster" alt="artist" height='300px' width='150px'/>
+  <div className="cardImage"> <img src="image-21.jpg" className="imgPoster" alt="artist" height='300px' width='150px'/>
 
   </div> 
   
-  <div className="cardImage"><img src={image} className="imgPoster" alt="artist" height='300px' width='150px'/>-8
+  <div className="cardImage"><img src="image-34.jpg" className="imgPoster" alt="artist" height='300px' width='50px'/>-8
 
   </div> 
 
-  <div className="cardImage"><img src={image} className="imgPoster" alt="artist" height='300px' width='150px'/>
+  <div className="cardImage"><img src="image-36.jpg"className="imgPoster" alt="artist" height='300px' width='50px'/>
 
   </div> 
 

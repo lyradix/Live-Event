@@ -1,15 +1,19 @@
 .container {
 	display: flex;
+    flex:auto;
 	align-items: center;
 	justify-content: center;
 	position: relative;
+    transform: translateX(5rem);
 
 
 .cardImage {
-    opacity: 1;  
+    opacity: 0.6;  
     z-index: 1;
-    transform: scale(0.6) translateY(-2rem);
+    transform: scale(0.6) translateY(1rem);
+    margin-top: 30px;
    transition: 1s;
+   
    &:after{
    content:"";
     position:absolute;
@@ -19,7 +23,7 @@
     filter:blur(4px);
    }
    &:nth-child(0):before{
-    content:"0";
+   
     position:absolute;
     top:50%;
     left:50%;
@@ -28,78 +32,78 @@
     transition:1s;
    }
    &:nth-child(1):before{
-    content:"1";
+  
     position:absolute;
     top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
+    left:0%;
+    transform:translateX(0%)
+    translateY(0%);
     transition:1s;
    }
    &:nth-child(2):before{
-    content:"2";
+   
     position:absolute;
     top:50%;
-    left:50%;
-    transform:translateX(-50%)
+    left:0%;
+    transform:translateX(0%)
     translateY(-50%);
     transition:1s;
    }
    &:nth-child(3):before{
-    content:"3";
+   
     position:absolute;
     top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
+    left:0%;
+    transform:translateX(0%)
+    translateY(0%);
     transition:1s;
    }
    &:nth-child(4):before{
-    content:"4";
+  
     position:absolute;
     top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
+    left:0%;
+    transform:translateX(0%)
+    translateY(0%);
     transition:1s;
    }
    &:nth-child(5):before{
-    content:"5";
+   
     position:absolute;
     top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
+    left:0%;
+    transform:translateX(0%)
+    translateY(0%);
     transition:1s;
    }
    &:nth-child(6):before{
-    content:"6";
+  
     position:absolute;
     top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
+    left:0%;
+    transform:translateX(0%)
+    translateY(0%);
     transition:1s;
    }
 
    &.active{
     z-index: 3;
-    transform: scale(1) translateY(0);
+    transform: scale(1) translateX(0.5rem) translateY(0);
     opacity:1;
     transition:1s;
    }
 }
 }
 
- 
+.container.cardImage.prev,
+.container.cardImage.next{
+   z-index:2;
+   transform:scale(0.8) translateX(1rem) translateY(-1rem);
+   opacity:0.6;
+   transition:1s;
+}
  .imgPoster{
    border-radius: 20%;
+   margin-left: -40px;
  }
 
- .container .cardImage.prev
- .constainer .cardImage.next{
-    z-index:2;
-    transform:scale(0.8) translateY(-1rem);
-    opacity:0.6;
-    transition:1s 9953;
-}
