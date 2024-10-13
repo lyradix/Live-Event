@@ -1,0 +1,105 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+
+.cardImage {
+    opacity: 1;  
+    z-index: 1;
+    transform: scale(0.6) translateY(-2rem);
+   transition: 1s;
+   &:after{
+   content:"";
+    position:absolute;
+    height:2px;
+    width:100%;
+    bottom:-5rem;
+    filter:blur(4px);
+   }
+   &:nth-child(0):before{
+    content:"0";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%)
+    translateY(-50%);
+    transition:1s;
+   }
+   &:nth-child(1):before{
+    content:"1";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%)
+    translateY(-50%);
+    transition:1s;
+   }
+   &:nth-child(2):before{
+    content:"2";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%)
+    translateY(-50%);
+    transition:1s;
+   }
+   &:nth-child(3):before{
+    content:"3";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%)
+    translateY(-50%);
+    transition:1s;
+   }
+   &:nth-child(4):before{
+    content:"4";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%)
+    translateY(-50%);
+    transition:1s;
+   }
+   &:nth-child(5):before{
+    content:"5";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%)
+    translateY(-50%);
+    transition:1s;
+   }
+   &:nth-child(6):before{
+    content:"6";
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%)
+    translateY(-50%);
+    transition:1s;
+   }
+
+   &.active{
+    z-index: 3;
+    transform: scale(1) translateY(0);
+    opacity:1;
+    transition:1s;
+   }
+}
+}
+
+ 
+ .imgPoster{
+   border-radius: 20%;
+ }
+
+ .container .cardImage.prev
+ .constainer .cardImage.next{
+    z-index:2;
+    transform:scale(0.8) translateY(-1rem);
+    opacity:0.6;
+    transition:1s 9953;
+}

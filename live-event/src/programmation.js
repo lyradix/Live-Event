@@ -53,7 +53,7 @@ const Programmation = () => {
     <Button onClick={() => setToggle(filterSaturday)}>Samedi</Button>
     <Button onClick={() => setToggle(filterSunday)}>Dimanche</Button>
     </Stack>
-    <h1>{toggle}</h1>      
+    <h1 className="text">{toggle}</h1>      
     </div>  
     );
 }

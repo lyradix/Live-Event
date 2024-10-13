@@ -1,56 +1,104 @@
+import { Container } from "react-bootstrap";
+import { Button,Stack} from 'react-bootstrap';
+import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
-import {Carousel} from 'react-bootstrap';
+let $num = $('.cardImage').length;
+
+let $even = $num / 2;
+let $odd = ($num + 1) / 2;
+
+if ($num % 2 == 0) {
+  $('.cardImage:nth-child(' + $even + ')').addClass('active');
+  $('.cardImage:nth-child(' + $even + ')').prev().addClass('prev');
+  $('.cardImage:nth-child(' + $even + ')').next().addClass('next');
+} else {
+  $('.cardImage:nth-child(' + $odd + ')').addClass('active');
+  $('.cardImage:nth-child(' + $odd + ')').prev().addClass('prev');
+  $('.cardImage:nth-child(' + $odd + ')').next().addClass('next');
+}
+
+$('.cardImage').click(function() {
+ let $slide = $('.active').width();
+  console.log($('.active').position().left);
+  
+  if ($(this).hasClass('next')) {
+    $('.container').stop(false, true).animate({left: '-=' + $slide});
+  } else if ($(this).hasClass('prev')) {
+    $('.container').stop(false, true).animate({left: '+=' + $slide});
+  }
+  
+  $(this).removeClass('prev next');
+  $(this).siblings().removeClass('prev active next');
+  
+  $(this).addClass('active');
+  $(this).prev().addClass('prev');
+  $(this).next().addClass('next');
+});
+
+// Keyboard nav
+$('html body').keydown(function(e) {
+  if (e.keyCode == 37) { // left
+    $('.active').prev().trigger('click');
+  }
+  else if (e.keyCode == 39) { // right
+    $('.active').next().trigger('click');
+  }
+
+});
+
+const Posters = ({concerts, artist}) => {
 
 
 
 
-
-const Posters = () => {
-
-    
+let num = 6
 
 
+ const image = `image-${num}.jpg`
+ console.log(num)
 
+    return ( 
 
-    
+  <div className="posters">
+   
+   
+<div className="container">
 
-    // const filterSunday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.jour === 'Dimanche')} jour = "filtre pour jour"/>
 
   
+  <div className="cardImage"><img src="image-1.jpg" className="imgPoster" alt="artist" height='300px' width='100px'/>  
+
+  </div>  
+
+    <div className="cardImage"><img src="image-2.jpg" className="imgPoster" alt="artist" height='300px' width='150px'/>  
+
+  </div>       
+               
+  
+  <div className="cardImage"> <img className="imgPoster"src="image-3.jpg" alt="artist" height='300px' width='150px'/>
+
+  </div> 
+
+  <div className="cardImage"> <img src={image} className="imgPoster" alt="artist" height='300px' width='150px'/>
+
+  </div> 
+  
+  <div className="cardImage"><img src={image} className="imgPoster" alt="artist" height='300px' width='150px'/>-8
+
+  </div> 
+
+  <div className="cardImage"><img src={image} className="imgPoster" alt="artist" height='300px' width='150px'/>
+
+  </div> 
 
 
-    // const toggleElements = () => {
-    //     setToggle(filterFriday)   
-    // };
+  
+</div>
 
-   
-// creer boutton filtre par jour
-    return ( 
-    <div className="posters">
-   
 
-   <Carousel id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item">
-            <img className="imgConcert active" src={`image-1.jpg`} alt="artist" height='600px' width='380px'/> 
-            </div>
-            <div class="carousel-item active">
-            <img className="imgConcert" src={`image-2.jpg`} alt="artist" height='600px' width='380px'/> 
-            </div>
-            <div class="carousel-item active">
-            <img className="imgConcert" src={`image-3.jpg`} alt="artist" height='600px' width='380px'/> 
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only"></span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-        </Carousel>    
-    </div>  
+    </div> 
+
     );
 }
  

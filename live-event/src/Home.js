@@ -9,24 +9,16 @@ const Home = () => {
         <div className="Home">
 
            
-        <Carousel>
-        <Posters/>
-        </Carousel>
-        <div className="carroussel">
-            <div class="poster">
-
-                <h3>Nom de l'artiste</h3>
-                <h4>Jour</h4>
-                <h4>date</h4>
-            </div>  
-        </div>
       
+        <Posters/>
+      
+          
 
         <div className="partners">
         </div> 
     
 
-        <article class="descriptif">
+        <article className="descriptif">
             <h2>Qui nous sommes...</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla est purus, ultrices in porttitor 
                 in, accumsan non quam. Nam consectetur porttitor rhoncus. Curabitur eu est et leo feugiat 

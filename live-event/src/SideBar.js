@@ -1,35 +1,29 @@
 import { Collapse, Nav,Card } from "react-bootstrap";
 import React, { useState } from "react";
+import { slide as Menu } from "react-burger-menu";
 
 
 
 
-const SideBar = () => {
+const Sidebar = () => {
 
-  const [open, setOpen] = useState(null);
 
     return ( 
 <div >
-<Nav class="navbar">
-    <button class="navbar-toggler" type="button"  onClick={() => setOpen(!open)} data-toggle="collapse" data-target="sidebar" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </Nav>
-  <Collapse class="collapse" in={open} className="sidebar">
-     <Card body style={{height:'100%', width: '400px' }} class="nav-item active" >
+<Menu>
+     <Card>
     
-                <ul  class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active"><a class="nav-link" href="/">Accueil</a></li> 
-                    <li> <a href="/Programmation">Programmation</a></li>
-                    <li> <a href="/Map">Où suis-je?</a></li>
+                <ul  className="navbar-nav">
+                    <li className="nav-item"><a className="nav-link" href="/">Accueil</a></li> 
+                    <li className="nav-item"> <a className="nav-link" href="/Programmation">Programmation</a></li>
+                    <li className="nav-item"> <a className="nav-link" href="/Map">Où suis-je?</a></li>
                  
                 </ul>
-      
-                </Card>
-  </Collapse>
-
+               
+      </Card>
+      </Menu>
 </div>
      );
 }
  
-export default SideBar;
+export default Sidebar;

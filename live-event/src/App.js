@@ -1,24 +1,28 @@
 import Home from './Home';
 import Programmation from './programmation';
 import Map from './map';
-import SideBar from './SideBar';
+import Sidebar from './SideBar';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './App.scss';
-
-
-
 
 
 
 
 
 function App() {
-  return (
-    <Router>
-    <div className="App">
 
-      <SideBar/>
+
+
+  return (
+ 
+    <Router>
+     
+
+    <div className="App">
+   
+    
+    
+      <Sidebar/>
      <div className='content'>
       <h1>Live Event</h1>
       <Routes>
@@ -27,11 +31,13 @@ function App() {
       <Route path="/Map" element={<Map/>}/>
     
       
-      </Routes>      
+      </Routes>  
+       
      </div>
     </div>
-    </Router>
-  );
+  
+    </Router>)
+  ;
 }
 
 export default App;
