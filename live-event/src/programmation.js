@@ -11,6 +11,8 @@ const Programmation = () => {
 
     const[concerts, setConcerts] = useState (null);
     const[toggle, setToggle] = useState (null);
+    const[exodiusFriday, setexodiusFriday] = useState (null);
+    
 
     
 
@@ -28,7 +30,8 @@ const Programmation = () => {
    
 
 
-    const filterHoraire = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras')} all = "all data"/>
+    const filterHoraire = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras' &&  concert.startTime.startsWith('2024-09-13'))} all = "all data"/>
+    const filterExodiusFriday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXodius'&&  concert.startTime.startsWith('2024-09-13'))} all = "all data"/>
     const filterLineUp = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !')} scene = "filtre pour jour"/>
     const filterFriday = concerts && <ConcertList concerts={concerts.filter(concert=> concert.startTime.startsWith('2024-09-13'))} jour = "filtre pour jour"/>
     const filterSaturday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2024-09-14'))} jour = "filtre pour jour"/>
@@ -50,7 +53,9 @@ const Programmation = () => {
 
       <Stack className="btnFilters"direction="horizontal" gap={2}>
             <Button >Artistes</Button>
-            <Button  onClick={() => setToggle(filterHoraire)} >Horaires</Button>
+            <Button  onClick={() => {
+                setToggle(filterHoraire); 
+                setexodiusFriday(filterExodiusFriday)}}>Horaires</Button>
         </Stack>
 
         <Stack  className="btnDays" direction="horizontal" gap={2}>
@@ -60,7 +65,8 @@ const Programmation = () => {
     <Button onClick={() => setToggle(filterSunday)}>Dimanche</Button>
 
     </Stack>
-    <h1 className="text">{toggle}</h1>      
+    <h1 className="text">{toggle}</h1> 
+    <h1 className="text">{exodiusFriday}</h1>        
     </div>  
     );
 }
