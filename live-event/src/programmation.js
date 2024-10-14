@@ -28,7 +28,7 @@ const Programmation = () => {
    
 
 
-
+    const filterHoraire = concerts && <Timetable concerts={concerts.filter((concert)=> concert)} all = "all data"/>
     const filterLineUp = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !')} scene = "filtre pour jour"/>
     const filterFriday = concerts && <ConcertList concerts={concerts.filter(concert=> concert.startTime.startsWith('2024-09-13'))} jour = "filtre pour jour"/>
     const filterSaturday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2024-09-14'))} jour = "filtre pour jour"/>
@@ -47,10 +47,13 @@ const Programmation = () => {
 // creer boutton filtre par jour
     return ( 
     <div className="programmation">
+
+      <Stack className="btnFilters"direction="horizontal" gap={2}>
             <Button >Artistes</Button>
-            <Button >Horaires</Button>
-        
-        <Stack direction="horizontal" gap={2}>
+            <Button  onClick={() => setToggle(filterHoraire)} >Horaires</Button>
+        </Stack>
+
+        <Stack  className="btnDays" direction="horizontal" gap={2}>
     <Button onClick={() => setToggle(filterLineUp)}>Line-Up</Button>
     <Button onClick={() => setToggle(filterFriday)}>Vendredi</Button>
     <Button onClick={() => setToggle(filterSaturday)}>Samedi</Button>

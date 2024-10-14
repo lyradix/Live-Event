@@ -140,6 +140,27 @@ padding: 10px;
 .blah { 
   position:relative; 
 }
+
+.btnFilters{
+  position:relative; 
+  display: flex;
+  align-items: center;
+  margin:30px 10px;
+  margin-left: 30%;
+  margin-right: 30%;
+
+}
+
+.btnDays{
+  position:relative; 
+  display: flex;
+  align-content:space-around;
+  align-items: center;
+
+  margin-left: 10%;
+  margin-right: 30%;
+
+}
 /* .currentImage{
    z-index: 1;
   position: absolute;

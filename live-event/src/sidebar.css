@@ -26,7 +26,7 @@
     justify-content: right;
     margin-right: 0px;
   
-    transform: translateX(20rem)translateY(3rem);
+    transform: translateX(0rem)translateY(3rem);
     
   }
   
@@ -89,7 +89,7 @@
 
     .bm-menu-wrap{
       top: -10px;
-      left:110px;
+      left:-20px;
       position:absolute;
         /* transform: translateX(10rem)translateY(-5rem); */
         padding: 0px;
@@ -118,7 +118,7 @@
         }
         
         .bm-overlay{
-          left:-110px;
+          left:0px;
           z-index:0;
           position: absolute; 
           z-index: 1000; 
