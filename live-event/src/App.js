@@ -23,7 +23,7 @@ function App() {
    
     
     
-      <Sidebar/>
+      <Sidebar className="sidebar"/>
      <div className='content'>
       <h1>Live Event</h1>
       <Routes>

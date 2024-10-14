@@ -63,28 +63,28 @@ const Posters = () => {
 
 
   
-  <div className="cardImage"><img src="image-6.jpg" className="imgPoster" alt="artist" height='300px' width='50px'/>  
+  <div className="cardImage"><img src="image-6.jpg" className="imgPoster" alt="artist" height='300px' width='180px'/>  
 
   </div>  
 
-    <div className="cardImage"><img src="image-8.jpg" className="imgPoster" alt="artist" height='300px' width='50px'/>  
+    <div className="cardImage"><img src="image-8.jpg" className="imgPoster" alt="artist" height='300px' width='180px'/>  
 
   </div>       
                
   
-  <div className="cardImage"> <img className="imgPoster"src="image-19.jpg" alt="artist" height='300px' width='150px'/>
+  <div className="cardImage"> <img className="imgPoster"src="image-19.jpg" alt="artist" height='300px' width='180px'/>
 
   </div> 
 
-  <div className="cardImage"> <img src="image-21.jpg" className="imgPoster" alt="artist" height='300px' width='150px'/>
+  <div className="cardImage"> <img src="image-21.jpg" className="imgPoster" alt="artist" height='300px' width='180px'/>
 
   </div> 
   
-  <div className="cardImage"><img src="image-34.jpg" className="imgPoster" alt="artist" height='300px' width='50px'/>-8
+  <div className="cardImage"><img src="image-34.jpg" className="imgPoster" alt="artist" height='300px' width='180px'/>
 
   </div> 
 
-  <div className="cardImage"><img src="image-36.jpg"className="imgPoster" alt="artist" height='300px' width='50px'/>
+  <div className="cardImage"><img src="image-36.jpg"className="imgPoster" alt="artist" height='300px' width='180px'/>
 
   </div> 
 

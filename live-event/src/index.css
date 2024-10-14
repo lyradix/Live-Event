@@ -8,11 +8,11 @@
 
 @import 'sidebar.css';
 
-.App{
- 
-  position: relative;
+.App{ 
+
     background-color: #143d3b;
     display:flex;
+    flex:1;
     text-align: center;
     justify-content: center;
     justify-items: center;
@@ -28,12 +28,14 @@
 
 
 .card {
+  position:relative;
   height:0px;
   color: #143d3b;
   display: flex;
   flex-direction: row;
 }
 .collapse{
+  position:relative;
   height:0px;
   display: flex;
   flex-direction: row;
@@ -43,6 +45,7 @@
   white-space-collapse: collapse;
 }
 .content {
+  position: relative;
   align-items: center;
   z-index:3;
 
@@ -78,8 +81,14 @@ background-color: #143d3b;
   margin-bottom: 30px;;
 }
 
+.descriptif{
+  margin-top: 300px;
+  
+}
+
 .paragraphe{
-  font-size: 10px;
+
+  font-size: 25px;
   line-height: 1.6; /* Ajuste l'espacement entre les lignes */
   letter-spacing: 0.11em; /* Ajuste l'espacement entre les lettres */
 align-items: center;
@@ -87,6 +96,10 @@ justify-content: center;
 
 font-family: bungee,Arial, sans-serif;
 color: #911818;
+}
+
+.concert{
+  position: relative;
 }
 
 .detailsPicture{
@@ -124,7 +137,9 @@ padding: 10px;
 
 }
 
-
+.blah { 
+  position:relative; 
+}
 /* .currentImage{
    z-index: 1;
   position: absolute;

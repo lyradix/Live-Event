@@ -16,7 +16,8 @@
   
   /* Position and sizing of burger button */
   .bm-burger-button {
-    position: fixed;
+    position:absolute;
+    left:0%;
     width: 36px;
     height: 30px;
     left: 36px;
@@ -31,6 +32,7 @@
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
+    position:absolute;
     background: #ffffff;
   
   }
@@ -40,6 +42,7 @@
   /* Color/shape of close button cross */
   /* General sidebar styles */
   .bm-menu {
+    position:absolute;
      padding: 0em 0em 0 0;
     font-size: 0em;
     flex-direction: right;
@@ -48,14 +51,10 @@
     transform: translateX(0rem);
   }
 
-  .bm-menu-wrap{
-    padding: 10px;
-   
-    padding: 100px, 10px,0px;
-    transform: translateX(10rem);
-  }
+
   /* Morph shape necessary with bubble or elastic */
   .bm-morph-shape {
+    position:absolute;
     fill: #ffffff;
   }
   
@@ -67,24 +66,13 @@
   }
   
   /* Styling of overlay */
-  .bm-overlay {
-    background: rgba(255, 255, 255, 0.877);
-  }
+
   
-  .bm-overlay{
-    position: fixed; 
-    z-index: 1; 
-    width: 50%; 
-    height: 100%; 
-    background: rgba(186, 219, 68, 0.926); 
-    opacity: 0; 
-    transition: opacity 0.3s, transform 0.3s; 
-    transform: translateX(5rem) translateY(-5rem);
-  }
+
   
 .react-burger-menu-btn{
     position: fixed; 
-    right: 0px; top: 0px; 
+    left: 0px; top: 0px; 
     z-index: 0; 
     width: 50%; 
     height: 100%; 
@@ -92,12 +80,23 @@
     border: none; font-size: 0px; 
     background: transparent;
     }
+    
+    .react-burger-menu{
+      position: absolute; 
+      right: 100px; top: 0px; 
   
+      }
+
     .bm-menu-wrap{
-        transform: translateX(10rem)translateY(-5rem);
+      top: -10px;
+      left:110px;
+      position:absolute;
+        /* transform: translateX(10rem)translateY(-5rem); */
         padding: 0px;
-        width: 0px;
-        transition:ease;
+        width: 50px;
+        padding: 10px;
+        padding: 100px, 10px,0px;       
+        transition:1s;
         }
         
         .navbar-toggler{
@@ -109,7 +108,7 @@
         
         
         .navbar-toggler-icon{
-          position: relative;
+            position: absolute; 
           display: flex;
           align-items: right;
           justify-content: right;
@@ -119,17 +118,18 @@
         }
         
         .bm-overlay{
-          transform: translateX(0rem)translateY(0rem);
+          left:-110px;
           z-index:0;
-          position: fixed; 
+          position: absolute; 
           z-index: 1000; 
-          width: 100%; height: 100%; 
+          width: 130%; height: 100%; 
           background: rgba(117, 54, 54, 0.3); 
           opacity: 1; 
           transition: opacity 0.3s;
         }
         
         .ul.navbar-nav{
+        
             align-content: flex-end;
              width:250px;
             z-index:1;
@@ -137,6 +137,7 @@
             top:0;}
          
         .navbar-nav{
+            
           align-content: flex-end;
            width:250px;
           z-index:1;
@@ -161,9 +162,11 @@
         
         .collapse:not(.show){
          flex:row;
+         
         }
         
         .sidebar {
+        position:absolute;
           padding: 20px;
           display: flex;
           align-items: center;
@@ -182,7 +185,7 @@
         }
         .nav-item {
          flex:row;
-         
+         position:relative;
           padding:10px;
           background-color: #096662;
           text-decoration: none;
@@ -190,6 +193,7 @@
         }
 
         .bm-item-list{
+            position:relative;
             display: flex;
             align-items: flex-end;
             transform: translateX(0rem);

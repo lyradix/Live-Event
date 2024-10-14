@@ -7,6 +7,8 @@ const Home = () => {
 
        return ( 
         <div className="Home">
+        
+        <div clasName="blah">
 
         <Posters/>
       
@@ -32,7 +34,7 @@ const Home = () => {
                 In aliquet quam et velit bibendum accumsan.</p>
         </article>
 
-
+        </div>
   
     <footer>
 

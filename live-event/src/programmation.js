@@ -1,7 +1,7 @@
 import { useState, useEffect} from "react";
 import { Button,Stack} from 'react-bootstrap';
 import ConcertList from "./ConcertList";
-
+import Timetable from "./timetable";
 
 
 
@@ -47,11 +47,15 @@ const Programmation = () => {
 // creer boutton filtre par jour
     return ( 
     <div className="programmation">
+            <Button >Artistes</Button>
+            <Button >Horaires</Button>
+        
         <Stack direction="horizontal" gap={2}>
     <Button onClick={() => setToggle(filterLineUp)}>Line-Up</Button>
     <Button onClick={() => setToggle(filterFriday)}>Vendredi</Button>
     <Button onClick={() => setToggle(filterSaturday)}>Samedi</Button>
     <Button onClick={() => setToggle(filterSunday)}>Dimanche</Button>
+
     </Stack>
     <h1 className="text">{toggle}</h1>      
     </div>  
