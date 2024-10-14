@@ -28,7 +28,7 @@ const Programmation = () => {
    
 
 
-    const filterHoraire = concerts && <Timetable concerts={concerts.filter((concert)=> concert)} all = "all data"/>
+    const filterHoraire = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras')} all = "all data"/>
     const filterLineUp = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !')} scene = "filtre pour jour"/>
     const filterFriday = concerts && <ConcertList concerts={concerts.filter(concert=> concert.startTime.startsWith('2024-09-13'))} jour = "filtre pour jour"/>
     const filterSaturday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2024-09-14'))} jour = "filtre pour jour"/>

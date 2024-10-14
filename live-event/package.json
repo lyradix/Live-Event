@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "carousel": "^0.0.3",
+    "flatlist-react": "^1.5.14",
     "jquery": "^3.7.1",
     "mdb-react-ui-kit": "^9.0.0",
     "mdbreact": "^5.2.0",

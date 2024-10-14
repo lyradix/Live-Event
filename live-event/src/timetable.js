@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import Flatlist from 'flatlist-react'
+import { Button,Stack} from 'react-bootstrap';
 const Timetable = ({concerts, artist,jour,date,horaire,scène}) => {
     
 
@@ -7,25 +8,30 @@ const Timetable = ({concerts, artist,jour,date,horaire,scène}) => {
 
 
     <div className="concert">
-        <h2>{artist}</h2>
+    
+    <div>eXageras</div>
          {concerts.map((concert) => (
-            <div className="timetable-preview" key = {concert.id}>                
-            <header className="scenetable">{concert.scène}</header>
-     
-            <div className="jeudi">
-              <div clasName="boxArtist"> 
-                <h2 className="artistName">{concert.artist}</h2>
-                <p className="detailsPicture">{concert.startTime.substring(0, 10)}</p>
-                <p>arrow symbol</p>
-                <p className="detailsPicture">{concert.endTime.substring(0, 10)}</p>
+          <table>
+          
+            <div key = {concert.id}>   
+           <tr>
+            <div>
+              <div clasName="boxArtist">
+
+                <td>{concert.artist}</td>
+                <Stack  className="btnDays" direction="horizontal" gap={2}>
+                <td>{concert.startTime.substring(10, 16)}</td>
+                <td>&rarr;</td>
+                <td>{concert.endTime.substring(10, 16)}</td>
+                </Stack>
               </div>      
-   
             </div>
+            </tr>
    
                 
                   
       </div>
-        ))}
+      </table>))}
 
         </div>
      );
