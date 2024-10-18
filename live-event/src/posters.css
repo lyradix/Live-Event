@@ -1,11 +1,16 @@
+.posters{
+    transform: translate(0px,200px);
+}
+
+
 .container {
     position:relative;
 	display: flex;
     flex:auto;
 	align-items: center;
 	justify-content: center;
-	position: relative;
     transform: translateX(5rem);
+    width:3rem;
 
 
 .cardImage {
@@ -108,12 +113,14 @@
   .container.cardImage.prev,
  .container.cardImage.next{
     position:relative;
-    z-index:2;
+    z-index:1;
     transform:scale(0.8) translateX(2rem) translateY(-1rem);
     opacity:0.6;
     transition:1s;
 }
  .imgPoster{
+    height:300px;
+     width:180px;
     position:relative;
    border-radius: 20%;
    margin-left: -40px;

@@ -1,0 +1,27 @@
+.boxTitle{
+    position: relative;
+    background-color:#096662;
+    border-radius:8px;
+    height: 70px;
+    width: 20rem;
+    justify-content: center;
+    align-items: baseline;
+    transform: translate(1.90rem,1.5rem);
+}
+
+.headTitle{
+    font-family: bungee,Arial, sans-serif;
+    color: #ffffff;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transform: translate(0rem,2rem);
+}
+
+.boxArtist{
+    color:#096662 !important;
+    background-color:#E5C8C8 !important;
+    border-radius:8px !important;
+    height: 70px !important;
+    margin:5px;
+}

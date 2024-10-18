@@ -1,0 +1,95 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "door"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19484090805053,
+          48.8304724870417
+        ],
+        "type": "Point"
+      },
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.199372459700726,
+              48.829906638801646
+            ],
+            [
+              2.203399923146236,
+              48.835482508306
+            ],
+            [
+              2.1996086163786686,
+              48.83632567900915
+            ],
+            [
+              2.190884909744085,
+              48.83455212743428
+            ],
+            [
+              2.1912477847633056,
+              48.83057437208305
+            ],
+            [
+              2.194240488797732,
+              48.829821853702384
+            ],
+            [
+              2.199372459700726,
+              48.829906638801646
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#d73c9e",
+        "marker-size": "medium",
+        "marker-symbol": "star",
+        "popup": "wow",
+        "name": "something",
+        "type": "scène"
+      },
+      "geometry": {
+        "coordinates": [
+          2.199746844660922,
+          48.834318740793606
+        ],
+        "type": "Point"
+      },
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "type": "scène",
+        "marker-color": "#d067b4",
+        "marker-size": "medium",
+        "marker-symbol": "circle"
+      },
+      "geometry": {
+        "coordinates": [
+          2.197107064095036,
+          48.8354357975185
+        ],
+        "type": "Point"
+      },
+      "id": 3
+    }
+  ]
+}

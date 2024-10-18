@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /* base styles */
+@import 'normalize.css';
 
 @import 'font.css';
 
@@ -8,9 +9,15 @@
 
 @import 'sidebar.css';
 
+
+@import 'timetable.css';
+
+@import 'button.css';
+
+
 .App{ 
 
-    background-color: #143d3b;
+    background-color: #012B29;
     display:flex;
     flex:1;
     text-align: center;
@@ -18,6 +25,7 @@
     justify-items: center;
     width:100%;
     height: 100%;
+    margin-bottom: 80px;
 }
 
 /* @media screen and (max-width: 530px){
@@ -59,15 +67,24 @@
 
 
 .text{
+  
   text-align: center;
   margin:5px 30px 5px 30px;
   font-family: bungee,Arial, sans-serif;
   color: #ffffff;
-  font-size: inherit;
 }
-.h1{
-background-color: #143d3b;
+
+.box{
+  position: relative;
+  width:20rem;
+  text-align: center;
+  margin:5px 30px 5px 30px;
+  font-family: bungee,Arial, sans-serif;
+  color: #ffffff;
+  background-color: #E5C8C8;
+  border-radius: 8px;
 }
+
 
 .h2{
   font-size:15px;
@@ -81,21 +98,24 @@ background-color: #143d3b;
   margin-bottom: 30px;;
 }
 
+
 .descriptif{
   margin-top: 300px;
+  color: #E5C8C8;
   
 }
 
 .paragraphe{
 
-  font-size: 25px;
+  font-size: 15px;
   line-height: 1.6; /* Ajuste l'espacement entre les lignes */
   letter-spacing: 0.11em; /* Ajuste l'espacement entre les lettres */
 align-items: center;
 justify-content: center;
-
+margin-left: 250px;
+width:40%;
 font-family: bungee,Arial, sans-serif;
-color: #911818;
+color: #E5C8C8;
 }
 
 .concert{
@@ -156,11 +176,14 @@ padding: 10px;
   display: flex;
   align-content:space-around;
   align-items: center;
-
-  margin-left: 10%;
-  margin-right: 30%;
+  margin-left: 5%;
+  margin-right: 20%;
 
 }
+
+
+
+
 /* .currentImage{
    z-index: 1;
   position: absolute;

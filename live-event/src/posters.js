@@ -1,6 +1,4 @@
-import { Container } from "react-bootstrap";
-import { Button,Stack} from 'react-bootstrap';
-import ReactDOM from 'react-dom';
+
 import $ from 'jquery';
 
 
@@ -49,6 +47,8 @@ $('html body').keydown(function(e) {
 
 });
 
+
+
 const Posters = () => {
 
 
@@ -63,28 +63,28 @@ const Posters = () => {
 
 
   
-  <div className="cardImage"><img src="image-6.jpg" className="imgPoster" alt="artist" height='300px' width='180px'/>  
+  <div className="cardImage"><img src="image-6.jpg" className="imgPoster" alt="artist"/>  
 
   </div>  
 
-    <div className="cardImage"><img src="image-8.jpg" className="imgPoster" alt="artist" height='300px' width='180px'/>  
+    <div className="cardImage"><img src="image-8.jpg" className="imgPoster" alt="artist" />  
 
   </div>       
                
   
-  <div className="cardImage"> <img className="imgPoster"src="image-19.jpg" alt="artist" height='300px' width='180px'/>
+  <div className="cardImage"> <img className="imgPoster"src="image-19.jpg" alt="artist"/>
 
   </div> 
 
-  <div className="cardImage"> <img src="image-21.jpg" className="imgPoster" alt="artist" height='300px' width='180px'/>
+  <div className="cardImage"> <img src="image-21.jpg" className="imgPoster" alt="artist"/>
 
   </div> 
   
-  <div className="cardImage"><img src="image-34.jpg" className="imgPoster" alt="artist" height='300px' width='180px'/>
+  <div className="cardImage"><img src="image-34.jpg" className="imgPoster" alt="artist"/>
 
   </div> 
 
-  <div className="cardImage"><img src="image-36.jpg"className="imgPoster" alt="artist" height='300px' width='180px'/>
+  <div className="cardImage"><img src="image-36.jpg"className="imgPoster" alt="artist"/>
 
   </div> 
 
@@ -98,4 +98,5 @@ const Posters = () => {
     );
 }
  
+
 export default Posters;

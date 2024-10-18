@@ -1,15 +1,18 @@
-.map-wrap {
+/* .map-wrap {
     position: relative;
     width: 100%;
     height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
   
-    transform: scale(1.3)translateX(-4rem) translateY(12rem);}
+    /* transform: scale(1.5)translateX(-4.5rem) translateY(15rem);} */ 
   
-  .map {
-    position: relative;
-    width: 180%;
+  /* .map {
+    position: absolute;
+    width: 210%;
     height: 50%;
-   
-  }
+  
+  } */
 
+  .MapContainer{
+    height: 100vh;
+  }
  

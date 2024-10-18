@@ -1,0 +1,66 @@
+.btnArtist{
+    color:#096662 !important;
+    background-color:#E5C8C8 !important;
+    
+}
+
+.btnArtist:active{
+    color:#E5C8C8 !important;
+    background-color:#096662 !important;
+}
+
+
+.btnHoraires{
+    color:#096662 !important;
+    background-color:#E5C8C8 !important;
+
+}
+
+.btnHoraires:active{
+    color:#E5C8C8 !important;
+    background-color:#096662 !important;
+}
+
+
+.btnLineUp{
+    color:#096662 !important;
+    background-color:#E5C8C8 !important;
+
+}
+
+
+.btnLineUp:active{
+    color:#E5C8C8 !important;
+    background-color:#096662 !important;
+}
+
+
+.btnFriday{
+    color:#096662 !important;
+    background-color:#E5C8C8 !important;
+
+}
+
+.btnSaturday{
+    color:#096662 !important;
+    background-color:#E5C8C8 !important;
+
+}
+
+.btnFriday:active{
+    color:#E5C8C8 !important;
+    background-color:#096662 !important;
+}
+
+
+.btnSunday{
+    color:#096662 !important;
+    background-color:#E5C8C8 !important;
+
+}
+
+.btnSaturday:active{
+    color:#E5C8C8 !important;
+    background-color:#096662 !important;
+}
+

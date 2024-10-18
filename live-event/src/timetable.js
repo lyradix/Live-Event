@@ -1,48 +1,39 @@
-import { useState } from "react";
-import Flatlist from 'flatlist-react'
-import { Button,Stack} from 'react-bootstrap';
-const Timetable = ({concerts, artist,jour,date,horaire,scène}) => {
+import {Stack} from 'react-bootstrap';
+const Timetable = ({concerts}) => {
     
 
     return ( 
 
 
     <div className="concert">
-
-    
-    <div>{concerts.slice(0, 1).map((concert) => (
-       <div clasName="boxArtist">
-         <h1>{concert.scène}</h1>
-      </div>
-       )) }
-    </div>
+  
 
     <div>{concerts.slice(0, 1).map((concert) => (
-       <div clasName="boxArtist">
-         <p>{concert.startTime.substring(0, 10)}</p>
+       <div className="boxTitle">
+         <p className="headTitle">{concert.startTime.substring(0, 10)}</p>
       </div>
        )) }
     </div>
        
          {concerts.map((concert) => (
-          <table>
+
           
             <div key = {concert.id}>   
-           <tr>
+         
             <div>
-              <div clasName="boxArtist">
+              <div className='box'>
 
-                <td>{concert.artist}</td>
+                <p >{concert.artist}</p>
                 <Stack  className="btnDays" direction="horizontal" gap={2}>
-                <td>{concert.startTime.substring(10, 16)}</td>
-                <td>&rarr;</td>
-                <td>{concert.endTime.substring(10, 16)}</td>
+                <p>{concert.startTime.substring(10, 16)}</p>
+                <p>&rarr;</p>
+                <p>{concert.endTime.substring(10, 16)}</p>
                 </Stack>
               </div>      
             </div>
-            </tr>   
+           
       </div>
-      </table>))}
+      ))}
 
         </div>
      );
