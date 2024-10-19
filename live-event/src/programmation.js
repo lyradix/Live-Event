@@ -11,6 +11,7 @@ const Programmation = () => {
 
     const[concerts, setConcerts] = useState (null);
     const[toggle, setToggle] = useState (null);
+    const[button, setButton] = useState (null);
 
     const[exagerasFriday, setexagerasFriday] = useState (null);
     const[exagerasSaturday, setexagerasSaturday] = useState (null);
@@ -80,8 +81,46 @@ const Programmation = () => {
 
     // const filterSunday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.jour === 'Dimanche')} jour = "filtre pour jour"/>
 
-  
+  const timetable = <Stack className="timetable">
+  <h1 className="text">eXageras</h1>
+  <p>{exagerasFriday}</p> 
+  <p>{exagerasSaturday}</p> 
+  <p>{exagerasSunday}</p>
 
+  <h1 className="text">eXodius</h1>
+  <p>{exodiusFriday}</p>        
+  <p>{exodiusSaturday}</p>        
+  <p>{exodiusSunday}</p>
+  
+  <h1 className="text">eXperienza</h1>
+  <p>{experienzaFriday}</p>        
+  <p>{experienzaSaturday}</p>        
+  <p>{experienzaSunday}</p>
+
+  <h1 className="text">eXclammation !</h1>
+  <p>{eXclammationFriday}</p>        
+  <p>{eXclammationSaturday}</p>        
+  <p>{eXclammationSunday}</p>
+
+  <h1 className="text">eXpassa</h1>
+  <p>{eXpassaFriday}</p>        
+  <p>{eXpassaSaturday}</p>
+  <p>{eXpassaSunday}</p>   
+  </Stack> 
+
+  const buttonDays =     <Stack  className="btnDays" direction="horizontal" gap={2}>
+                        <Button className="btnLineUp" onClick={() => {setToggle(filterLineUp)              
+                            }}>Line-Up</Button>
+                        <Button className="btnFriday" onClick={() => setToggle(filterFriday)}>Vendredi</Button>
+                        <Button className="btnSaturday" onClick={() => setToggle(filterSaturday)}>Samedi</Button>
+                        <Button className="btnSunday" onClick={() => setToggle(filterSunday)}>Dimanche</Button>
+                        </Stack>
+
+const btnDaysOff = <Stack ClassName = "btnDays" style={{opacity:"0"}}></Stack>
+
+
+
+const horaireOff = <Stack className="timetable" style={{opacity:"0", position:"absolute"}}></Stack>
 
     // const toggleElements = () => {
     //     setToggle(filterFriday)   
@@ -93,8 +132,16 @@ const Programmation = () => {
     <div className="programmation">
 
       <Stack className="btnFilters"direction="horizontal" gap={2}>
-            <Button  className="btnArtist">Artistes</Button>
+            <Button  className="btnArtist"onClick={() => { setButton(buttonDays);
+             setToggle(filterLineUp); 
+          
+            
+               
+                }}>Artistes</Button>
+
+
             <Button className="btnHoraires" onClick={() => {
+                setToggle(timetable);
                 setexagerasFriday(filterExagerasFriday);
                 setexagerasSaturday(filterExagerasSaturday);
                 setexagerasSunday(filterExagerasSunday);
@@ -114,42 +161,19 @@ const Programmation = () => {
                 seteXpassaFriday(filterExpassaFriday);
                 seteXpassaSaturday(filterExpassaSaturday);
                 seteXpassaSunday(filterExpassaSunday);
+
+                setButton(btnDaysOff)
+               
+            
                 }}>Horaires</Button>
         </Stack>
 
-        <Stack  className="btnDays" direction="horizontal" gap={2}>
-    <Button className="btnLineUp" onClick={() => {setToggle(filterLineUp)}}>Line-Up</Button>
-    <Button className="btnFriday" onClick={() => setToggle(filterFriday)}>Vendredi</Button>
-    <Button className="btnSaturday" onClick={() => setToggle(filterSaturday)}>Samedi</Button>
-    <Button className="btnSunday" onClick={() => setToggle(filterSunday)}>Dimanche</Button>
-
-    </Stack>
-    <h1 className="text">{toggle}</h1> 
-
-    <h1 className="text">eXageras</h1>
-    <p>{exagerasFriday}</p> 
-    <p>{exagerasSaturday}</p> 
-    <p>{exagerasSunday}</p>
-
-    <h1 className="text">eXodius</h1>
-    <p>{exodiusFriday}</p>        
-    <p>{exodiusSaturday}</p>        
-    <p>{exodiusSunday}</p>
+       <div>{button}</div>
     
-    <h1 className="text">eXperienza</h1>
-    <p>{experienzaFriday}</p>        
-    <p>{experienzaSaturday}</p>        
-    <p>{experienzaSunday}</p>
+    <h1 >{toggle}</h1> 
+  
 
-    <h1 className="text">eXclammation !</h1>
-    <p>{eXclammationFriday}</p>        
-    <p>{eXclammationSaturday}</p>        
-    <p>{eXclammationSunday}</p>
-
-    <h1 className="text">eXpassa</h1>
-    <p>{eXpassaFriday}</p>        
-    <p>{eXpassaSaturday}</p>
-    <p>{eXpassaSunday}</p>        
+    
     </div>  
     );
 }

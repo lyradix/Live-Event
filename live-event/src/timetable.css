@@ -6,7 +6,8 @@
     width: 20rem;
     justify-content: center;
     align-items: baseline;
-    transform: translate(1.90rem,1.5rem);
+    transform: translate(1.90rem,0.3rem);
+    margin-bottom: 10px;
 }
 
 .headTitle{
@@ -15,7 +16,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    transform: translate(0rem,2rem);
+    transform: translate(0rem,1rem);
 }
 
 .boxArtist{
@@ -23,5 +24,6 @@
     background-color:#E5C8C8 !important;
     border-radius:8px !important;
     height: 70px !important;
-    margin:5px;
+    
+ 
 }
