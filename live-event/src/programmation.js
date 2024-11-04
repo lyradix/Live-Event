@@ -1,78 +1,71 @@
-import { useState, useEffect} from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button,Stack} from 'react-bootstrap';
 import ConcertList from "./ConcertList";
 import Timetable from "./timetable";
-
+import FlatList from "flatlist-react"
+import TouchableOpacity from 'react-touchableopacity'
+import FilterToggle from "./showFilterToggle";
 
 
 const Programmation = () => {
 
-    
 
+
+
+
+
+
+
+        
+ 
+    
+    const [pending, setpending] = useState(true);
     const[concerts, setConcerts] = useState (null);
     const[toggle, setToggle] = useState (null);
     const[button, setButton] = useState (null);
 
-    const[exagerasFriday, setexagerasFriday] = useState (null);
-    const[exagerasSaturday, setexagerasSaturday] = useState (null);
-    const[exagerasSunday, setexagerasSunday] = useState (null);
 
-    const[exodiusFriday, setexodiusFriday] = useState (null);
-    const[exodiusSaturday, setexodiusSaturday] = useState (null);
-    const[exodiusSunday, setexodiusSunday] = useState (null);
 
-    const[experienzaFriday, setexperienzaFriday] = useState (null);
-    const[experienzaSaturday, setexperienzaSaturday] = useState (null);
-    const[experienzaSunday, setexperienzaSunday] = useState (null);
-
-    const[eXclammationFriday, setexclammationFriday] = useState (null);
-    const[eXclammationSaturday, setexclammationSaturday] = useState (null);
-    const[eXclammationSunday, setexclammationSunday] = useState (null);
-
-    const[eXpassaFriday, seteXpassaFriday] = useState (null);
-    const[eXpassaSaturday, seteXpassaSaturday] = useState (null);
-    const[eXpassaSunday, seteXpassaSunday] = useState (null);
 
 
     
-
-    
-
-
      useEffect(() => {
-
-        // go and fetch the json data in the localhost
-        fetch('http://localhost:8001/concerts').then(res => {
+        setTimeout(() => {
+            // go and fetch the json data in the localhost
+        fetch('http://localhost:8000/concerts').then(res => {
             return res.json();
         }).then((data) => {
             setConcerts(data);
+            setpending(false)
         })
-    })
+        })
+        
+    },[])
 
-   
-
-
-    const filterExagerasFriday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras' &&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "exageras et vendredi"/>
-    const filterExagerasSaturday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras' &&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "exageras et samedi"/>
-    const filterExagerasSunday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras' &&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "exageras et dimanche"/>
-
-    const filterExodiusFriday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXodius'&&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "exageras et vendredi"/>
-    const filterExodiusSaturday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXodius'&&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "exageras et samedi"/>
-    const filterExodiusSunday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXodius'&&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "exageras et dimanche"/>
+  
 
 
-    const filterExperienzaFriday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXperienza'&&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "eXperienza et vendredi"/>
-    const filterExperienzaSaturday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXperienza'&&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "eXperienza et samedi"/>
-    const filterExperienzaSunday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXperienza'&&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "eXperienza et dimanche"/>
+    const exageras = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras' &&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "exageras et vendredi"/>,
+                                 concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras' &&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "exageras et samedi"/>,
+                                 concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXageras' &&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "exageras et dimanche"/>
+                                 ]
+    const exodius = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXodius'&&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "exageras et vendredi"/>,
+                                concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXodius'&&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "exageras et samedi"/>,
+                                concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXodius'&&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "exageras et dimanche"/>
+                                ]
 
-    const filterExclammationFriday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !'&&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "eXclammation et vendredi"/>
-    const filterExclammationSaturday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !'&&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "eXclammation et samedi"/>
-    const filterExclammationSunday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !'&&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "eXclammation et dimanche"/>
-
-    const filterExpassaFriday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXpassa'&&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "eXpassa et vendredi"/>
-    const filterExpassaSaturday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXpassa'&&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "eXpassa et samedi"/>
-    const filterExpassaSunday = concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXpassa'&&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "eXpassa et dimanche"/>
-
+    const experienza = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXperienza'&&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "eXperienza et vendredi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXperienza'&&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "eXperienza et samedi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXperienza'&&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "eXperienza et dimanche"/>
+                            ]
+    const eXclammation = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !'&&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "eXclammation et vendredi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !'&&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "eXclammation et samedi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !'&&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "eXclammation et dimanche"/>
+                                        ]
+    const eXpassa = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXpassa'&&  concert.startTime.startsWith('2024-09-13'))} scène et jour = "eXpassa et vendredi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXpassa'&&  concert.startTime.startsWith('2024-09-14'))} scène et jour = "eXpassa et samedi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scène === 'Scène eXpassa'&&  concert.startTime.startsWith('2024-09-15'))} scène et jour = "eXpassa et dimanche"/>
+                                    ]
 
     const filterLineUp = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.scène === 'Scéne eXclammation !')} scene = "filtre pour jour"/>
     const filterFriday = concerts && <ConcertList concerts={concerts.filter(concert=> concert.startTime.startsWith('2024-09-13'))} jour = "filtre pour jour"/>
@@ -81,97 +74,79 @@ const Programmation = () => {
 
     // const filterSunday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.jour === 'Dimanche')} jour = "filtre pour jour"/>
 
-  const timetable = <Stack className="timetable">
-  <h1 className="text">eXageras</h1>
-  <p>{exagerasFriday}</p> 
-  <p>{exagerasSaturday}</p> 
-  <p>{exagerasSunday}</p>
 
-  <h1 className="text">eXodius</h1>
-  <p>{exodiusFriday}</p>        
-  <p>{exodiusSaturday}</p>        
-  <p>{exodiusSunday}</p>
+
   
-  <h1 className="text">eXperienza</h1>
-  <p>{experienzaFriday}</p>        
-  <p>{experienzaSaturday}</p>        
-  <p>{experienzaSunday}</p>
-
-  <h1 className="text">eXclammation !</h1>
-  <p>{eXclammationFriday}</p>        
-  <p>{eXclammationSaturday}</p>        
-  <p>{eXclammationSunday}</p>
-
-  <h1 className="text">eXpassa</h1>
-  <p>{eXpassaFriday}</p>        
-  <p>{eXpassaSaturday}</p>
-  <p>{eXpassaSunday}</p>   
-  </Stack> 
 
   const buttonDays =     <Stack  className="btnDays" direction="horizontal" gap={2}>
-                        <Button className="btnLineUp" onClick={() => {setToggle(filterLineUp)              
+                        <Button className="btnLineUp"  onClick={() => {setToggle(filterLineUp);             
                             }}>Line-Up</Button>
                         <Button className="btnFriday" onClick={() => setToggle(filterFriday)}>Vendredi</Button>
                         <Button className="btnSaturday" onClick={() => setToggle(filterSaturday)}>Samedi</Button>
                         <Button className="btnSunday" onClick={() => setToggle(filterSunday)}>Dimanche</Button>
                         </Stack>
 
-const btnDaysOff = <Stack ClassName = "btnDays" style={{opacity:"0"}}></Stack>
+const btnDaysOff = <Stack className = "btnDays" style={{opacity:"0"}}></Stack>
 
 
 
 const horaireOff = <Stack className="timetable" style={{opacity:"0", position:"absolute"}}></Stack>
 
-    // const toggleElements = () => {
-    //     setToggle(filterFriday)   
-    // };
+const buttonRef = useRef(null);
 
-   
-// creer boutton filtre par jour
+const timetable = <div className="timetable">
+<h1 className="text">e&#129419;geras</h1>
+<p>{exageras}</p> 
+
+
+<h1 className="text">e&#129419;odius</h1>
+<p>{exodius}</p>        
+
+
+<h1 className="text">e&#129419;perienza</h1>
+<p>{experienza}</p>        
+
+
+<h1 className="text">e&#129419;clammation !</h1>
+<p>{eXclammation}</p>        
+
+
+<h1 className="text">e&#129419;passa</h1>
+<p>{eXpassa}</p>        
+
+</div> 
+
+
+
     return ( 
+        
     <div className="programmation">
 
-      <Stack className="btnFilters"direction="horizontal" gap={2}>
-            <Button  className="btnArtist"onClick={() => { setButton(buttonDays);
-             setToggle(filterLineUp); 
-          
-            
-               
-                }}>Artistes</Button>
+
+      <Stack className="btnFilters" direction="horizontal" gap={2}>
+            <Button  className="btnArtist"  onClick={() => { setButton(buttonDays);
+             setToggle(filterLineUp);
+             }}>Artistes</Button>
 
 
             <Button className="btnHoraires" onClick={() => {
+         
+           
+                setButton(btnDaysOff);
                 setToggle(timetable);
-                setexagerasFriday(filterExagerasFriday);
-                setexagerasSaturday(filterExagerasSaturday);
-                setexagerasSunday(filterExagerasSunday);
-
-                setexodiusFriday(filterExodiusFriday);
-                setexodiusSaturday(filterExodiusSaturday);
-                setexodiusSunday(filterExodiusSunday);
-
-                setexperienzaFriday(filterExperienzaFriday);
-                setexperienzaSaturday(filterExperienzaSaturday);
-                setexperienzaSunday(filterExperienzaSunday);
-
-                setexclammationFriday(filterExclammationFriday);
-                setexclammationSaturday(filterExclammationSaturday);
-                setexclammationSunday(filterExclammationSunday);
-
-                seteXpassaFriday(filterExpassaFriday);
-                seteXpassaSaturday(filterExpassaSaturday);
-                seteXpassaSunday(filterExpassaSunday);
-
-                setButton(btnDaysOff)
                
-            
                 }}>Horaires</Button>
+
+
         </Stack>
 
-       <div>{button}</div>
+        <div>
+
+
+        <div>{!button?buttonDays:button}</div>
     
-    <h1 >{toggle}</h1> 
-  
+         <div>{!toggle?filterLineUp:toggle}</div> 
+         </div>
 
     
     </div>  

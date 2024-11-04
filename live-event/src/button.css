@@ -4,7 +4,7 @@
     
 }
 
-.btnArtist:active{
+.btnArtist:active ,.btnArtist:focus{
     color:#E5C8C8 !important;
     background-color:#096662 !important;
 }
@@ -16,29 +16,36 @@
 
 }
 
-.btnHoraires:active{
+.btnHoraires:active, .btnHoraires:focus{
     color:#E5C8C8 !important;
     background-color:#096662 !important;
 }
 
 
 .btnLineUp{
+    font-family: Bungee;
     color:#096662 !important;
     background-color:#E5C8C8 !important;
 
 }
 
 
-.btnLineUp:active{
+.btnLineUp:active, 
+.btnLineUp:focus, .btnLineUp:target{
     color:#E5C8C8 !important;
     background-color:#096662 !important;
 }
-
 
 .btnFriday{
     color:#096662 !important;
     background-color:#E5C8C8 !important;
 
+}
+
+.btnFriday:active, 
+.btnFriday:focus{
+    color:#E5C8C8 !important;
+    background-color:#096662 !important;
 }
 
 .btnSaturday{
@@ -47,7 +54,7 @@
 
 }
 
-.btnFriday:active{
+.btnSaturday:active, .btnSaturday:focus{
     color:#E5C8C8 !important;
     background-color:#096662 !important;
 }
@@ -59,7 +66,7 @@
 
 }
 
-.btnSaturday:active{
+.btnSunday:active, .btnSunday:focus{
     color:#E5C8C8 !important;
     background-color:#096662 !important;
 }

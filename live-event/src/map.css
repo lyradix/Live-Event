@@ -14,5 +14,20 @@
 
   .MapContainer{
     height: 100vh;
+   
+  }
+
+  .btnIcon{
+background-image: url("./image/star.png");
+  }
+
+  .btnStar{
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 8px 12px;
+    border-color: transparent;
+    color: white;
+    font-size: 2vh;
+    outline: none;
   }
  

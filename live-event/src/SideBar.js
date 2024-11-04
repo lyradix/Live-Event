@@ -12,11 +12,12 @@ const Sidebar = () => {
 <div >
 <Menu>
 
-     <Card style= { { width: "0rem" }}>
+     <Card style= { { width: "0rem", flex:"start"}}>
                 <ul  className="navbar-nav ml-auto">
                     <li className="nav-item"><a className="nav-link" href="/">Accueil</a></li> 
                     <li className="nav-item"> <a className="nav-link" href="/Programmation">Programmation</a></li>
                     <li className="nav-item"> <a className="nav-link" href="/Map">Où suis-je?</a></li>
+                    <li className="nav-item"> <a className="nav-link" href="/#">Billètterie</a></li>
                  
                 </ul>
                

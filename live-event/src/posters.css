@@ -1,4 +1,4 @@
-.posters{
+.carousel{
     transform: translate(0px,200px);
 }
 
@@ -12,111 +12,6 @@
     transform: translateX(5rem);
     width:3rem;
 
-
-.cardImage {
-    opacity: 0.6;  
-    z-index: 1;
-    transform: scale(0.6) translateY(1rem);
-    margin-top: 30px;
-   transition: 1s;
-  
-   
-   &:after{
-   content:"";
-   position:relative;
-    height:2px;
-    width:100%;
-    bottom:-5rem;
-    filter:blur(4px);
-   }
-   &:nth-child(0):before{
-   
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
-    display: none;
-    transition:1s;
-   }
-   &:nth-child(1):before{
-  
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
-    display: none;
-    transition:1s;
-   }
-   &:nth-child(2):before{
-   
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
-    display: none;
-    transition:1s;
-   }
-   &:nth-child(3):before{
-   
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
-    display: none;
-    transition:1s;
-   }
-   &:nth-child(4):before{
-  
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
-    display: none;
-    transition:1s;
-   }
-   &:nth-child(5):before{
-   
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
-    display: none;
-    transition:1s;
-   }
-   &:nth-child(6):before{
-  
-    position:relative;
-    top:50%;
-    left:50%;
-    transform:translateX(-50%)
-    translateY(-50%);
-    display: none;
-    transition:1s;
-   }
-
-   &.active{
-    position:relative;
-    z-index: 3;
-    transform: scale(1) translateX(0.5rem) translateY(0);
-    opacity:1;
-    transition:1s;
-   }
-}
-}
-
-  .container.cardImage.prev,
- .container.cardImage.next{
-    position:relative;
-    z-index:1;
-    transform:scale(0.8) translateX(2rem) translateY(-1rem);
-    opacity:0.6;
-    transition:1s;
 }
  .imgPoster{
     height:300px;
@@ -126,3 +21,18 @@
    margin-left: -40px;
  }
 
+.namePoster{
+ color:#F8FD04;
+ font-size:18px ;
+ -webkit-text-stroke-width: 2px;
+ -webkit-text-stroke-color: #2CC94E;  
+ font-family: bungee,Arial, sans-serif;
+ transform: translateY(1rem);
+ z-index:2000;
+}
+
+.datePoster{
+    color:#F8FD04;
+    font-size:15px ; 
+    font-family: Montserrat Alternates,Arial, sans-serif;   
+}

@@ -14,26 +14,52 @@
 
 @import 'button.css';
 
+@import 'slide.css';
 
+@media (max-width: 600px) {
+  .article {
+    width: 100%;
+    height: auto;
+  }
+}
 .App{ 
 
     background-color: #012B29;
     display:flex;
-    flex:1;
+    flex:3;
     text-align: center;
     justify-content: center;
     justify-items: center;
+    background-position: center;
+ 
     width:100%;
     height: 100%;
     margin-bottom: 80px;
+
 }
 
+.container-sd{
+  background-color: #012B29;
+  background-position: center;
+  height: 100%;
+
+}
 /* @media screen and (max-width: 530px){
     .body{
         background-color: #012B28;
     }  
 } */
 
+
+.thislogo{
+  width:10px;
+  height:10px;
+  transform:translateY(50rem);
+  z-index:-2;
+  position:absolute;
+  margin: 0;
+  
+}
 
 .card {
   position:relative;
@@ -53,17 +79,56 @@
   white-space-collapse: collapse;
 }
 .content {
-  position: relative;
+  /* position: relative; */
   align-items: center;
-  z-index:3;
-
-
+  /* z-index:3; */
+  overflow: hidden;
+ width: 100%;
 }
 
-.programmation{
+.programmationText{
   z-index:1;
+  font-size: 45px;
+  font-family: Black And White Picture,Arial, sans-serif;
+  color:#4CB8DA;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #673CAE; 
+
 }
 
+.textPartners{
+  color:#833346;
+  font-size: 15;
+  font-family: Bungee,Arial, sans-serif;
+}
+
+.partners{
+  transform: translateX(2rem);
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btnPartner{
+  background-color: #833346;
+  border: none;
+  color: white;
+  padding: 5%;
+  text-align: center;
+  text-decoration: none;
+  width:20%;
+  margin: 1%;
+  height: 80px;
+  line-height: 50%;
+  font-size: 30%;
+transition: 1s;
+}
+
+.btnPartner:active{
+opacity: 0.8;
+transform: scale(1.5);
+}
 
 
 .text{
@@ -72,6 +137,11 @@
   margin:5px 30px 5px 30px;
   font-family: bungee,Arial, sans-serif;
   color: #ffffff;
+  z-index: 3;
+}
+
+.imgTimetable{
+border-radius: 50%;
 }
 
 .box{
@@ -100,22 +170,17 @@
 
 
 .descriptif{
-  margin-top: 300px;
   color: #E5C8C8;
-  
-}
-
-.paragraphe{
-
   font-size: 15px;
   line-height: 1.6; /* Ajuste l'espacement entre les lignes */
   letter-spacing: 0.11em; /* Ajuste l'espacement entre les lettres */
 align-items: center;
 justify-content: center;
-margin-left: 250px;
-width:40%;
+width:90%;
 font-family: bungee,Arial, sans-serif;
 color: #E5C8C8;
+transform: translateX(1rem);
+margin: 5px;
 }
 
 .concert{
@@ -207,3 +272,9 @@ padding: 10px;
   position: absolute;
   transform: translate(295px,100px)  
 } */
+
+.footer{ background-color: #7A5555;
+padding: 10px;
+text-align: center;
+color: white;
+}

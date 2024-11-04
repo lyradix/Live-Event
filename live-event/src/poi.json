@@ -4,7 +4,11 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "door"
+        "popup": "Entrée/sortie du festival",
+        "type": "start",
+        "marker-color": "#4b9baf",
+        "marker-size": "medium",
+        "marker-symbol": "gate"
       },
       "geometry": {
         "coordinates": [
@@ -17,58 +21,35 @@
     },
     {
       "type": "Feature",
-      "properties": {},
+      "properties": {
+        "popup": "Entré scènes",
+        "type": "entry",
+        "marker-color": "#4b9baf",
+        "marker-size": "medium",
+        "marker-symbol": "gate"
+      },
       "geometry": {
         "coordinates": [
-          [
-            [
-              2.199372459700726,
-              48.829906638801646
-            ],
-            [
-              2.203399923146236,
-              48.835482508306
-            ],
-            [
-              2.1996086163786686,
-              48.83632567900915
-            ],
-            [
-              2.190884909744085,
-              48.83455212743428
-            ],
-            [
-              2.1912477847633056,
-              48.83057437208305
-            ],
-            [
-              2.194240488797732,
-              48.829821853702384
-            ],
-            [
-              2.199372459700726,
-              48.829906638801646
-            ]
-          ]
+          2.19503402709961,
+          48.833565844027
         ],
-        "type": "Polygon"
+        "type": "Point"
       },
       "id": 1
     },
     {
       "type": "Feature",
       "properties": {
-        "marker-color": "#d73c9e",
+        "popup": "Point restauration",
+        "type": "snack",
+        "marker-color": "#e1870f",
         "marker-size": "medium",
-        "marker-symbol": "star",
-        "popup": "wow",
-        "name": "something",
-        "type": "scène"
+        "marker-symbol": "restaurant"
       },
       "geometry": {
         "coordinates": [
-          2.199746844660922,
-          48.834318740793606
+          2.19642877578735,
+          48.8341308201092
         ],
         "type": "Point"
       },
@@ -77,19 +58,713 @@
     {
       "type": "Feature",
       "properties": {
-        "type": "scène",
-        "marker-color": "#d067b4",
+        "marker-color": "#ff870f",
         "marker-size": "medium",
-        "marker-symbol": "circle"
+        "marker-symbol": "restaurant",
+        "type": "snack",
+        "popup": "Point restauration"
       },
       "geometry": {
         "coordinates": [
-          2.197107064095036,
-          48.8354357975185
+          2.192414634227049,
+          48.83544600108655
         ],
         "type": "Point"
       },
       "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Point restauration",
+        "type": "snack",
+        "marker-color": "#ff870f",
+        "marker-size": "medium",
+        "marker-symbol": "restaurant"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19685792922973,
+          48.83615055749969
+        ],
+        "type": "Point"
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Point restauration C",
+        "type": "snack",
+        "marker-color": "#ff870f",
+        "marker-size": "medium",
+        "marker-symbol": "restaurant"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19404697418212,
+          48.8331138585738
+        ],
+        "type": "Point"
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "eXclammation !",
+        "type": "bigstar",
+        "marker-color": "#d21e96",
+        "marker-size": "medium",
+        "marker-symbol": "theatre"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19488382339477,
+          48.8356420998122
+        ],
+        "type": "Point"
+      },
+      "id": 6
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "eXageras",
+        "type": "scène",
+        "marker-color": "#d21e96",
+        "marker-size": "medium",
+        "marker-symbol": "theatre"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19194412231445,
+          48.8356562237065
+        ],
+        "type": "Point"
+      },
+      "id": 7
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "eXodius",
+        "type": "scène",
+        "marker-color": "#d21e96",
+        "marker-size": "medium",
+        "marker-symbol": "theatre"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19866037368774,
+          48.836094062456
+        ],
+        "type": "Point"
+      },
+      "id": 8
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "eXperienza",
+        "type": "scène",
+        "marker-color": "#d21e96",
+        "marker-size": "medium",
+        "marker-symbol": "theatre"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19878911972045,
+          48.8348935277137
+        ],
+        "type": "Point"
+      },
+      "id": 9
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "eXpassa",
+        "type": "scène",
+        "marker-color": "#d21e96",
+        "marker-size": "medium",
+        "marker-symbol": "theatre"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19400405883789,
+          48.8343568087582
+        ],
+        "type": "Point"
+      },
+      "id": 10
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Toilettes",
+        "type": "wc",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "toilet"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19754457473754,
+          48.8343850572676
+        ],
+        "type": "Point"
+      },
+      "id": 11
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Toilettes",
+        "type": "wc",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "toilet"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19303846359252,
+          48.834865279491
+        ],
+        "type": "Point"
+      },
+      "id": 12
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Toilettes",
+        "type": "scène",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "toilet"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19891786575317,
+          48.8353878690331
+        ],
+        "type": "Point"
+      },
+      "id": 13
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Toilettes",
+        "type": "wc",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "toilet"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19419717788696,
+          48.8300063481985
+        ],
+        "type": "Point"
+      },
+      "id": 14
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Toilettes",
+        "type": "wc",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "toilet"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19029188156127,
+          48.8333257272627
+        ],
+        "type": "Point"
+      },
+      "id": 15
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Toilettes",
+        "type": "wc",
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "marker-symbol": "toilet"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19265222549438,
+          48.8333116027113
+        ],
+        "type": "Point"
+      },
+      "id": 16
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "camping A",
+        "type": "camping",
+        "marker-color": "#7d5a28",
+        "marker-size": "medium",
+        "marker-symbol": "campsite"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19099998474121,
+          48.8334810970651
+        ],
+        "type": "Point"
+      },
+      "id": 17
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "camping B",
+        "type": "camping",
+        "marker-color": "#7d5a28",
+        "marker-size": "medium",
+        "marker-symbol": "campsite"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19205141067504,
+          48.8328454902816
+        ],
+        "type": "Point"
+      },
+      "id": 18
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "camping C",
+        "type": "camping",
+        "marker-color": "#7d5a28",
+        "marker-size": "medium",
+        "marker-symbol": "campsite"
+      },
+      "geometry": {
+        "coordinates": [
+          2.1918,
+          48.8336
+        ],
+        "type": "Point"
+      },
+      "id": 19
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "camping D",
+        "type": "camping",
+        "marker-color": "#7d5a28",
+        "marker-size": "medium",
+        "marker-symbol": "campsite"
+      },
+      "geometry": {
+        "coordinates": [
+          2.1911072731018,
+          48.8328313655949
+        ],
+        "type": "Point"
+      },
+      "id": 20
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "coin médical",
+        "type": "medical",
+        "marker-color": "#ff0000",
+        "marker-size": "medium",
+        "marker-symbol": "hospital"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19630002975463,
+          48.8336788397531
+        ],
+        "type": "Point"
+      },
+      "id": 21
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "coin médical",
+        "type": "medical",
+        "marker-color": "#ff0000",
+        "marker-size": "medium",
+        "marker-symbol": "hospital"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19280242919921,
+          48.8331562323832
+        ],
+        "type": "Point"
+      },
+      "id": 22
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "coin médical",
+        "type": "medical",
+        "marker-color": "#ff0000",
+        "marker-size": "medium",
+        "marker-symbol": "hospital"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19522714614868,
+          48.830924496324
+        ],
+        "type": "Point"
+      },
+      "id": 23
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Exit",
+        "type": "exit",
+        "marker-color": "#2d642d",
+        "marker-size": "medium",
+        "marker-symbol": "arrow"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19239473342895,
+          48.8352748771616
+        ],
+        "type": "Point"
+      },
+      "id": 24
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Exit",
+        "type": "exit",
+        "marker-color": "#2d642d",
+        "marker-size": "medium",
+        "marker-symbol": "arrow"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19904661178588,
+          48.8360375673485
+        ],
+        "type": "Point"
+      },
+      "id": 25
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "popup": "Exit",
+        "marker-color": "#2d642d",
+        "marker-size": "medium",
+        "marker-symbol": "arrow",
+        "type": "exit"
+      },
+      "geometry": {
+        "coordinates": [
+          2.19717979431152,
+          48.8342579388497
+        ],
+        "type": "Point"
+      },
+      "id": 26
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#7d5a28",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.1914197593346216,
+              48.8334127699232
+            ],
+            [
+              2.1914197593346216,
+              48.83261840189496
+            ],
+            [
+              2.192587071374845,
+              48.83261840189496
+            ],
+            [
+              2.192587071374845,
+              48.8334127699232
+            ],
+            [
+              2.1914197593346216,
+              48.8334127699232
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 28
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#7d5a28",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.1904036945229564,
+              48.83411817277201
+            ],
+            [
+              2.1904036945229564,
+              48.83342017768331
+            ],
+            [
+              2.191367409858856,
+              48.83342017768331
+            ],
+            [
+              2.191367409858856,
+              48.83411817277201
+            ],
+            [
+              2.1904036945229564,
+              48.83411817277201
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 29
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#7d5a28",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.1903454665519746,
+              48.83336765896283
+            ],
+            [
+              2.1903454665519746,
+              48.832672686055645
+            ],
+            [
+              2.1913830389083557,
+              48.832672686055645
+            ],
+            [
+              2.1913830389083557,
+              48.83336765896283
+            ],
+            [
+              2.1903454665519746,
+              48.83336765896283
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 30
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "stroke": "#555555",
+        "stroke-width": 2,
+        "stroke-opacity": 1,
+        "fill": "#7d5a28",
+        "fill-opacity": 0.5
+      },
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.191449236569781,
+              48.83408276752354
+            ],
+            [
+              2.191449236569781,
+              48.83346514675435
+            ],
+            [
+              2.192481347709787,
+              48.83346514675435
+            ],
+            [
+              2.192481347709787,
+              48.83408276752354
+            ],
+            [
+              2.191449236569781,
+              48.83408276752354
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      },
+      "id": 31
+    },
+    {
+      "type": "Feature",
+      "properties": {},
+      "geometry": {
+        "coordinates": [
+          [
+            [
+              2.1937691652531157,
+              48.830039337747706
+            ],
+            [
+              2.1945028558041884,
+              48.82978634510218
+            ],
+            [
+              2.197752056815119,
+              48.83229321584068
+            ],
+            [
+              2.195516047516577,
+              48.833627095931945
+            ],
+            [
+              2.196494301584579,
+              48.83332812589563
+            ],
+            [
+              2.19806649562301,
+              48.83424802799831
+            ],
+            [
+              2.199603752014866,
+              48.8352599008019
+            ],
+            [
+              2.1995688143693712,
+              48.83638673509796
+            ],
+            [
+              2.196005174550578,
+              48.83638673509796
+            ],
+            [
+              2.193419788799787,
+              48.836110778022004
+            ],
+            [
+              2.191463280663669,
+              48.835880812630904
+            ],
+            [
+              2.1926860982487995,
+              48.834776964058676
+            ],
+            [
+              2.194048666415597,
+              48.83401805405626
+            ],
+            [
+              2.194521243545836,
+              48.83380004863329
+            ],
+            [
+              2.1934271448298546,
+              48.83368801964724
+            ],
+            [
+              2.192600492467079,
+              48.834136134088254
+            ],
+            [
+              2.1908499345226744,
+              48.834392197683655
+            ],
+            [
+              2.1897801491116127,
+              48.834136134088254
+            ],
+            [
+              2.189634269282976,
+              48.83325590549745
+            ],
+            [
+              2.190047595464762,
+              48.83261572953589
+            ],
+            [
+              2.1912632607036926,
+              48.83231164308867
+            ],
+            [
+              2.1926977456866723,
+              48.83239166601675
+            ],
+            [
+              2.193670277878141,
+              48.832791778741125
+            ],
+            [
+              2.195129076165273,
+              48.83312787095997
+            ],
+            [
+              2.1964663079286595,
+              48.83223162003276
+            ],
+            [
+              2.194594183459742,
+              48.831271333390134
+            ],
+            [
+              2.193670277878141,
+              48.830407059675736
+            ],
+            [
+              2.193597337963382,
+              48.830247007352085
+            ],
+            [
+              2.1937691652531157,
+              48.830039337747706
+            ]
+          ]
+        ],
+        "type": "Polygon"
+      }
     }
   ]
 }
