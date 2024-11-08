@@ -1,4 +1,5 @@
-import ResponsiveCarousel from './carousel'
+import Poster from './carousel'
+import Slide from './slide'
 
 const Home = () => {
 
@@ -7,7 +8,8 @@ const Home = () => {
        return ( 
         <div className="Home">
         <h1 className='programmationText'>Programmation</h1>
-        <ResponsiveCarousel />
+        <Poster />
+ 
         <h2 className='textPartners'>Partenaires</h2>
         <div className="partners">
            <button className='btnPartner'><img></img></button>

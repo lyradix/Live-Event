@@ -5,12 +5,17 @@
   /* Our sidebar item styling */
   text-decoration: none;
   margin-bottom: 10px;
-  color: #ffffff;
+  color: #096662;
   transition: color 0.2s;
   
 }
 
+div.card{
+  position: absolute;
+  background-color: #096662;
+  transform: translateX(16rem);
 
+}
 
 /* The rest copied directly from react-burger-menu docs */
 
@@ -140,7 +145,7 @@
        
       .navbar-nav{
           
-       
+      
          width:250px;
         z-index:1;
         position: fixed; 
@@ -185,6 +190,7 @@
         z-index: 0;
       }
       .nav-item {
+       opacity: 1;
        flex:row;
        position:relative;
         padding:10px;

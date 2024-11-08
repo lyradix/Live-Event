@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+
 /* base styles */
 @import 'normalize.css';
 
@@ -61,13 +62,13 @@
   
 }
 
-.card {
+/* .card {
   position:relative;
   height:0px;
   color: #143d3b;
   display: flex;
   flex-direction: row;
-}
+} */
 .collapse{
   position:relative;
   height:0px;
@@ -100,10 +101,11 @@
   color:#833346;
   font-size: 15;
   font-family: Bungee,Arial, sans-serif;
+  transform: translateY(10rem);
 }
 
 .partners{
-  transform: translateX(2rem);
+  transform: translateX(2rem)translateY(10rem);
   display: flex;
   flex-wrap: wrap;
   text-align: center;
@@ -179,7 +181,7 @@ justify-content: center;
 width:90%;
 font-family: bungee,Arial, sans-serif;
 color: #E5C8C8;
-transform: translateX(1rem);
+transform: translateX(1rem)translatey(12rem);
 margin: 5px;
 }
 
@@ -212,18 +214,15 @@ text-align: center;
   margin-top: 130%;
   margin-left: 50%;
   transform: translate(-50%, -50%);
+  
 }
 
 .imgConcert{
-border-radius: 10%;
+border-radius: 28px;
 align-items: center;
 padding: 10px;
+object-fit: cover;
 
-
-}
-
-.blah { 
-  position:relative; 
 }
 
 .btnFilters{
@@ -247,8 +246,54 @@ padding: 10px;
 }
 
 
+.filterScene{
+  display: none;
+ position: absolute;
+ display: inline-block;
+ padding: 50px;
+ margin: 50px;
+z-index: 2;
+transform: translateX(-103%)translateY(-3.2rem);
+box-shadow: 0px 8px 50px 0px rgba(15, 15, 15, 0.2);
+background-color: #201b5a;
+border-radius: 2px;
+opacity: 0.9;
+z-index: 4;
+transition: ease;
+}
 
+/* .dropdown:active .filterScene{
+  display: block;
+} */
+.dropbtn{
+  color:#096662 !important;
+  background-color:#E5C8C8 !important;
+}
 
+.dropbtn:focus{
+  color:#E5C8C8 !important;
+  background-color:#096662 !important;
+}
+
+.overlayBoxDropbtn{
+  position: absolute;
+  background-color:red;
+  opacity: 0;
+  height:3rem;
+  width: 5rem;
+  z-index: 3;
+  transform: translateX(19rem)translateY(-4.5rem);
+}
+
+.overlayBox{
+  position: absolute;
+  background-color:blue;
+  opacity: 0;
+  height:100vh;
+  width: 100vh;
+  z-index: 3;
+  transform: translateY(2rem);
+}
 
 
 /* .currentImage{

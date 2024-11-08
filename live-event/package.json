@@ -10,7 +10,6 @@
     "bootstrap": "^5.3.3",
     "carousel": "^0.0.3",
     "flatlist-react": "^1.5.14",
-    "flowbite-react": "^0.10.2",
     "jquery": "^3.7.1",
     "leaflet": "^1.9.4",
     "leaflet-defaulticon-compatibility": "^0.1.2",

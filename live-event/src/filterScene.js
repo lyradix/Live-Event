@@ -1,12 +1,6 @@
-import { useState } from "react";
-
-const ConcertList = ({concerts, artist,jour,date,horaire,scène}) => {
-    
-
+const FilterScene = (concerts,artist,) => {
     return ( 
-
-
-    <div className="concert">
+        <div className="concert">
         <h2>{artist}</h2>
          {concerts.map((concert) => (
             <div className="concert-preview" key = {concert.id}>                
@@ -19,15 +13,12 @@ const ConcertList = ({concerts, artist,jour,date,horaire,scène}) => {
            
             {/* <button onClick={() => handleDelete (concert.id)}>Plus d'infos</button>       */}
                 
-        
-                    <h1 className="text"><a className="nav-link" href="/Artist">Plus de détails</a></h1> 
-                    
-           
+                  
             </div>
         ))}
 
-        </div>
+        </div> 
      );
 }
  
-export default ConcertList;
+export default FilterScene;

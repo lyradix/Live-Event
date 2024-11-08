@@ -1,3 +1,15 @@
+
+.box{
+    margin: auto;
+    align-items: center;
+    position: relative;
+}
+
+.timetable{
+padding: 5%;
+}
+
+
 .boxTitle{
     position: relative;
     background-color:#096662;
