@@ -1,6 +1,6 @@
 import Poster from './carousel'
 import Slide from './slide'
-
+import { Link } from 'react-router-dom';
 const Home = () => {
 
     
@@ -12,7 +12,7 @@ const Home = () => {
  
         <h2 className='textPartners'>Partenaires</h2>
         <div className="partners">
-           <button className='btnPartner'><img></img></button>
+           <button className='btnPartner'><Link className="nav-link" to="/Artist"><img></img></Link></button>
            <button  className='btnPartner'><img></img></button>
            <button  className='btnPartner'><img></img></button>
            <button  className='btnPartner'><img></img></button>

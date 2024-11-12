@@ -18,29 +18,35 @@ const Poster = () => {
 
 
    useEffect(() => {
-    
+
     // go and fetch the json data in the localhost
 fetch('http://localhost:8000/concerts').then(res => {
     return res.json();
 }).then((data) => {
  setConcerts(data);
 
-},-50)
-},[index])
+},3000)
+},[index]);
 
 
     useEffect(() => {
       setTimeout(() => {
-        setIndex((index +29) % concerts.length);
+        setIndex((index + 1) % concerts.length);
         console.log(concerts.length);
       },1500);
     }, [concerts]);
 
 
+    // useEffect(() => {
+    //   setTimeout(() => {
+      
+    //   },1500);
+    // }, [index]);
 
-    useEffect(()=>{
-      console.log(concerts)
-    },[])
+
+    // useEffect(()=>{
+    //   console.log(concerts)
+    // },[])
 
 
 
@@ -53,11 +59,11 @@ fetch('http://localhost:8000/concerts').then(res => {
        <img className="poster poster--right" src={image3} alt="imgPoster"></img>  */}
 
 {/* <button onClick={()=>{setIndex((index + 1) % concerts.length);}}>clickright</button> */}
-
+<Stack className="btnFilters" direction="horizontal" gap={5}>
 {concerts.map((concert, i) => {
   
-          const indexLeft = mod(index - 29, concerts.length);
-          const indexRight = mod(index + 29, concerts.length);
+          const indexLeft = mod(index - 1, concerts.length);
+          const indexRight = mod(index + 1, concerts.length);
 
           let className = "poster";
 
@@ -84,6 +90,7 @@ fetch('http://localhost:8000/concerts').then(res => {
             </div>
           );
         })}
+    </Stack>
     </div>
 
    );

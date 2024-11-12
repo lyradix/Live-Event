@@ -1,14 +1,17 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const ConcertList = ({concerts, artist,jour,date,horaire,scène}) => {
+const ConcertList = ({concerts, artist,jour,date,horaire,scène, Description,Source, Lien }) => {
     
 
     return ( 
 
 
     <div className="concert">
+      
         <h2>{artist}</h2>
          {concerts.map((concert) => (
+            <Link className="nav-link" to={`/Artist/${concert.id}`}>
             <div className="concert-preview" key = {concert.id}>                
             <h2 className="artistName">{concert.artist}</h2>
             {/* pour récuperer la date seulement */}
@@ -19,13 +22,10 @@ const ConcertList = ({concerts, artist,jour,date,horaire,scène}) => {
            
             {/* <button onClick={() => handleDelete (concert.id)}>Plus d'infos</button>       */}
                 
-        
-                    <h1 className="text"><a className="nav-link" href="/Artist">Plus de détails</a></h1> 
-                    
-           
             </div>
+            </Link>
         ))}
-
+    
         </div>
      );
 }

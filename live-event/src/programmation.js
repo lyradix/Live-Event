@@ -5,14 +5,14 @@ import Timetable from "./timetable";
 import FlatList from "flatlist-react"
 import TouchableOpacity from 'react-touchableopacity'
 import FilterToggle from "./showFilterToggle";
-
+import FetchData from "./fetchData";
 
 
 const Programmation = () => {
 
     
     const [pending, setpending] = useState(true);
-    const[concerts, setConcerts] = useState (null);
+
     const[toggle, setToggle] = useState (null);
     const[button, setButton] = useState (null);
     const[stages, setStages] = useState (null);
@@ -20,19 +20,19 @@ const Programmation = () => {
 
 
 
-    
-     useEffect(() => {
-        setTimeout(() => {
-            // go and fetch the json data in the localhost
-        fetch('http://localhost:8000/concerts').then(res => {
-            return res.json();
-        }).then((data) => {
-            setConcerts(data);
-            setpending(false)
-        })
-        })
+    const {data:concerts} = FetchData('http://localhost:8000/concerts'); 
+    //  useEffect(() => {
+    //     setTimeout(() => {
+    //         // go and fetch the json data in the localhost
+    //     fetch('http://localhost:8000/concerts').then(res => {
+    //         return res.json();
+    //     }).then((data) => {
+    //         setConcerts(data);
+    //         setpending(false)
+    //     })
+    //     })
         
-    },[])
+    // },[])
 
   
 
@@ -147,14 +147,9 @@ const scenes =  <div className="filterScene" onClick={()=>{
     const overlayBox = <div className="overlayBox" onClick={()=>{ 
         setStages(!scenes);
         setOverlay(!overlayBox);
-        setButton(!overlayBoxDropbtn)
+   
         }}></div>
 
-        const overlayBoxDropbtn = <div className="overlayBoxDropbtn" onClick={()=>{ 
-            setStages(!scenes);
-            setOverlay(!overlayBox);
-            setButton(!overlayBoxDropbtn)
-            }}></div>
 
 
     return ( 
@@ -183,11 +178,11 @@ const scenes =  <div className="filterScene" onClick={()=>{
                 <div class="dropdown">
                 <Button className="dropbtn" onClick={() => {
                 
-                        setStages(scenes);
+                        setStages(!stages?scenes:!scenes);
                         setOverlay(overlayBox)
-                        setButton(overlayBoxDropbtn)
+                        
                      
-                    }}>Scènes</Button>
+                    }}><div></div>Scènes</Button>
                 <div className="dropdown-content">{stages}</div> 
                
                 </div>

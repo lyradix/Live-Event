@@ -239,7 +239,7 @@
       "type": "Feature",
       "properties": {
         "popup": "Toilettes",
-        "type": "scène",
+        "type": "wc",
         "marker-color": "#7e7e7e",
         "marker-size": "medium",
         "marker-symbol": "toilet"

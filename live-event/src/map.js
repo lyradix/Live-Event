@@ -5,7 +5,7 @@ import L from 'leaflet';
 import {divIcon, point} from 'leaflet';
 import poi from './poi.json'
 import stageIcon from './image/star.png'
-import {useState} from "react";
+import {useState, useCallback, useEffect} from "react";
 import toiletIcon from './image/toilet.png'
 import exitIcon from './image/exit.png'
 import medicalIcon from './image/hospital.png'
@@ -70,7 +70,7 @@ const Map = () => {
         //     return L.marker(latlng, { icon: customMarkerIcon(properties.Name) });
         //   };
         
-    const customIcon = new L.Icon ({
+    let customIcon = new L.Icon ({
         iconUrl:stageIcon,
         iconSize:[38, 38]
 
@@ -110,7 +110,7 @@ const Map = () => {
         iconUrl:campIcon,
         iconSize:[35,35]
     })
-    const customIconBigStar = new L.Icon ({
+    let customIconBigStar = new L.Icon ({
         iconUrl:bigStarIcon,
         iconSize:[50,50]
     })
@@ -118,93 +118,87 @@ const Map = () => {
 
 
 
-      
-           
-
-let starBtn = 'isActive' 
-
-
-
     return (
         
   
+  
+       <div className='mapWrap'>
 
-       <div>
 
+<MapContainer center={[48.833565844027000, 2.1950340270996100]} zoom={15} 
 
-         
-        <MapContainer center={[48.833565844027000, 2.1950340270996100]} zoom={15} 
+style={{transform:"translate(0rem,5rem)", height: "70vh", width:"100%"}}>
+    <TileLayer
+        url="https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=0PDdyawvaHZFff4J0rGo"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    />
 
-        style={{transform:"translate(0rem,5rem)", height: "70vh", width:"45vh"}}>
-            <TileLayer
-                url="https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=0PDdyawvaHZFff4J0rGo"
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            
- 
-        <GeoJSON data={poi}  
-    onEachFeature={(feature, layer) => {
+  
+<GeoJSON data={poi}  
+onEachFeature={(feature, layer) => {
 if (feature.properties && feature.properties.popup) {
-   layer.bindPopup(feature.properties.popup , feature.properties.name);
-   
+layer.bindPopup(feature.properties.popup , feature.properties.name);
+
 }
 
 }} 
 
-    pointToLayer={(feature, latlng) => {
+pointToLayer={(feature, latlng) => {
 
 
-       if ((feature.properties && feature.properties.type === 'scène' ) && (starBtn === 'isActive')) 
-       return L.marker(latlng,{
-           icon:customIcon
-       });
-      
-       else if
-       (feature.properties && feature.properties.type === 'wc')
-       return L.marker(latlng,{
-           icon:customIconToilet 
-       })
-       else if
-       (feature.properties && feature.properties.type === 'exit')
-       return L.marker(latlng,{
-           icon:customIconExit 
-       })
-       else if
-       (feature.properties && feature.properties.type === 'medical')
-       return L.marker(latlng,{
-           icon:customIconMedical 
-       })
-       else if
-       (feature.properties && feature.properties.type === 'snack')
-       return L.marker(latlng,{
-           icon:customIconSnack 
-       })
-       else if
-       (feature.properties && feature.properties.type === 'start')
-       return L.marker(latlng,{
-           icon:customIconStart 
-       })
-       else if
-       (feature.properties && feature.properties.type === 'entry')
-       return L.marker(latlng,{
-           icon:customIconEntry
-       })
-       else if
-       (feature.properties && feature.properties.type === 'camping')
-       return L.marker(latlng,{
-           icon:customIconCamp
-       })
-       else if
-       (feature.properties && feature.properties.type === 'bigstar')
-       return L.marker(latlng,{
-           icon:customIconBigStar
-       })
-   }}
-   
+if ((feature.properties && feature.properties.type === 'scène' )) 
+return L.marker(latlng,{
+   icon:customIcon
+});
 
- />
-        </MapContainer>
+else if
+(feature.properties && feature.properties.type === 'wc' )
+return L.marker(latlng,{
+   icon:customIconToilet 
+})
+else if
+(feature.properties && feature.properties.type === 'exit')
+return L.marker(latlng,{
+   icon:customIconExit 
+})
+else if
+(feature.properties && feature.properties.type === 'medical')
+return L.marker(latlng,{
+   icon:customIconMedical 
+})
+else if
+(feature.properties && feature.properties.type === 'snack')
+return L.marker(latlng,{
+   icon:customIconSnack 
+})
+else if
+(feature.properties && feature.properties.type === 'start')
+return L.marker(latlng,{
+   icon:customIconStart 
+})
+else if
+(feature.properties && feature.properties.type === 'entry')
+return L.marker(latlng,{
+   icon:customIconEntry
+})
+else if
+(feature.properties && feature.properties.type === 'camping')
+return L.marker(latlng,{
+   icon:customIconCamp
+})
+else if
+(feature.properties && feature.properties.type === 'bigstar' )
+return L.marker(latlng,{
+   icon:customIconBigStar
+})
+}}
 
+/>
+
+
+</MapContainer>
+
+         
         </div>
     );
 };

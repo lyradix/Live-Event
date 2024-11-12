@@ -1,30 +1,35 @@
 import { Collapse, Nav,Card } from "react-bootstrap";
 import React, { useState } from "react";
 import { slide as Menu } from "react-burger-menu";
+import { Link } from "react-router-dom";
 
 
 
 
 const Sidebar = () => {
 
+const [menuvisible, setMenuVisible] = useState(true);
+
+const menu = <Menu>
+
+<Card style= { { width: "0rem", flex:"start"}}>
+           <ul  className="navbar-nav ml-auto">
+               <li className="nav-item"><Link to="/" className="nav-link" >Accueil</Link></li> 
+               <li className="nav-item"> <Link to="/Programmation" className="nav-link" >Programmation</Link></li>
+               <li className="nav-item"> <Link to="/Map" className="nav-link" >Où suis-je?</Link></li>
+               <li className="nav-item"> <Link to="/#" className="nav-link" >Billetterie</Link></li>
+            
+           </ul>
+          
+
+ </Card>
+
+ </Menu>
 
     return ( 
 <div >
-<Menu>
-
-     <Card style= { { width: "0rem", flex:"start"}}>
-                <ul  className="navbar-nav ml-auto">
-                    <li className="nav-item"><a className="nav-link" href="/">Accueil</a></li> 
-                    <li className="nav-item"> <a className="nav-link" href="/Programmation">Programmation</a></li>
-                    <li className="nav-item"> <a className="nav-link" href="/Map">Où suis-je?</a></li>
-                    <li className="nav-item"> <a className="nav-link" href="/#">Billètterie</a></li>
-                 
-                </ul>
-               
-
-      </Card>
-
-      </Menu>
+ 
+ {menu}
      
 </div>
      );

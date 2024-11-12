@@ -1,40 +1,33 @@
 import { useState, useEffect, useRef } from "react";
-import { Button,Stack} from 'react-bootstrap';
-import ConcertList from "./ConcertList";
-import Timetable from "./timetable";
 
 
 
-const FetchData = () => {
+
+const FetchData = (url) => {
 
     
  
-    const[toggle, setToggle] = useState (null);
-    const[button, setButton] = useState (null);
+    const[data, setData] = useState (null);
+    const[pending, setpending] = useState (null);
 
-    const [pending, setpending] = useState(true);
-    const[concerts, setConcerts] = useState (null);
 
 
     
      useEffect(() => {
         setTimeout(() => {
             // go and fetch the json data in the localhost
-        fetch('http://localhost:8000/concerts').then(res => {
+        fetch(url).then(res => {
             return res.json();
         }).then((data) => {
-            setConcerts(data);
+            setData(data);
             setpending(false)
-        })
+    })
         })
         
-    },[])
+    },[url])
 
   
-    // return ( 
-   
-    //     <div></div>
-    // );
+return{data}
 }
  
 export default FetchData;

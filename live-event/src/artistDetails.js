@@ -1,46 +1,44 @@
-import { useState, useEffect, useRef } from "react";
-import ConcertList from "./ConcertList";
+import { useParams } from "react-router-dom";
+import FetchData from "./fetchData";
+import { Link } from "react-router-dom";
 
-const ArtistDetails = ({concert,artist}) => {
+
+
+
+const ArtistDetails = () => {
     
-    const[concerts, setConcerts] = useState ([]);
-    
-   useEffect(() => {
+    // const[data, setData] = useState ([]);
+
+    const {id} = useParams();
+    const {data:concert} = FetchData('http://localhost:8000/concerts/' + id );
+
+//    useEffect(() => {
     
     // go and fetch the json data in the localhost
-fetch('http://localhost:8000/concerts').then(res => {
-    return res.json();
-}).then((ConcertList) => {
- setConcerts(ConcertList);
+// fetch('http://localhost:8000/concerts/'+id).then(res => {
+//     return res.json();
+// }).then((concerts) => {
+//  setConcerts(concerts);
 
-})
-},[])
+// })
+// },[])
 
 
     return ( 
         <div className="artistDetails">
-               
-         {concerts.map((concert) => (
-            <div className="concert-preview" key = {concert.id}>                
-            <h2 className="artistName">{concert.artist}</h2>
-            {/* pour récuperer la date seulement */}
-            <p className="detailsPicture">{concert.startTime.substring(0, 10)}</p>
-            <p className="scenePicture">{concert.scène}</p>
-            <p className="text">{concert.Description}</p>
-            <p className="text">{concert.Source}</p>
-            <p className="text">{concert.Lien}</p>
-            <img className="imgConcert" src={`image-${concert.id}.jpg`} alt="artist" height='600px' width='380px'/> 
-              {/*template string pour extraire l'image correspondante  */}
-           
-            {/* <button onClick={() => handleDelete (concert.id)}>Plus d'infos</button>       */}
-                
-        
-                    <h2><a className="nav-link" href="/Programmation">retour</a></h2> 
-                    
-           
+
+{concert && (
+         <article>
+            <p className="text">{concert.Description}</p>        
+            <p className="text">{concert.Source}</p>        
+            </article>
+            
+)                    
+}
+
+<button><Link className="nav-link" to="/Programmation">retour</Link></button> 
             </div>
-        ))}
-        </div>
+
      );
 }
  

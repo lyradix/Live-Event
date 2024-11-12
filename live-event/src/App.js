@@ -3,11 +3,12 @@ import Programmation from './programmation';
 import Map from './map';
 import Sidebar from './SideBar';
 import ArtistDetails from './artistDetails';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
 
 import { useState, useEffect, useRef } from "react";
 
@@ -53,14 +54,14 @@ function App() {
     
       <Sidebar className="sidebar"/>
      <div className='content'>
-      <div >
-        <img src="Preview.png" alt="logo" onClick={()=><Route path="/" element={<Home/>}/>}/>
+     <div>
+        <img src="Preview.png"  alt="logo" ></img>
       </div>
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/Programmation" element={<Programmation/>}/>
       <Route path="/Map" element={<Map/>}/>
-      <Route path="/Artist" element={<ArtistDetails/>}/>
+      <Route path="/Artist/:id" element={<ArtistDetails/>}/>
       </Routes>  
      </div>
     </div>
