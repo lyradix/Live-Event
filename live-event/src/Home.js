@@ -1,26 +1,46 @@
 import Poster from './carousel'
+import MainPartners from './mainPartners';
 import Slide from './slide'
 import { Link } from 'react-router-dom';
+import imageA from './image/image-a.png'
+import FetchData from './fetchData';
+
 const Home = () => {
 
+    const {data:partners} = FetchData('http://localhost:8000/partners'); 
+    const {data:concerts} = FetchData('http://localhost:8000/concerts'); 
     
+
+    const partnersList = partners && <MainPartners partners={partners.filter((partner)=>partner.frontPage === true)} />
+    const carouselList = concerts && <Poster concerts={concerts.filter((concert)=> concert.scène === 'eXtravaganza !')} scene = "filtre pour jour"/>
+
 
        return ( 
         <div className="Home">
         <h1 className='programmationText'>Programmation</h1>
-        <Poster />
+        {/* <Poster /> */}
+
+        {/* {carouselList} */}
  
-        <h2 className='textPartners'>Partenaires</h2>
-        <div className="partners">
+        <h2 className='textPartners'>Annonceurs</h2>
+       {/* {partners.map((partner) => (  */}
+
+    {partnersList}
+
+
+        {/* <div className="partners">
+ 
            <button className='btnPartner'><Link className="nav-link" to="/Artist"><img></img></Link></button>
+           <button  className='btnPartner'><img className="imgPartner" src={imageA} alt="Mobalpa"></img></button>
            <button  className='btnPartner'><img></img></button>
            <button  className='btnPartner'><img></img></button>
            <button  className='btnPartner'><img></img></button>
            <button  className='btnPartner'><img></img></button>
            <button  className='btnPartner'><img></img></button>
            <button  className='btnPartner'><img></img></button>
-           <button  className='btnPartner'><img></img></button>
-        </div>
+   
+           </div> */}
+
 
         <article className="descriptif">
             <h2>Qui nous sommes...</h2>        

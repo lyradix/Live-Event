@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const ConcertList = ({concerts, artist,jour,date,horaire,scène, Description,Source, Lien }) => {
+const ConcertList = ({concerts, artist,jour,date,horaire,scène, Description,Source, Lien, image }) => {
     
 
     return ( 
@@ -17,7 +17,7 @@ const ConcertList = ({concerts, artist,jour,date,horaire,scène, Description,Sou
             {/* pour récuperer la date seulement */}
             <p className="detailsPicture">{concert.startTime.substring(0, 10)}</p>
             <p className="scenePicture">{concert.scène}</p>
-            <img className="imgConcert" src={`image-${concert.id}.jpg`} alt="artist" height='600px' width='380px'/> 
+            <img className="imgConcert" src={`image-${concert.id}.jpg`} alt="artist" /> 
               {/*template string pour extraire l'image correspondante  */}
            
             {/* <button onClick={() => handleDelete (concert.id)}>Plus d'infos</button>       */}

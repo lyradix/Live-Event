@@ -1,16 +1,18 @@
 import Home from './Home';
 import Programmation from './programmation';
-import Map from './map';
+import MapWrap from './map';
 import Sidebar from './SideBar';
 import ArtistDetails from './artistDetails';
 import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
+import {Container, Card} from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
-
 import { useState, useEffect, useRef } from "react";
+import NavBar from './navBar';
+import Info from './info';
+import Footer from './footer';
+import Partners from './partners';
 
 
 // import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
@@ -21,6 +23,8 @@ import { useState, useEffect, useRef } from "react";
 
 
 function App() {
+
+  
 
   // const [pending, setpending] = useState(true);
   // const[concerts, setConcerts] = useState (null);
@@ -47,40 +51,30 @@ function App() {
   
   return (
  
-    <Router>
-     <Container fluid="sd">
 
+    <Router>
+    
+
+      {/* <Sidebar className="sidebar"/> */}
+  
+      <Container fluid="sd">
+ 
     <div className="App">
     
-      <Sidebar className="sidebar"/>
+
      <div className='content'>
-     <div>
-        <img src="Preview.png"  alt="logo" ></img>
-      </div>
+     <NavBar/>
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/Programmation" element={<Programmation/>}/>
-      <Route path="/Map" element={<Map/>}/>
+      <Route path="/Map" element={<MapWrap/>}/>
       <Route path="/Artist/:id" element={<ArtistDetails/>}/>
+      <Route path="/Parteraires" element={<Partners/>}/>
+      <Route path="/info" element={<Info/>}/>
       </Routes>  
      </div>
     </div>
-    <footer bgDark className='footer'>
-      <div className="w-full">
-        <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
-          <div>
-            <h3>footer</h3>
-            <ul col>
-          
-              <a href="#">Blog</a>
-            </ul>
-          </div>
-               
-    
-     
-        </div>
-      </div>
-    </footer>
+    <Footer/>
 
     </Container>
     </Router>

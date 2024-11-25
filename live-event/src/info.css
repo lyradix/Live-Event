@@ -1,0 +1,55 @@
+
+.information{
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    z-index: 0;
+    height: 100%;
+    width: 80%;
+  
+}
+
+.ulInfo{
+    position: relative;
+    justify-content: space-evenly;
+    display: inline-block;
+}
+
+.ulInfo, .liInfo{
+    width: 100%;
+    position: relative;
+    padding: auto;
+    padding-left: 0px;
+    margin: 0px;
+    background-color:#2a534c;
+    border-radius: 8px;
+    color:#2a534c;
+    font-size:15px ; 
+    font-family: bungee,Arial, sans-serif;
+    justify-content: end;
+}
+
+
+.btnInfo{
+    left:0px;
+    border-radius: 8px;
+    width: 100%;
+    color:#096662;
+    background-color:#E5C8C8 ;
+}
+
+h6{
+    display: none;
+}
+h6.open{
+    height: 15rem;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+   text-justify:newspaper;
+    background-color: #E5C8C8;
+}
+.btnretour{
+   position: relative;
+}

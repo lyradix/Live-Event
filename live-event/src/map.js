@@ -1,11 +1,11 @@
 import React from 'react';
-import { MapContainer, TileLayer, GeoJSON, Marker, Popup,} from 'react-leaflet';
+import { MapContainer, Map, TileLayer, GeoJSON, Marker, Popup,LayersControl,LayerGroup,FeatureGroup, Circle, Rectangle, leafletElement} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
+import L, { latLng } from 'leaflet';
 import {divIcon, point} from 'leaflet';
 import poi from './poi.json'
 import stageIcon from './image/star.png'
-import {useState, useCallback, useEffect} from "react";
+import {useState, useCallback, useEffect, useRef} from "react";
 import toiletIcon from './image/toilet.png'
 import exitIcon from './image/exit.png'
 import medicalIcon from './image/hospital.png'
@@ -14,6 +14,9 @@ import startIcon from './image/start.png'
 import entryIcon from './image/entry.png'
 import campIcon from './image/camping.png'
 import bigStarIcon from './image/bigstar.png'
+import FetchData from './fetchData';
+import MapList from './maplist';
+import MapLOcation from './mapLocation';
 
 
 
@@ -25,26 +28,42 @@ import bigStarIcon from './image/bigstar.png'
 
 
 
-const Map = () => {
+const MapWrap = () => {
 
+    // const mapRef = useRef();
 
+    // useEffect(()=>{
+    //     const {current = {}} = mapRef;
+    //     const {leafletElement:map} = current;
 
+    //     map.locate()
+    // },[]);
+
+    const [userLocation, setUserLocation] = useState(null);
+    
     // const setColor = ({ properties }) => {
     //     return { weight: 1 };
     //   };
 
     // const markers= [];
 
- 
+    // const popup = L.popup({
+    //     closeButton: true,
+    //     autoClose: true,
+    //     className: "custom-popup" // classname for the popup acting like a splash screen
+    // })
+    //   .setLatLng(Map.getBounds().getCenter())
+    // //   .setContent('<p>Some Disclaimer Text.</p>')
+    //   .openOn(Map);
     
     
-        delete L.Icon.Default.prototype._getIconUrl;
+    //     delete L.Icon.Default.prototype._getIconUrl;
         
-        L.Icon.Default.mergeOptions({
-          iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-          iconUrl: require('leaflet/dist/images/marker-icon.png'),
-          shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-        });
+    //     L.Icon.Default.mergeOptions({
+    //       iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+    //       iconUrl: require('leaflet/dist/images/marker-icon.png'),
+    //       shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+    //     });
 
         // const iconDoor = new L.Icon({
         //     iconUrl: require('../public/mardi-gras.png'),
@@ -69,23 +88,29 @@ const Map = () => {
         //   const setIcon = ({ properties }, latlng) => {
         //     return L.marker(latlng, { icon: customMarkerIcon(properties.Name) });
         //   };
-        
-    let customIcon = new L.Icon ({
-        iconUrl:stageIcon,
-        iconSize:[38, 38]
-
-    });
+ 
+        const {data:features} = FetchData('http://localhost:8001/features');   
+        const [map, setMap] = useState(null);
+        const [position, setPosition] = useState(null);
 
    
-
+    
+    const customIcon = new L.Icon ({
+        iconUrl:stageIcon,
+        iconSize:[38, 38],
+   
+    });
+   
     const customIconToilet = new L.Icon ({
         iconUrl:toiletIcon,
-        iconSize:[30,30]
+        iconSize:[30,30],
+
     })
 
     const customIconExit = new L.Icon ({
         iconUrl:exitIcon,
-        iconSize:[38,38]
+        iconSize:[38,38],
+ 
     })
 
     const customIconMedical = new L.Icon ({
@@ -110,21 +135,27 @@ const Map = () => {
         iconUrl:campIcon,
         iconSize:[35,35]
     })
-    let customIconBigStar = new L.Icon ({
+    const customIconBigStar = new L.Icon ({
         iconUrl:bigStarIcon,
         iconSize:[50,50]
     })
 
-
-
+    // const center = [51.505, -0.09]
+    // const rectangle = [
+    //   [51.49, -0.08],
+    //   [51.5, -0.06],
+    // ]
+    
 
     return (
-        
+      
   
   
        <div className='mapWrap'>
 
 
+  {/* <button onClick={()=>{setUserLocation(customIcon)}}>delete</button> */}
+function LayersControlExample() {
 <MapContainer center={[48.833565844027000, 2.1950340270996100]} zoom={15} 
 
 style={{transform:"translate(0rem,5rem)", height: "70vh", width:"100%"}}>
@@ -133,7 +164,14 @@ style={{transform:"translate(0rem,5rem)", height: "70vh", width:"100%"}}>
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     />
 
-  
+ <LayersControl position="topright">
+
+        <LayersControl.Overlay checked name="Tout afficher">
+
+{/* <MapLOcation/> */}
+
+
+            
 <GeoJSON data={poi}  
 onEachFeature={(feature, layer) => {
 if (feature.properties && feature.properties.popup) {
@@ -148,7 +186,7 @@ pointToLayer={(feature, latlng) => {
 
 if ((feature.properties && feature.properties.type === 'scène' )) 
 return L.marker(latlng,{
-   icon:customIcon
+   icon:customIcon,
 });
 
 else if
@@ -195,12 +233,46 @@ return L.marker(latlng,{
 
 />
 
+      </LayersControl.Overlay>
+      <LayersControl.Overlay checked name="Toutes les scènes"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'scène' )) 
+            return L.marker(latlng,{
+            icon:customIcon,
+            });
+            }}
+            />
+      </LayersControl.Overlay> 
+      <LayersControl.Overlay checked name="Toutes les toilettes"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'wc' )) 
+            return L.marker(latlng,{
+            icon:customIconToilet,
+            });
+            }}
+            />
+      </LayersControl.Overlay>    
+    </LayersControl>
+
+{/* <MapList features={features} /> */}
 
 </MapContainer>
 
-         
+}       
         </div>
     );
 };
 
-export default Map;
+export default MapWrap;

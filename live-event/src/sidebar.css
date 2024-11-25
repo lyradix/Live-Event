@@ -1,211 +1,200 @@
 
 
+
 .bm-item {
-  display: inline-block;
-  /* Our sidebar item styling */
-  text-decoration: none;
-  margin-bottom: 10px;
-  color: #096662;
-  transition: color 0.2s;
-  
-}
-
-div.card{
-  position: absolute;
-  background-color: #096662;
-  transform: translateX(16rem);
-
-}
-
-/* The rest copied directly from react-burger-menu docs */
-
-/* Position and sizing of burger button */
-.bm-burger-button {
-  position:absolute;
-  left:0%;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
-  align-items: right;
-  justify-content: right;
-  margin-right: 0px;
-
-  transform: translateX(0rem)translateY(3rem);
-  
-}
-
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  position:absolute;
-  background: #ffffff;
-
-}
-
-/* Position and sizing of clickable cross button */
-
-/* Color/shape of close button cross */
-/* General sidebar styles */
-.bm-menu {
-  position:absolute;
-   padding: 0em 0em 0 0;
-  font-size: 0em;
-  flex-direction: right;
-  width:100%;
-  background-color: #096662;
-  transform: translateX(0rem);
-}
-
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  position:absolute;
-  fill: #ffffff;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #ffffff;
-  transform: translateX(0rem);
-
-}
-
-/* Styling of overlay */
-
-
-
-
-.react-burger-menu-btn{
-  position: fixed; 
-  left: 0px; top: 0px; 
-  z-index: 0; 
-  width: 50%; 
-  height: 100%; 
-  margin: 0px; padding: 0px; 
-  border: none; font-size: 0px; 
-  background: transparent;
+    display: inline-block;
+    /* Our sidebar item styling */
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #096662;
+    transition: color 0.2s;
+    
   }
   
-  .react-burger-menu{
-    position: absolute; 
-    right: 100px; top: 0px; 
-
-    }
-
-  .bm-menu-wrap{
-    top: -10px;
-    left:-20px;
+  div.card{
+    position: absolute;
+    background-color: #096662;
+    transform: translateX(16rem);
+  
+  }
+  
+  /* The rest copied directly from react-burger-menu docs */
+  
+  /* Position and sizing of burger button */
+  .bm-burger-button {
     position:absolute;
-      /* transform: translateX(10rem)translateY(-5rem); */
-      padding: 0px;
-      width: 50px;
-      padding: 10px;
-      padding: 100px, 10px,0px;       
-      transition:1s;
-      }
-      
-      .navbar-toggler{
-        align-content: flex-end;
-      
-        display: flex;
-        flex-direction: row;
-      }
-      
-      
-      .navbar-toggler-icon{
-          position: absolute; 
-        display: flex;
-        align-items: right;
-        justify-content: right;
-        transform: translateX(0rem)translateY(-5rem);
-      
-        
-      }
-      
-      .bm-overlay{
-        left:0px;
-        z-index:0;
-        position: absolute; 
-        z-index: 1000; 
-        width: 130%; height: 100%; 
-        background: rgba(117, 54, 54, 0.3); 
-        opacity: 1; 
-        transition: opacity 0.3s;
-     
-     
-      }
-      
-      .ul.navbar-nav{
-      
+    left:0%;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+    align-items: right;
+    justify-content: right;
+    margin-right: 0px;
+  
+    transform: translateX(0rem)translateY(3rem);
+    
+  }
 
+  .bm-burger-bars {
+    position:absolute;
+    background: #ffffff;
+  
+  }
+  
+
+  .bm-menu {
+    position:absolute;
+     padding: 0em 0em 0 0;
+    font-size: 0em;
+    flex-direction: right;
+    width:100%;
+    background-color: #096662;
+    transform: translateX(0rem);
+  }
+  
+  
+
+  .bm-morph-shape {
+    position:absolute;
+    fill: #ffffff;
+  }
+  
+
+  .bm-item-list {
+    color: #ffffff;
+    transform: translateX(0rem);
+  
+  }
+
+  
+  
+  
+  
+  .react-burger-menu-btn{
+    position: fixed; 
+    left: 0px; top: 0px; 
+    z-index: 0; 
+    width: 50%; 
+    height: 100%; 
+    margin: 0px; padding: 0px; 
+    border: none; font-size: 0px; 
+    background: transparent;
+    }
+    
+    .react-burger-menu{
+      position: absolute; 
+      right: 100px; top: 0px; 
+  
+      }
+  
+    .bm-menu-wrap{
+      top: -10px;
+      left:-20px;
+      position:absolute;
+
+        padding: 0px;
+        width: 50px;
+        padding: 10px;
+        padding: 100px, 10px,0px;       
+        transition:1s;
+        }
+        
+        .navbar-toggler{
+          align-content: flex-end;
+          display: flex;
+          flex-direction: row;
+        }
+        
+        
+        .navbar-toggler-icon{
+            position: absolute; 
+          display: flex;
+          align-items: right;
+          justify-content: right;
+          transform: translateX(0rem)translateY(-5rem);
+        }
+        
+        .bm-overlay{
+          left:0px;
+          z-index:0;
+          position: absolute; 
+          z-index: 1000; 
+          width: 130%; height: 100%; 
+          background: rgba(117, 54, 54, 0.3); 
+          opacity: 1; 
+          transition: opacity 0.3s;
+       
+       
+        }
+        
+        .ul.navbar-nav{
+             width:250px;
+            z-index:1;
+            right: 0;
+            top:0;}
+         
+        .navbar-nav{
            width:250px;
           z-index:1;
+          position: fixed; 
           right: 0;
-          top:0;}
-       
-      .navbar-nav{
-          
-      
-         width:250px;
-        z-index:1;
-        position: fixed; 
-        right: 0;
-        top:0;
-       padding-top:100px;
-      padding-top:100px;
-      text-decoration: none;
-        color:white;
-        font-size:15px;
-        font-family: bungee, Arial, sans-serif;
-        font-weight: 400;
-        font-style: normal;
-      }
-     
-    
-      
-      .collapse:not(.show){
-       flex:row;
-       
-      }
-      
-      .sidebar {
-      position:absolute;
-        padding: 20px;
-        display: flex;
-        align-items: center;
-        max-width: 600px;
-        margin: 0 auto;
-        border-bottom: 1px solid #f2f2f2;
-        background-color: #096662;
-      }
-      
-   
-
-      .navbar-nav {
-       
-        margin-left: auto;
-        background-color: #096662;
-        margin: 1rem;
-        flex:1;
-        z-index: 0;
-      }
-      .nav-item {
-       opacity: 1;
-       flex:row;
-       position:relative;
-        padding:10px;
-        background-color: #096662;
+          top:0;
+         padding-top:100px;
+        padding-top:100px;
         text-decoration: none;
-       color:#ffffff;
-      }
-
-      .bm-item-list{
-        justify-content: left;
-          position:absolute;
+          color:white;
+          font-size:15px;
+          font-family: bungee, Arial, sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+       
+      
+        
+        .collapse:not(.show){
+         flex:row;
+         
+        }
+        
+        .sidebar {
+        position:absolute;
+          padding: 20px;
           display: flex;
-          align-items: left;
-          transform: translateX(3rem);
-          z-index: 2;
+          align-items: center;
+          max-width: 600px;
+          margin: 0 auto;
+          border-bottom: 1px solid #f2f2f2;
           background-color: #096662;
-          color: #ffffff;
-      }
+        }
+        
+     
+  
+        .navbar-nav {
+         
+          margin-left: auto;
+          background-color: #096662;
+          margin: 1rem;
+          flex:1;
+          z-index: 0;
+        }
+        .nav-item {
+         opacity: 1;
+         flex:row;
+         position:relative;
+          padding:10px;
+          background-color: #096662;
+          text-decoration: none;
+         color:#ffffff;
+        }
+  
+        .bm-item-list{
+          justify-content: left;
+            position:absolute;
+            display: flex;
+            align-items: left;
+            transform: translateX(3rem);
+            z-index: 2;
+            background-color: #096662;
+            color: #ffffff;
+        }

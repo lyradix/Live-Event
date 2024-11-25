@@ -1,11 +1,9 @@
 import { useState, useEffect } from "react"
 import { Button,Stack} from 'react-bootstrap';
 
-const Poster = () => {
+const Poster = ({scène}) => {
 
-   const [index, setIndex] = useState(0);
- 
-   const[concerts, setConcerts] = useState ([]);
+
   
 
    const mod = (n, m) => {
@@ -16,7 +14,10 @@ const Poster = () => {
 
    };
 
-
+   const [index, setIndex] = useState(0);
+ 
+   const[concerts, setConcerts] = useState ([]);
+   
    useEffect(() => {
 
     // go and fetch the json data in the localhost
@@ -59,7 +60,7 @@ fetch('http://localhost:8000/concerts').then(res => {
        <img className="poster poster--right" src={image3} alt="imgPoster"></img>  */}
 
 {/* <button onClick={()=>{setIndex((index + 1) % concerts.length);}}>clickright</button> */}
-<Stack className="btnFilters" direction="horizontal" gap={5}>
+<div direction="horizontal">
 {concerts.map((concert, i) => {
   
           const indexLeft = mod(index - 1, concerts.length);
@@ -90,7 +91,7 @@ fetch('http://localhost:8000/concerts').then(res => {
             </div>
           );
         })}
-    </Stack>
+    </div>
     </div>
 
    );

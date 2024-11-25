@@ -19,10 +19,11 @@
    
   }
 
-  .btnIcon{
+  /* .btnIcon{
 background-image: url("./image/toilet.png");
-z-index:3000 ;
-  }
+z-index:3000;
+
+  } */
 
   .btnStar{
     background-color: transparent;
@@ -34,3 +35,18 @@ z-index:3000 ;
     outline: none;
   }
  
+  .custom-popup, .leaflet-popup-content-wrapper {
+    background:#2c3e50;
+    color:#fff;
+    font-size:350%;
+    line-height:10px;
+    border-radius: 10px;
+    }
+
+/* .custom-popup, .leaflet-popup-content-wrapper a {
+    color:rgba(36, 7, 134, 0.1);
+    } */
+
+    .CustomIcon{
+      display: flex;
+    }
