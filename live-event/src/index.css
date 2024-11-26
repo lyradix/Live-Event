@@ -417,10 +417,11 @@ ol{
 /* position: relative; */
 /* justify-content:center; */
 padding: auto;
+padding-top: 5%;
 padding-left: 5%;
 padding-right: 5%;
 color: white;
-height: 10rem;
+height: 15rem;
 }
 
 @media(max-width:1280px){
@@ -457,7 +458,7 @@ height: 10rem;
       /* justify-content:center; */
       /* padding: auto; */
       color: white;
-      height: 10rem;;
+      height: 15rem;
       }
 
       ol{

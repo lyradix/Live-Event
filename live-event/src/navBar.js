@@ -22,7 +22,7 @@ const overlayMenu =<div className="overlayMenu" onClick={()=>{setmenuOpen(menuOp
                <li className="navli"> <Link to="/Programmation" className="nav-link" >Programmation</Link></li>
                <li className="navli"> <Link to="/Map" className="nav-link" >Où suis-je?</Link></li>
                <li className="navli"> <Link to="/#" className="nav-link" >Billetterie</Link></li> 
-               <li className="navli"> <Link to="/info" className="nav-link" >info</Link></li> 
+               <li className="navli"> <Link to="/info" className="nav-link" >&#9432;<br/>info</Link></li> 
            </ul>  
            <Link to="/" alt="logo accueil" className='logoXtra'><img src="Preview.png"  alt="logo" >
            </img> </Link> 

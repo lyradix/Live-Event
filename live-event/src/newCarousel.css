@@ -1,5 +1,5 @@
 .containerWrap {
-    width: 90%;
+    width: 100%;
     height: 200px;
     position: absolute;
     top: 50%;
@@ -20,7 +20,10 @@
      /* align-items: center; */
      /* justify-content: center; */
      overflow-x: scroll;
+ 
     }
+
+
     
     .inner-container{
     display: flex;
@@ -29,8 +32,15 @@
     position: absolute;
     top: 0;
     left: 0;
+    animation-name: slider;
+    animation-duration: 2s;
+    animation-direction: alternate-reverse;
     }
-    
+    @keyframes slider {
+        0%  {left:0rem; }
+        50%  {left:-10rem; }
+        100%  {left:0rem; }
+      }
     .item {
     height: 200px;
     width: 200px;

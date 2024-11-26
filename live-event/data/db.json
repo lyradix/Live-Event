@@ -409,7 +409,7 @@
             "id": "a2",
             "title":"Breiz Cola",
             "image":"image",
-            "frontPage":false,
+            "frontPage":true,
             "type": "Restauration",
             "link":"https://www.breizhcola.bzh/"
         },
@@ -417,7 +417,7 @@
             "id": "a3",
             "title":"Mcdonalds",
             "image":"image",
-            "frontPage":false,
+            "frontPage":true,
             "type": "Restauration",
             "link":"https://www.mcdonalds.fr/?gclsrc=aw.ds&gad_source=1&gclid=CjwKCAiA3ZC6BhBaEiwAeqfvyrLYv4OaWzd6rcLBBhiVLHp7mlZU1gSKPIpc7y0z26IKd3a9A4PrNBoCe14QAvD_BwE&gclsrc=aw.ds"
         },
@@ -452,7 +452,7 @@
             "id": "b2",
             "title":"Citroen",
             "image":"image",
-            "frontPage":false,
+            "frontPage":true,
             "type": "Sponsor",
             "link":"https://www.citroen.fr/"
         },

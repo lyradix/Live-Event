@@ -30,7 +30,7 @@ ul{
     /* justify-content: space-around; */
     background-color: #096662;
     top:0rem;
-    width: 60%;
+    width: 100%;
 }
 
 
@@ -60,7 +60,6 @@ ul{
     ul{ 
        /* justify-content: space-around; */
         background-color: #096662;
-        border-radius: 8px;
         top:0rem;
         width: 100%;
     }
@@ -110,7 +109,16 @@ ul{
         width: 50%;
         height: 200vh;
         z-index: 3;
+        animation-name: slide;
+        animation-duration: 500ms;
+        animation-direction:reverse;
     }
+
+    @keyframes slide {
+        0%  {left:0rem; }
+        100%  {left:-5rem; }
+    
+      }
 
     .navli{
         top:10rem;

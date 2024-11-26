@@ -4,12 +4,12 @@ import 'leaflet/dist/leaflet.css';
 import L, { latLng } from 'leaflet';
 import poi from './poi.json'
 
-const MapList = ({features, type}) => {
+const MapList = ({features,feature, type,properties, image}) => {
 
     
 
     const iconMap = new L.icon({
-        iconUrl:`./image/${type}.png`,
+        iconUrl:`./image/${feature.properties.image}.png`,
         iconSize:[38, 38]
     })
 
@@ -26,8 +26,8 @@ const MapList = ({features, type}) => {
         <LayersControl.Overlay >               
             </LayersControl.Overlay>
         {features.slice(0,3).map(() => (
-             <div className="map-preview" key = {features.id}>   
-                <LayersControl.Overlay checked name="Toutes les"> 
+             <div className="map-preview" key = {feature.properties.id}>   
+                <LayersControl.Overlay checked name={`${feature.properties.image}`}> 
                   <GeoJSON data={poi}  
                   onEachFeature={(feature, layer) => {
                   if (feature.properties && feature.properties.popup) {
@@ -35,7 +35,7 @@ const MapList = ({features, type}) => {
                   }
                   }} 
                   pointToLayer={(feature, latlng) => {
-                  if ((feature.properties && feature.properties.type == `${type}` )) 
+                  if ((feature.properties && feature.properties.type === `${feature.properties.type}` )) 
                   return L.marker(latlng,{
                   icon:iconMap,
                   });

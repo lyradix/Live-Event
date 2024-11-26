@@ -14,21 +14,12 @@ import startIcon from './image/start.png'
 import entryIcon from './image/entry.png'
 import campIcon from './image/camping.png'
 import bigStarIcon from './image/bigstar.png'
-import FetchData from './fetchData';
 import MapList from './maplist';
-import MapLOcation from './mapLocation';
 
 
 
 
-
-
-
-
-
-
-
-const MapWrap = () => {
+const MapWrap = ({features, image}) => {
 
     // const mapRef = useRef();
 
@@ -39,7 +30,7 @@ const MapWrap = () => {
     //     map.locate()
     // },[]);
 
-    const [userLocation, setUserLocation] = useState(null);
+    // const [userLocation, setUserLocation] = useState(null);
     
     // const setColor = ({ properties }) => {
     //     return { weight: 1 };
@@ -89,12 +80,17 @@ const MapWrap = () => {
         //     return L.marker(latlng, { icon: customMarkerIcon(properties.Name) });
         //   };
  
-        const {data:features} = FetchData('http://localhost:8001/features');   
-        const [map, setMap] = useState(null);
-        const [position, setPosition] = useState(null);
+        // const {data:features} = FetchData('http://localhost:8001/features');   
+        // const [map, setMap] = useState(null);
+        // const [position, setPosition] = useState(null);
 
-   
+        // const iconMap = new L.icon({
+        //     iconUrl:`./image/${features.properties.image}.png`,
+        //     iconSize:[38, 38]
+        // })
     
+     console.log(features);
+        
     const customIcon = new L.Icon ({
         iconUrl:stageIcon,
         iconSize:[38, 38],
@@ -155,7 +151,7 @@ const MapWrap = () => {
 
 
   {/* <button onClick={()=>{setUserLocation(customIcon)}}>delete</button> */}
-function LayersControlExample() {
+function LayersControlExample({}) {
 <MapContainer center={[48.833565844027000, 2.1950340270996100]} zoom={15} 
 
 style={{transform:"translate(0rem,5rem)", height: "70vh", width:"100%"}}>
@@ -171,70 +167,80 @@ style={{transform:"translate(0rem,5rem)", height: "70vh", width:"100%"}}>
 {/* <MapLOcation/> */}
 
 
-            
-<GeoJSON data={poi}  
-onEachFeature={(feature, layer) => {
-if (feature.properties && feature.properties.popup) {
-layer.bindPopup(feature.properties.popup , feature.properties.name);
-
-}
-
-}} 
-
-pointToLayer={(feature, latlng) => {
-
-
-if ((feature.properties && feature.properties.type === 'scène' )) 
-return L.marker(latlng,{
-   icon:customIcon,
-});
-
-else if
-(feature.properties && feature.properties.type === 'wc' )
-return L.marker(latlng,{
-   icon:customIconToilet 
-})
-else if
-(feature.properties && feature.properties.type === 'exit')
-return L.marker(latlng,{
-   icon:customIconExit 
-})
-else if
-(feature.properties && feature.properties.type === 'medical')
-return L.marker(latlng,{
-   icon:customIconMedical 
-})
-else if
-(feature.properties && feature.properties.type === 'snack')
-return L.marker(latlng,{
-   icon:customIconSnack 
-})
-else if
-(feature.properties && feature.properties.type === 'start')
-return L.marker(latlng,{
-   icon:customIconStart 
-})
-else if
-(feature.properties && feature.properties.type === 'entry')
-return L.marker(latlng,{
-   icon:customIconEntry
-})
-else if
-(feature.properties && feature.properties.type === 'camping')
-return L.marker(latlng,{
-   icon:customIconCamp
-})
-else if
-(feature.properties && feature.properties.type === 'bigstar' )
-return L.marker(latlng,{
-   icon:customIconBigStar
-})
-}}
-
-/>
 
       </LayersControl.Overlay>
-      <LayersControl.Overlay checked name="Toutes les scènes"> 
+{/* 
+      <LayersControl position="topright">
+        <LayersControl.Overlay >               
+            </LayersControl.Overlay>
+        {features.map(() => (
+             <div className="map-preview" key = {features.properties.id}>   
+                <LayersControl.Overlay checked name={`${features.properties.image}`}> 
+                  <GeoJSON data={poi}  
+                  onEachFeature={(feature, layer) => {
+                  if (feature.properties && feature.properties.popup) {
+                  layer.bindPopup(feature.properties.popup , feature.properties.name);
+                  }
+                  }} 
+                  pointToLayer={(feature, latlng) => {
+                  if ((feature.properties && feature.properties.type === `${feature.properties.type}` )) 
+                  return L.marker(latlng,{
+                  icon:iconMap,
+                  });
+                  }}
+                  />
+                </LayersControl.Overlay> 
+                </div>
+            ))}
+          </LayersControl> */}
+
+
+      <LayersControl.Overlay checked name="Entrée Bienvenue"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'start' )) 
+            return L.marker(latlng,{
+            icon:customIconStart,
+            });
+            }}
+            />
+      </LayersControl.Overlay>
+      <LayersControl.Overlay checked name="Entrée vers les scènes"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'entry' )) 
+            return L.marker(latlng,{
+            icon:customIconEntry,
+            });
+            }}
+            />
+      </LayersControl.Overlay>
+      <LayersControl.Overlay checked name="Scène Principale" className="text"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'bigstar' )) 
+            return L.marker(latlng,{
+            icon:customIconBigStar,
+            });
+            }}
+            />
+      </LayersControl.Overlay>
+      <LayersControl.Overlay checked name="Scènes"> 
             <GeoJSON data={poi}  
             onEachFeature={(feature, layer) => {
             if (feature.properties && feature.properties.popup) {
@@ -249,7 +255,67 @@ return L.marker(latlng,{
             }}
             />
       </LayersControl.Overlay> 
-      <LayersControl.Overlay checked name="Toutes les toilettes"> 
+      <LayersControl.Overlay checked name="Coin camping"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'camping' )) 
+            return L.marker(latlng,{
+            icon:customIconCamp,
+            });
+            }}
+            />
+      </LayersControl.Overlay> 
+      <LayersControl.Overlay checked name="Restauration"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'snack' )) 
+            return L.marker(latlng,{
+            icon:customIconSnack,
+            });
+            }}
+            />
+      </LayersControl.Overlay>
+      <LayersControl.Overlay checked name="Assistance médicale"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'medical' )) 
+            return L.marker(latlng,{
+            icon:customIconMedical,
+            });
+            }}
+            />
+      </LayersControl.Overlay>
+      <LayersControl.Overlay checked name="Sortie de secour"> 
+            <GeoJSON data={poi}  
+            onEachFeature={(feature, layer) => {
+            if (feature.properties && feature.properties.popup) {
+            layer.bindPopup(feature.properties.popup , feature.properties.name);
+            }
+            }} 
+            pointToLayer={(feature, latlng) => {
+            if ((feature.properties && feature.properties.type === 'exit' )) 
+            return L.marker(latlng,{
+            icon:customIconExit,
+            });
+            }}
+            />
+      </LayersControl.Overlay>
+      <LayersControl.Overlay checked name="Toilettes"> 
             <GeoJSON data={poi}  
             onEachFeature={(feature, layer) => {
             if (feature.properties && feature.properties.popup) {
@@ -263,11 +329,10 @@ return L.marker(latlng,{
             });
             }}
             />
-      </LayersControl.Overlay>    
+      </LayersControl.Overlay>   
+
+      {/* <MapList features={features} /> */}
     </LayersControl>
-
-{/* <MapList features={features} /> */}
-
 </MapContainer>
 
 }       
