@@ -8,6 +8,7 @@ const Partners = () => {
     const partnerList = partners && <PartnerList partners={partners} />
     const partnerList1 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Restauration")} />
     const partnerList2 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Sponsor")} />
+    const partnerList3 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Media")} />
     
     return ( 
 
@@ -17,6 +18,8 @@ const Partners = () => {
         {partnerList1}
         <h1 className="text">Sponsor</h1>
         {partnerList2}
+        <h1 className="text">Media</h1>
+        {partnerList3}
       </Stack>
       
     <button className="btnretour"><Link className="nav-link" to="/">retour</Link></button>

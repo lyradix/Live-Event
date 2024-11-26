@@ -1,5 +1,6 @@
 import Poster from './carousel'
 import MainPartners from './mainPartners';
+import NewCarousel from './newCarousel';
 import Slide from './slide'
 import { Link } from 'react-router-dom';
 import imageA from './image/image-a.png'
@@ -21,6 +22,9 @@ const Home = () => {
         {/* <Poster /> */}
 
         {/* {carouselList} */}
+        <div className='carousel-preview'>
+        <NewCarousel/>
+        </div>
  
         <h2 className='textPartners'>Annonceurs</h2>
        {/* {partners.map((partner) => (  */}
