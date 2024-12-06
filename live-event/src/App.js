@@ -1,51 +1,17 @@
-import Home from './Home';
-import Programmation from './programmation';
-import MapWrap from './map';
-import Sidebar from './SideBar';
-import ArtistDetails from './artistDetails';
-import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
+import Home from './composants/home/Home';
+import Programmation from './composants/programmation/programmation';
+import MapWrap from './composants/map/map';
+import ArtistDetails from './composants/programmation/artistDetails';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Card} from 'react-bootstrap';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import { useState, useEffect, useRef } from "react";
-import NavBar from './navBar';
-import Info from './info';
-import Footer from './footer';
-import Partners from './partners';
-
-
-// import { BsDribbble, BsFacebook, BsGithub, BsInstagram, BsTwitter } from "react-icons/bs";
-
-
-
-
+import {Container} from 'react-bootstrap';
+import NavBar from './composants/navbar/navBar';
+import Info from './composants/info/info';
+import Footer from './composants/footer';
+import Partners from './composants/partner/partners';
 
 
 function App() {
-
-  
-
-  // const [pending, setpending] = useState(true);
-  // const[concerts, setConcerts] = useState (null);
-  // const[toggle, setToggle] = useState (null);
-  // const[button, setButton] = useState (null);
-
-
-
-  
-  //  useEffect(() => {
-  //     setTimeout(() => {
-  //         // go and fetch the json data in the localhost
-  //     fetch('http://localhost:8000/concerts').then(res => {
-  //         return res.json();
-  //     }).then((data) => {
-  //         setConcerts(data);
-  //         setpending(false)
-  //     })
-  //     })
-      
-  // },[])
 
  
   
@@ -54,8 +20,6 @@ function App() {
 
     <Router>
     
-
-      {/* <Sidebar className="sidebar"/> */}
   
       <Container fluid="sd">
  

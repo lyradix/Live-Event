@@ -1,0 +1,40 @@
+/* .map-wrap {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
+  
+    /* transform: scale(1.5)translateX(-4.5rem) translateY(15rem);} */ 
+  
+
+  .mapContainer{
+    height: 100vh;
+    width:100%;
+    transform:translate(0rem,7rem);
+  }
+
+  /* .btnIcon{
+background-image: url("./image/toilet.png");
+z-index:3000;
+
+  } */
+
+  
+  .custom-popup, .leaflet-popup-content-wrapper, .label {
+    background:#2c3e50;
+    color:#fff;
+    font-size:18px;
+    line-height:10px;
+    border-radius: 10px;
+    font-family: bungee,Arial, sans-serif;
+    background-color: #E5C8C8;
+    }
+
+/* .custom-popup, .leaflet-popup-content-wrapper a {
+    color:rgba(36, 7, 134, 0.1);
+    } */
+
+    /* .CustomIcon{
+      display: flex;
+    } */
+
+    

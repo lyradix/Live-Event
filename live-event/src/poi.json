@@ -118,7 +118,7 @@
     {
       "type": "Feature",
       "properties": {
-        "popup": "eXclammation !",
+        "popup": "eXtravaganza !",
         "type": "bigstar",
         "marker-color": "#d21e96",
         "marker-size": "medium",
@@ -194,7 +194,7 @@
     {
       "type": "Feature",
       "properties": {
-        "popup": "eXpassa",
+        "popup": "eXtasia",
         "type": "scène",
         "marker-color": "#d21e96",
         "marker-size": "medium",
@@ -505,6 +505,53 @@
         "image":"exit"
       }
       
-    }
+    },
+
+      {
+        "type": "Feature",
+        "properties": {
+          "popup": "Parking",
+          "type": "parking"
+        },
+        "geometry": {
+          "coordinates": [
+            2.218435129682746,
+            48.83965677595668
+          ],
+          "type": "Point"
+        },
+        "id": 26
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "popup": "Parking",
+          "type": "parking"
+        },
+        "geometry": {
+          "coordinates": [
+            2.212591899934125,
+            48.83668103771694
+          ],
+          "type": "Point"
+        },
+        "id": 27
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "popup": "Parking",
+          "type": "parking"
+        },
+        "geometry": {
+          "coordinates": [
+            2.2226053047783125,
+            48.83461075983277
+          ],
+          "type": "Point"
+        },
+        "id": 28
+      }
+  
   ]
 }

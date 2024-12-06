@@ -1,0 +1,78 @@
+
+.information{
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+    z-index: 0;
+    width: 80%;
+}
+
+.ulInfo{
+    height: 10rem;
+    position: relative;
+    display:flex;
+    z-index: 0;
+}
+
+.ulInfo, .liInfo{
+    margin-top: 5rem;
+    height: 100%;
+    z-index: 0;
+    width: 100%;
+    position: relative;
+    padding: auto;
+    padding-left: 0px;
+    margin: 0px;
+    background-color:#2a534c;
+    border-radius: 8px;
+    color:#2a534c;
+    font-size:15px ; 
+    font-family: bungee,Arial, sans-serif;
+    justify-content: end;
+    /* justify-content: space-evenly; */
+}
+
+
+.btnInfo{
+    left:0px;
+    height: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    color:#096662;
+    background-color:#E5C8C8 ;
+}
+
+h6{
+    display: none;
+}
+h6.open{
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+   text-justify:newspaper;
+    background-color: #E5C8C8;
+    transition: ease-out;
+    z-index: 0;
+}
+.btnBox{
+   height: 7rem;
+   align-items: center;
+   justify-content: center;
+}
+.btnBox,.btnretour{
+    margin-top: 20px;;
+   position: sticky;
+   bottom: 0px;
+   z-index: 1;
+}
+
+.btnPlus{
+    display: flex;
+  flex-direction: row;
+ transform: translateX(18rem);
+ color:#E5C8C8 !important;
+    background-color:#096662 !important;
+    border-radius: 8px;
+}
