@@ -1,4 +1,3 @@
-import Poster from '../carousel/carousel'
 import MainPartners from './mainPartners';
 import NewCarousel from '../carousel/newCarousel';
 import { Link } from 'react-router-dom';
@@ -14,7 +13,7 @@ const Home = () => {
 
     const partnersList = partners && <MainPartners partners={partners.filter((partner)=>partner.frontPage === true)} />
     const Descrip = info && <Descriptif info={info.filter((info)=>info.type === "mainInfo")} />
-    const carouselList = concerts && <Poster concerts={concerts.filter((concert)=> concert.scène === 'eXtravaganza !')} scene = "filtre pour jour"/>
+    const carouselList = concerts && <NewCarousel concerts={concerts.filter((concert)=> concert.scène === 'eXtravaganza !')} scene = "filtre pour jour"/>
 
 
        return ( 

@@ -2,18 +2,14 @@ import { useState, useEffect} from "react";
 
 
 
-
 const FetchData = (url) => {
 
-    
  
     const[data, setData] = useState (null);
     const[pending, setpending] = useState (null);
     const[error, setError] = useState (null);
 
 
-
-    
      useEffect(() => {
         setTimeout(() => {
             // go and fetch the json data in the localhost

@@ -63,7 +63,7 @@ const btnDaysOff = <Stack className = "btnDays" style={{opacity:"0"}}></Stack>
 
 
 const timetable = <div className="timetable">
-<h1 className="textTimetable">e&#129419;geras</h1>
+<h1 className="textTimetable">e&#129419;tasia</h1>
 <p>{extasia}</p> 
 
 
@@ -75,7 +75,7 @@ const timetable = <div className="timetable">
 <p>{experienza}</p>        
 
 
-<h1 className="textTimetable">e&#129419;clammation !</h1>
+<h1 className="textTimetable">e&#129419;travaganza !</h1>
 <p>{extravaganza}</p>        
 
 

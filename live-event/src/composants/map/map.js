@@ -20,76 +20,7 @@ import parkingIcon from '../../image/parking.png'
 
 const MapWrap = ({features, image}) => {
 
-    // const mapRef = useRef();
-
-    // useEffect(()=>{
-    //     const {current = {}} = mapRef;
-    //     const {leafletElement:map} = current;
-
-    //     map.locate()
-    // },[]);
-
-    // const [userLocation, setUserLocation] = useState(null);
-    
-    // const setColor = ({ properties }) => {
-    //     return { weight: 1 };
-    //   };
-
-    // const markers= [];
-
-    // const popup = L.popup({
-    //     closeButton: true,
-    //     autoClose: true,
-    //     className: "custom-popup" // classname for the popup acting like a splash screen
-    // })
-    //   .setLatLng(Map.getBounds().getCenter())
-    // //   .setContent('<p>Some Disclaimer Text.</p>')
-    //   .openOn(Map);
-    
-    
-    //     delete L.Icon.Default.prototype._getIconUrl;
-        
-    //     L.Icon.Default.mergeOptions({
-    //       iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-    //       iconUrl: require('leaflet/dist/images/marker-icon.png'),
-    //       shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
-    //     });
-
-        // const iconDoor = new L.Icon({
-        //     iconUrl: require('../public/mardi-gras.png'),
-        //     iconRetinaUrl: require('../public/mardi-gras.png'),
-        //     iconAnchor: null,
-        //     popupAnchor: null,
-        //     shadowUrl: null,
-        //     shadowSize: null,
-        //     shadowAnchor: null,
-        //     iconSize: new L.Point(60, 75),
-        //     className: 'leaflet-div-icon'
-        // });
-        
-        // const customMarkerIcon = (name) =>
-        //     divIcon({
-        //       html: name,
-        //       className: "icon",
-        //        iconUrl:"https://www.flaticon.com/fr/icones-gratuites/discotheque",
-        //       iconSize:[38, 38]
-        //     });
-        
-        //   const setIcon = ({ properties }, latlng) => {
-        //     return L.marker(latlng, { icon: customMarkerIcon(properties.Name) });
-        //   };
- 
-        // const {data:features} = FetchData('http://localhost:8001/features');   
-        // const [map, setMap] = useState(null);
-        // const [position, setPosition] = useState(null);
-
-        // const iconMap = new L.icon({
-        //     iconUrl:`./image/${features.properties.image}.png`,
-        //     iconSize:[38, 38]
-        // })
-    
-     console.log(features);
-        
+           
     const customIcon = new L.Icon ({
         iconUrl:stageIcon,
         iconSize:[38, 38],
@@ -146,10 +77,10 @@ const MapWrap = ({features, image}) => {
   
        <div className='mapWrap'>
 
-function LayersControlExample({}) {
+function Layers({}) {
 <MapContainer center={[48.833565844027000, 2.1950340270996100]} zoom={13} 
 
-style={{transform:"translate(0rem,3rem)", height: "70vh", width:"100%"}}>
+style={{transform:"translate(0rem,0rem)", height:"100vh", width:"100%"}}>
     <TileLayer
         url="https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=0PDdyawvaHZFff4J0rGo"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -178,7 +109,7 @@ style={{transform:"translate(0rem,3rem)", height: "70vh", width:"100%"}}>
             if (feature.properties && feature.properties.popup) {
             layer.bindPopup(feature.properties.popup , feature.properties.name);
             }
-            }} 
+            }}
             pointToLayer={(feature, latlng) => {
             if ((feature.properties && feature.properties.type === 'entry' )) 
             return L.marker(latlng,{

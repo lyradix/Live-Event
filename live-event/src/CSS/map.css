@@ -1,15 +1,12 @@
-/* .map-wrap {
+.map-wrap {
     position: relative;
     width: 100%;
     height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
-  
-    /* transform: scale(1.5)translateX(-4.5rem) translateY(15rem);} */ 
-  
+    transform: scale(1.5)translateX(-4.5rem) translateY(15rem);
+  }
 
   .mapContainer{
-    height: 100vh;
-    width:100%;
-    transform:translate(0rem,7rem);
+
   }
 
   /* .btnIcon{

@@ -12,12 +12,16 @@ const Info = () => {
     const [descripinfo2, setdescripinfo2] = useState(null);
     const [descripinfo3, setdescripinfo3] = useState(null);
     const [descripinfo4, setdescripinfo4] = useState(null);
+    const [descripinfo5, setdescripinfo5] = useState(null);
+    const [descripinfo6, setdescripinfo6] = useState(null);
 
 
     const infoList1 = info && <InfoList info={info.filter((info)=>info.type === "déroulement")} />
     const infoList2 = info && <InfoList info={info.filter((info)=>info.type === "Venir")} />
     const infoList3 = info && <InfoList info={info.filter((info)=>info.type === "surPLace")} />
     const infoList4 = info && <InfoList info={info.filter((info)=>info.type === "Interdits")} />
+    const infoList5 = info && <InfoList info={info.filter((info)=>info.type === "handi")} />
+    const infoList6 = info && <InfoList info={info.filter((info)=>info.type === "revente")} />
     // const infoList1 = info && <InfoList info={info.filter((infolist) => info.priority === "1")} />
     
     console.log(info)
@@ -53,16 +57,16 @@ const Info = () => {
                 <li>{infoList4}</li>
                 </h6>
             </li>
-            <li className="liInfo"><button className="btnInfo" onClick={()=>{setdescripinfo4(!descripinfo4)}}>Les interdits
+            <li className="liInfo"><button className="btnInfo" onClick={()=>{setdescripinfo5(!descripinfo5)}}>Accéssibilité
                 <button className="btnPlus">+</button></button>
-            <h6 className={descripinfo4?"open":""}>
-                <li>{infoList4}</li>
+            <h6 className={descripinfo5?"open":""}>
+                <li>{infoList5}</li>
                 </h6>
             </li>
-            <li className="liInfo"><button className="btnInfo" onClick={()=>{setdescripinfo4(!descripinfo4)}}>Les interdits
+            <li className="liInfo"><button className="btnInfo" onClick={()=>{setdescripinfo6(!descripinfo6)}}>Revente de billets
                 <button className="btnPlus">+</button></button>
-            <h6 className={descripinfo4?"open":""}>
-                <li>{infoList4}</li>
+            <h6 className={descripinfo6?"open":""}>
+                <li>{infoList6}</li>
                 </h6>
             </li>
             </ul>   

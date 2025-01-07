@@ -553,11 +553,26 @@
         },
         {
             "id": "8",
+            "title": "Accéssibilité",
+            "type":"handi",
+            "Descriptif": "- Accès à un parking et un camping réservés proches du site - Plateformes avec vue sur les scènes principales - WC et douches adaptés, bornes de recharge pour fauteuils roulants, boucles magnétiques, etc.",
+            "Priority": "4"
+        },
+        {
+            "id": "9",
+            "title": "Revente de billets",
+            "type":"revente",
+            "Descriptif": "La revente à un prix supérieur est strictement interdite et punie par la loi (jusqu'à 30 000 € d’amende en cas de récidive). Merci de votre vigilance !",
+            "Priority": "4"
+        },
+        {
+            "id": "10",
             "title": "Qui nous sommes",
             "type":"mainInfo",
             "Descriptif": "Live Event est une société présent dans l'évènementiel depuis  qulques années déjà. Nous organisons des tournées en France ainsi qu'en Europe. Nous faisons également la promotion de concerts d'artistes connus et moins connus du public. Nous avons le plaisirs de manager et produire de beaux talents",
             "Priority": "4"
         }
+
 
 
 ]} 

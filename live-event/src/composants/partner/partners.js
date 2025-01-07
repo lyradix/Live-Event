@@ -1,7 +1,7 @@
 import FetchData from "../fetchData";
 import { Link } from "react-router-dom";
 import PartnerList from "./partnerList";
-import { Stack } from "react-bootstrap";
+import { Stack, Button } from "react-bootstrap";
 const Partners = () => {
 
     const {data:partners} = FetchData('http://localhost:8000/partners'); 
@@ -22,7 +22,7 @@ const Partners = () => {
         {partnerList3}
       </Stack>
       
-    <button className="btnretour"><Link className="nav-link" to="/">retour</Link></button>
+    <Button className="btnretour"><Link className="nav-link" to="/">retour</Link></Button>
   </div>
   
      );
