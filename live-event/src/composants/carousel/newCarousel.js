@@ -10,7 +10,7 @@ const NewCarousel = ({innerContainer, containerWrap}) => {
 
     const {data:concerts} = FetchData('http://localhost:8000/concerts'); 
 
-    const newCarouselList = concerts && <NewCarouselList concerts={concerts.filter((concert)=> concert.scène === 'eXtravaganza !')} scene = "filtre pour jour"/>
+    const newCarouselList = concerts && <NewCarouselList concerts={concerts.filter((concert)=> concert.scene === 'eXtravaganza !')} scene = "filtre pour jour"/>
 
     return ( 
         <div className="containerWrap" ref={myRef}>

@@ -7,7 +7,7 @@ const FilterScene = (concerts,artist,) => {
             <h2 className="artistName">{concert.artist}</h2>
             {/* pour récuperer la date seulement */}
             <p className="detailsPicture">{concert.startTime.substring(0, 10)}</p>
-            <p className="scenePicture">{concert.scène}</p>
+            <p className="scenePicture">{concert.scene}</p>
             <img className="imgConcert" src={`image-${concert.id}.jpg`} alt="artist" height='600px' width='380px'/> 
               {/*template string pour extraire l'image correspondante  */}
            

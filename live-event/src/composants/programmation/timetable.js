@@ -7,14 +7,14 @@ const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Sa
 
     <div className="concert">
 
-<div>{concerts.slice(0,[1]).map((concert, scène) => (
+<div>{concerts.slice(0,[1]).map((concert, scene) => (
        <div>
-         <p className="textLargeTimetable">{concert.scène}</p> 
+         <p className="textLargeTimetable">{concert.scene}</p> 
       </div>
        )) }
     </div>
 
-    <div>{concerts.slice(0, 1).map((concert, artist,jour,date,horaire,scène) => (
+    <div>{concerts.slice(0, 1).map((concert, artist,jour,date,horaire,scene) => (
        <div className="boxTitle">
          <p className="headTitle">{days[new Date(`${concert.startTime}`).getDay()]}</p> 
       </div>
