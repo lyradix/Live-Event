@@ -6,9 +6,9 @@ import Descriptif from './descriptif';
 
 const Home = () => {
 
-    const {data:partners} = FetchData('http://localhost:8000/partners'); 
-    const {data:concerts, pending, error} = FetchData('http://localhost:8000/concerts'); 
-    const {data:info} = FetchData('http://localhost:8000/info'); 
+    const {data:partners} = FetchData('http://localhost:8001/partners'); 
+    const {data:concerts, pending, error} = FetchData('http://localhost:8001/concerts'); 
+    const {data:info} = FetchData('http://localhost:8001/info'); 
     
 
     const partnersList = partners && <MainPartners partners={partners.filter((partner)=>partner.frontPage === true)} />
