@@ -13,7 +13,7 @@ import entryIcon from '../../image/entry.png'
 import campIcon from '../../image/camping.png'
 import bigStarIcon from '../../image/bigstar.png'
 import parkingIcon from '../../image/parking.png'
-// import MapList from './maplist';
+
 
 
 
@@ -80,7 +80,7 @@ const MapWrap = ({features, image}) => {
 function Layers({}) {
 <MapContainer center={[48.833565844027000, 2.1950340270996100]} zoom={13} 
 
-style={{transform:"translate(0rem,0rem)", height:"100vh", width:"100%"}}>
+style={{transform:"translate(0rem,0rem)", height:"80vh", width:"100%"}}>
     <TileLayer
         url="https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=0PDdyawvaHZFff4J0rGo"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

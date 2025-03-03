@@ -17,7 +17,7 @@ const ArtistDetails = () => {
     // const[data, setData] = useState ([]);
 
     const {id} = useParams();
-    const {data:concert} = FetchData('http://localhost:8000/concerts/' + id );
+    const {data:concert} = FetchData('http://localhost:8001/concerts/' + id );
 
 
 //    useEffect(() => {
