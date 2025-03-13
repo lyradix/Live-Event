@@ -27,7 +27,7 @@ Title : Xtra paris
 npm run pour démarrer le localHost sur le port 3000
 
 ## To launch the server containing the datas
-npx json-server --watch ./data/db.json --port 8000
+npx json-server --watch ./src/db.json --port 8001
 
 ## Installation of external libraries
 npm install bootstrap/dist/css/bootstrap.min.css

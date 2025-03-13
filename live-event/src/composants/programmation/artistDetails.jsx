@@ -40,7 +40,6 @@ const ArtistDetails = () => {
                             <article>          
                             <p className="text">{concert.Description}</p>        
                             <p className="descripText">Source: {concert.Source}</p> 
-                            {console.log(`${concert.image}`)}
                             <p className="descripText">chanson connue: {concert.FamousSong}</p> 
                             <Stack  direction="horizontal" gap={0}>
                 <li><img className="logoNetwork" src={fbLogo} alt="facebook logo"></img></li>
