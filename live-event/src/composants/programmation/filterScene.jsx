@@ -4,7 +4,7 @@ const FilterScene = (concerts,artist,) => {
         <h2>{artist}</h2>
          {concerts.map((concert) => (
             <div className="concert-preview" key = {concert.id}>                
-            <h2 className="artistName">{concert.artist}</h2>
+            <h2 className="artistName">{concert.nom}</h2>
             {/* pour récuperer la date seulement */}
             <p className="detailsPicture">{concert.startTime.substring(0, 10)}</p>
             <p className="scenePicture">{concert.scene}</p>

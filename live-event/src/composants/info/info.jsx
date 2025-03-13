@@ -7,7 +7,7 @@ import { Button } from "react-bootstrap";
 
 const Info = () => {
 
-    const {data:info} = FetchData('http://localhost:8001/info'); 
+    const {data:info} = FetchData('http://localhost:8000/info'); 
     const [descripinfo, setdescripinfo] = useState(null);
     const [descripinfo2, setdescripinfo2] = useState(null);
     const [descripinfo3, setdescripinfo3] = useState(null);
@@ -16,13 +16,14 @@ const Info = () => {
     const [descripinfo6, setdescripinfo6] = useState(null);
 
 
-    const infoList1 = info && <InfoList info={info.filter((info)=>info.type === "déroulement")} />
+    const infoList1 = info && <InfoList info={info.filter((info)=>info.type === "d\u00e9roulement")} />
     const infoList2 = info && <InfoList info={info.filter((info)=>info.type === "Venir")} />
     const infoList3 = info && <InfoList info={info.filter((info)=>info.type === "surPLace")} />
     const infoList4 = info && <InfoList info={info.filter((info)=>info.type === "Interdits")} />
     const infoList5 = info && <InfoList info={info.filter((info)=>info.type === "handi")} />
     const infoList6 = info && <InfoList info={info.filter((info)=>info.type === "revente")} />
     // const infoList1 = info && <InfoList info={info.filter((infolist) => info.priority === "1")} />
+
     
     console.log(info)
 

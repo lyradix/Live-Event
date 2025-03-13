@@ -9,12 +9,12 @@ const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Sa
 
 <div>{concerts.slice(0,[1]).map((concert, scene) => (
        <div>
-         <p className="textLargeTimetable">{concert.scene}</p> 
+         <p className="textLargeTimetable">{concert.sceneFK.nom}</p> 
       </div>
        )) }
     </div>
 
-    <div>{concerts.slice(0, 1).map((concert, artist,jour,date,horaire,scene) => (
+    <div>{concerts.slice(0, 1).map((concert, nom,jour,date,horaire,scene) => (
        <div className="boxTitle">
          <p className="headTitle">{days[new Date(`${concert.startTime}`).getDay()]}</p> 
       </div>
@@ -28,14 +28,14 @@ const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Sa
               <div className='box'>
               <div className="imglist" direction="horizontal" gap={2}>
               <img src={`image-${concert.id}.jpg`} alt="artist" className='imgTimetable' height='36px' width='36px' />
-              <p className='text'>{concert.artist}</p>
+              <p className='text'>{concert.nom}</p>
               </div>
                 
-                <div  className="hours">
-                <p>{concert.startTime.substring(10, 16)}</p>
+              <div className="hours">
+                <p>{concert.startTime.substring(11, 16)}</p>
                 <p>&rarr;</p>
-                <p>{concert.endTime.substring(10, 16)}</p>
-                </div>
+                <p>{concert.endTime.substring(11, 16)}</p>
+              </div>
               </div>      
             </div>
             </Link> 

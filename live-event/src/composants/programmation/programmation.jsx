@@ -16,35 +16,35 @@ const Programmation = () => {
 
 
 
-    const {data:concerts, pending, error} = FetchData('http://localhost:8001/concerts'); 
+    const {data:concerts, pending, error} = FetchData('http://localhost:8000/getData'); 
   
   
 
 // filtres pour les listes des concerts selon les scenes
-    const extasia = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXtasia' &&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXtasia et vendredi"/>,
-                                 concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXtasia' &&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXtasia et samedi"/>,
-                                 concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXtasia' &&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXtasia et dimanche"/>
+    const extasia = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtasia' &&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXtasia et vendredi"/>,
+                                 concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtasia' &&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXtasia et samedi"/>,
+                                 concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtasia' &&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXtasia et dimanche"/>
                                  ]
     const exodius = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXodius'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXodius et vendredi"/>,
-                                concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXodius'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXodius et samedi"/>,
-                                concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXodius'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXodius et dimanche"/>
+                                concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXodius'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXodius et samedi"/>,
+                                concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXodius'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXodius et dimanche"/>
                                 ]
 
-    const experienza = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === ' eXperienza'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXperienza et vendredi"/>,
-                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === ' eXperienza'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXperienza et samedi"/>,
-                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === ' eXperienza'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXperienza et dimanche"/>
+    const experienza = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXperienza'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXperienza et vendredi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXperienza'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXperienza et samedi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXperienza'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXperienza et dimanche"/>
                             ]
-    const extravaganza= [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXtravaganza !'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXtravaganza ! et vendredi"/>,
-                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXtravaganza !'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXtravaganza ! et samedi"/>,
-                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXtravaganza !'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXtravaganza ! et dimanche"/>
+    const extravaganza= [concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtravaganza !'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXtravaganza ! et vendredi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtravaganza !'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXtravaganza ! et samedi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtravaganza !'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXtravaganza ! et dimanche"/>
                                         ]
-    const expassa = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXpassa'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXpassa et vendredi"/>,
-                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXpassa'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXpassa et samedi"/>,
-                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXpassa'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXpassa et dimanche"/>
+    const expassa = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXpassa'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXpassa et vendredi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXpassa'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXpassa et samedi"/>,
+                                    concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXpassa'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXpassa et dimanche"/>
                                     ]
 
 
-    const filterLineUp = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.scene === 'eXtravaganza !')} scene = "filtre pour jour"/>
+    const filterLineUp = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtravaganza !')} scene = "filtre pour jour"/>
     const filterFriday = concerts && <ConcertList concerts={concerts.filter(concert=> concert.startTime.startsWith('2025-09-12'))} jour = "filtre pour jour"/>
     const filterSaturday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2025-09-13'))} jour = "filtre pour jour"/>
     const filterSunday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2025-09-14'))} jour = "filtre pour jour"/>

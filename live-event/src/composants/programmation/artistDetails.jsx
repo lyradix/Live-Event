@@ -17,7 +17,7 @@ const ArtistDetails = () => {
     // const[data, setData] = useState ([]);
 
     const {id} = useParams();
-    const {data:concert} = FetchData('http://localhost:8001/concerts/' + id );
+    const {data:concert} = FetchData('http://localhost:8000/getData' + id );
 
 
 //    useEffect(() => {
@@ -38,9 +38,9 @@ const ArtistDetails = () => {
                 
                 {concert && (
                             <article>          
-                            <p className="text">{concert.Description}</p>        
-                            <p className="descripText">Source: {concert.Source}</p> 
-                            <p className="descripText">chanson connue: {concert.FamousSong}</p> 
+                            <p className="text">{concert.description}</p>        
+                            <p className="descripText">Source: {concert.source}</p> 
+                            <p className="descripText">chanson connue: {concert.famousSong}</p> 
                             <Stack  direction="horizontal" gap={0}>
                 <li><img className="logoNetwork" src={fbLogo} alt="facebook logo"></img></li>
                 <li><img className="logoNetwork" src={iLogo} alt="instagram logo"></img></li>

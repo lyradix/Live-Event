@@ -1,8 +1,8 @@
-const Descriptif = ({info, Descriptif}) => {
+const Descriptif = ({info, descriptif}) => {
     return ( 
         <div>
         {info.map((info) => ( 
-         <p className="descripText">{info.Descriptif}</p>
+         <p className="descripText">{info.descriptif}</p>
  ))}
  </div>
      );

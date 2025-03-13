@@ -6,14 +6,14 @@ import Descriptif from './descriptif';
 
 const Home = () => {
 
-    const {data:partners} = FetchData('http://localhost:8001/partners'); 
-    const {data:concerts, pending, error} = FetchData('http://localhost:8001/concerts'); 
-    const {data:info} = FetchData('http://localhost:8001/info'); 
+    const {data:partners} = FetchData('http://localhost:8000/partners'); 
+    const {data:concerts, pending, error} = FetchData('http://localhost:8000/getData'); 
+    const {data:info} = FetchData('http://localhost:8000/info'); 
     
 
     const partnersList = partners && <MainPartners partners={partners.filter((partner)=>partner.frontPage === true)} />
     const Descrip = info && <Descriptif info={info.filter((info)=>info.type === "mainInfo")} />
-    const carouselList = concerts && <NewCarousel concerts={concerts.filter((concert)=> concert.scene === 'eXtravaganza !')} scene = "filtre pour jour"/>
+    const carouselList = concerts && <NewCarousel concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtravaganza !')} scene = "filtre pour jour"/>
 
 
        return ( 
