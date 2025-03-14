@@ -15,8 +15,9 @@ const menu = <Menu>
 <Card style= { { width: "0rem", flex:"start"}}>
            <ul  className="navbar-nav ml-auto">
                <li className="nav-item"><Link to="/" className="nav-link" >Accueil</Link></li> 
+               <li className="nav-item"><Link to="/login" className="nav-link" >S'identifier</Link></li> 
                <li className="nav-item"> <Link to="/Programmation" className="nav-link" >Programmation</Link></li>
-               <li className="nav-item"> <Link to="/Map" className="nav-link" >Où suis-je?</Link></li>
+               <li className="nav-item"> <Link to="/Map" className="nav-link" >Carte</Link></li>
                <li className="nav-item"> <Link to="/#" className="nav-link" >Billetterie</Link></li>
             
            </ul>

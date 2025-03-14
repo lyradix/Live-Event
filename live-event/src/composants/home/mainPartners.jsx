@@ -1,6 +1,6 @@
 
 
-const MainPartners = ({partners,frontPage,partner, id, partner1, title, link, partnerId}) => {
+const MainPartners = ({partners,frontPage,partner, id, partner1, title, link, parnerId}) => {
 
     return ( 
 
@@ -9,7 +9,7 @@ const MainPartners = ({partners,frontPage,partner, id, partner1, title, link, pa
             {partners.slice(0,8).map((partner) => (
            <button  className='btnPartner' key = {partner.id}>
             <a href={partner.link} rel="noreferrer" target="_blank"> 
-                <img className="imgPartnerFront" src={`image-${partner.partnerId}.png`} alt="annonceurs"></img></a>
+                <img className="imgPartnerFront" src={`image-${partner.parnerId}.png`} alt="annonceurs"></img></a>
            </button>
             ))}    
             </div>

@@ -2,11 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\live-event",
-    "\\live-event\\src",
     "\\live-event\\src\\composants",
     "\\live-event\\src\\composants\\home",
     "\\live-event\\src\\composants\\programmation"
   ],
-  "SelectedNode": "\\live-event\\src\\composants\\programmation\\programmation.js",
+  "SelectedNode": "\\live-event\\package.json",
   "PreviewInSolutionExplorer": false
 }

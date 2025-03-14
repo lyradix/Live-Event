@@ -19,8 +19,9 @@ const overlayMenu =<div className="overlayMenu" onClick={()=>{setmenuOpen(menuOp
       </div>
               <ul className={menuOpen?"open":""} onClick={()=>{setmenuOpen(!menuOpen);setOverlay(!overlayMenu)}}>
                <li className="navli"><Link to="/" className="nav-link" >Accueil</Link></li> 
+               <li className="navli"><Link to="/login" className="nav-link" >S'identifier</Link></li> 
                <li className="navli"> <Link to="/Programmation" className="nav-link" >Programmation</Link></li>
-               <li className="navli"> <Link to="/Map" className="nav-link" >Où suis-je?</Link></li>
+               <li className="navli"> <Link to="/Map" className="nav-link" >Carte</Link></li>
                <li className="navli"> <Link to="/#" className="nav-link" >Billetterie</Link></li> 
                <li className="navli"> <Link to="/info" className="nav-link" >&#9432;<br/>infos</Link></li> 
            </ul>  

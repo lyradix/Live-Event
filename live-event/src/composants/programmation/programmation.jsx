@@ -25,7 +25,7 @@ const Programmation = () => {
                                  concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtasia' &&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXtasia et samedi"/>,
                                  concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtasia' &&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXtasia et dimanche"/>
                                  ]
-    const exodius = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.scene === 'eXodius'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXodius et vendredi"/>,
+    const exodius = [concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXodius'&&  concert.startTime.startsWith('2025-09-12'))} scene et jour = "eXodius et vendredi"/>,
                                 concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXodius'&&  concert.startTime.startsWith('2025-09-13'))} scene et jour = "eXodius et samedi"/>,
                                 concerts && <Timetable concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXodius'&&  concert.startTime.startsWith('2025-09-14'))} scene et jour = "eXodius et dimanche"/>
                                 ]
