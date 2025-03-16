@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 
-const ConcertList = ({concerts, nom,jour,date,horaire,scene, Description,Source, Lien, image, FamousSong }) => {
+const ConcertList = ({concerts, nom,jour,date,horaire,scene, description,source, lien, famousSong }) => {
     
 
     return ( 
