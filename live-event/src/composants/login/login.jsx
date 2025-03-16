@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FetchData from '../fetchData'; // Adjust the import path if necessary
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
     const { data, pending, error, postData } = FetchData('http://localhost:8000/login');
@@ -11,6 +12,11 @@ const LogIn = () => {
         e.preventDefault();
         postData('http://localhost:8000/login', formData);
     };
+
+    const navigate = useNavigate();
+    if (data) {
+        navigate('/');
+    }
 
     return (
         <div className="login">

@@ -54,14 +54,12 @@ ul{
 .navli{
     list-style: none;
     display: block;
+    height: auto;
     color:#ffffff;
     font-size:18px ; 
     font-family: bungee,Arial, sans-serif;
     background-color: #096662;
     padding: 0.3rem;
-    margin:1.5rem;
-    border-radius: 0.5rem;
-    transform: translateY(-1.5rem);
 }
 
 
@@ -83,8 +81,8 @@ ul{
     }
 
     .navli{
-        margin-top: 10rem;
-        top:7rem;
+
+        top:0rem;
         transform: translateY(0rem);
     }
   
@@ -135,27 +133,14 @@ ul{
     }
 
     .navli{
-        top:0rem;
-        margin-top: 0rem;
-        margin-right: 0rem;
-        padding-right: 3rem;
-      justify-content: start;
-   
-        /* transform: translate(3rem, 3rem); */
+       
+        transform: translate(3rem, 3rem);
     }
 
 
 ul{
-        display: none;
-        position: fixed;
-        flex-direction: column;
-        align-items: start;
-        margin-bottom: 0.25rem;
-        background-color: #096662;
-        height: 100vh;
-        z-index: 3;
-        padding-right: 0rem;
-        /* transition: 2.2s cubic-bezier(.36,-0.01,0,.77); */
+     
+        transition: 2.2s cubic-bezier(.36,-0.01,0,.77); 
     }
 
 
@@ -179,13 +164,8 @@ ul{
     @keyframes slide {
         50%  {left:-0.7rem; }
         /* 50%  {left:-5rem; } */
-    
         100%  {left:-18rem; }
-    
       }
-
-   
-
     .menuNav{
         display: flex;
     }
@@ -202,24 +182,55 @@ ul{
 
 
 @media(max-width:480px){
-
     ul.open{
        padding-left: 0rem;
        padding-right: 3rem;
         width: 60%;
         padding-top: 5rem;
-     
     }
 
-   
     .logoXtra{
-        left:48%;
-      
+        left:48%; 
     }
 
     .navli{
         font-size: small;
     }
 
+    .navli{
+        top:0rem;
+        margin-top: 0rem;
+        margin-right: 0rem;
+        padding-right: 3rem;
+        justify-content: start;
+        /* transform: translate(3rem, 3rem); */
+    }
+
+    ul.open{
+        display: flex;
+        width: 50%;
+        height: 200vh;
+        padding-left: 0rem;
+        padding-right: 3rem;
+         width: 60%;
+         left:-10px;
+         padding-top: 5rem;
+        z-index: 3;
+        animation-name: slide;
+        animation-duration: 500ms;
+        animation-direction:reverse;
+    }
+    ul{
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        margin-bottom: 0.25rem;
+        background-color: #096662;
+        height: 100vh;
+        z-index: 3;
+        padding-right: 0rem;
+        /* transition: 2.2s cubic-bezier(.36,-0.01,0,.77); */
+    }
 }
 

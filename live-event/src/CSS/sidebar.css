@@ -198,3 +198,14 @@
             background-color: #096662;
             color: #ffffff;
         }
+
+        li.navli {
+          display: flex;
+          flex-direction: row;
+          justify-content: right;
+          align-items: right;
+          height: 40px;
+          padding: 10px;
+          background-color: #48872d;
+
+        }

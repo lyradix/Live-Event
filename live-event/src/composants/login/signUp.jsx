@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FetchData from '../fetchData';
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const { data, pending, error, postData } = FetchData('http://localhost:8000/register');
@@ -16,6 +17,11 @@ const SignUp = () => {
         }
         postData('http://localhost:8000/register', formData);
     };
+
+    const navigate = useNavigate();
+    if (data) {
+        navigate('/login');
+    }
 
     return (
         <div className="sign-up">
@@ -45,7 +51,6 @@ const SignUp = () => {
                 </div>
                 <div className="boxForm">
                     <Button className="btnretour" type="submit">
-                        <Link className="nav-link" to="/login"></Link>
                         Soumettre</Button>
                     <Button className="btnretour">
                         <Link className="nav-link" to="/login">retour</Link>
