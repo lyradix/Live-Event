@@ -7,7 +7,7 @@ import { Button } from "react-bootstrap";
 
 const Info = () => {
 
-    const {data:info} = FetchData('http://localhost:8000/info'); 
+    const {data:info} = FetchData('https://bisque-dotterel-606944.hostingersite.com/info'); 
     const [descripinfo, setdescripinfo] = useState(null);
     const [descripinfo2, setdescripinfo2] = useState(null);
     const [descripinfo3, setdescripinfo3] = useState(null);
