@@ -195,7 +195,7 @@ ul{
         opacity: 0;
         width: 50%;
         height: 200vh;
-        background-color: aquamarine;
+        background-color: rgb(135, 214, 188);
         z-index: 1;
 }
 }
