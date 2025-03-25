@@ -12,12 +12,12 @@ import xLogo from '../../image/x.png'
 
 
 
-const ArtistDetails = () => {
+const ArtistDetails = (description) => {
     
     // const[data, setData] = useState ([]);
 
     const {id} = useParams();
-    const {data:concert} = FetchData('https://bisque-dotterel-606944.hostingersite.com/concert'+id);
+    const {data:concert} = FetchData('http://localhost:8000/concert'+id);
 
 
 //    useEffect(() => {
