@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
-    const { data, pending, error, postData } = FetchData('http://localhost:8000/register');
+    const { data, pending, error, postData } = FetchData('https://bisque-dotterel-606944.hostingersite.com/register');
     const [formData, setFormData] = useState({});
     const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -15,7 +15,7 @@ const SignUp = () => {
             alert("Passwords do not match");
             return;
         }
-        postData('http://localhost:8000/register', formData);
+        postData('https://bisque-dotterel-606944.hostingersite.com/register', formData);
     };
 
     const navigate = useNavigate();

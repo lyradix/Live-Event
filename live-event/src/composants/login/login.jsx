@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 const LogIn = () => {
-    const { data, pending, error, postData } = FetchData('http://localhost:8000/login');
+    const { data, pending, error, postData } = FetchData('https://bisque-dotterel-606944.hostingersite.com/login');
     const [formData, setFormData] = useState({ email: '', password: '' });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        postData('http://localhost:8000/login', formData);
+        postData('https://bisque-dotterel-606944.hostingersite.com/login', formData);
     };
 
     const navigate = useNavigate();
