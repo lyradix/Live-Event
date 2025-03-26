@@ -8,10 +8,16 @@
 }
 
 .ulInfo{
-    height: 10rem;
-    position: relative;
-    display:flex;
-    z-index: 0;
+    position: relative; /* Set as the reference point for .btnPlus */
+    left: 0px;
+    height: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    color: #096662;
+    background-color: #E5C8C8;
+    display: flex; /* Ensure children are aligned properly */
+    align-items: center; /* Vertically center the children */
+    justify-content: center; /* Horizontally center the children */
 }
 
 .ulInfo, .liInfo{
@@ -34,12 +40,14 @@
 
 
 .btnInfo{
-    left:0px;
+    position: relative; /* Set as the reference point for .btnPlus */
     height: 2rem;
     border-radius: 8px;
     width: 100%;
-    color:#096662;
-    background-color:#E5C8C8 ;
+    color: #096662;
+    background-color: #E5C8C8;
+    display: flex;
+    align-items: center; 
 }
 
 h6{
@@ -69,10 +77,15 @@ h6.open{
 }
 
 .btnPlus{
+    position: absolute; /* Position relative to .btnInfo */
+    top: 50%; /* Center vertically */
+    left: 90%;
+    transform: translate(-50%, -50%); /* Adjust for centering */
     display: flex;
-  flex-direction: row;
- transform: translateX(18rem);
- color:#E5C8C8 !important;
-    background-color:#096662 !important;
+    flex-direction: row;
+    color: #E5C8C8 !important;
+    background-color: #096662 !important;
     border-radius: 8px;
+    padding: 0.5rem 1rem; /* Add padding for better appearance */
+    z-index: 2;
 }
