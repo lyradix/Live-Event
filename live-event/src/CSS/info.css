@@ -8,10 +8,16 @@
 }
 
 .ulInfo{
-    height: 10rem;
-    position: relative;
-    display:flex;
-    z-index: 0;
+    position: relative; /* Set as the reference point for .btnPlus */
+    left: 0px;
+    height: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    color: #096662;
+    background-color: #E5C8C8;
+    display: flex; /* Ensure children are aligned properly */
+    align-items: center; /* Vertically center the children */
+    justify-content: center; /* Horizontally center the children */
 }
 
 .ulInfo, .liInfo{
@@ -48,41 +54,74 @@
 
 h6{
     display: none;
-}
-h6.open{
-    display: block; /* Show the content when open */
-    height: auto; /* Allow the content to expand */
+    position: absolute; /* Position the expanding content absolutely */
+    top: 100%; /* Position it below the .btnInfo */
+    left: 0;
     width: 100%;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-   text-justify:newspaper;
     background-color: #E5C8C8;
-    transition: ease-out;
-    z-index: 0;
+    padding: 10px;
+    z-index: 1;
+    transition: max-height 0.3s ease-out; /* Smooth transition for height */
+    max-height: 0; /* Initially collapsed */
+    overflow:scroll-y;
+    z-index: 3;
 }
+
+h6.open{
+    display: block;
+    max-height: 15rem; /* Set a maximum height for the expanded content */
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #E5C8C8 #096662;
+}
+
+h6::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+
+h6::-webkit-scrollbar-thumb {
+    background-color: #096662; /* Color of the scrollbar thumb */
+    border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+h6::-webkit-scrollbar-track {
+    background-color: #E5C8C8; /* Color of the scrollbar track */
+}
+
 .btnBox{
-   height: 7rem;
-   align-items: center;
-   justify-content: center;
+    height: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative; /* Ensure it stays in the normal flow */
+    z-index: 1;  
 }
-.btnBox,.btnretour{
-    margin-top: 20px;;
-   position: sticky;
-   bottom: 0px;
-   z-index: 1;
+
+.btnretour{
+    margin-top: 20px;
+    position: relative; /* Ensure it stays in the normal flow */
+    z-index: 1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
 }
 
 .btnPlus{
-    position: absolute; /* Position relative to .btnInfo */
-    top: 50%; /* Center vertically */
+    position: absolute; 
+    top: 50%; 
     left: 90%;
-    transform: translate(-50%, -50%); /* Adjust for centering */
+    transform: translate(-50%, -50%); 
     display: flex;
     flex-direction: row;
     color: #E5C8C8 !important;
     background-color: #096662 !important;
     border-radius: 8px;
-    padding: 0.5rem 1rem; /* Add padding for better appearance */
+    padding: 0.5rem 1rem; 
     z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+    h6.open{
+        position: relative;  
+}
 }
