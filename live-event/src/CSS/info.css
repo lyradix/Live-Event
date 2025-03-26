@@ -42,13 +42,16 @@
     background-color: #E5C8C8;
     display: flex;
     align-items: center; 
+    justify-content: space-between; /* Ensure the button stays aligned */
+    overflow: hidden; /* Prevent content overflow */
 }
 
 h6{
     display: none;
 }
 h6.open{
-    height: 100%;
+    display: block; /* Show the content when open */
+    height: auto; /* Allow the content to expand */
     width: 100%;
     padding: 5px;
     display: flex;
@@ -81,5 +84,5 @@ h6.open{
     background-color: #096662 !important;
     border-radius: 8px;
     padding: 0.5rem 1rem; /* Add padding for better appearance */
-    z-index: 1.5;
+    z-index: 2;
 }
