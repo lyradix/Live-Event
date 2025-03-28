@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FetchData from '../fetchData'; // Adjust the import path if necessary
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 const LogIn = () => {
     const { data, pending, error, postData } = FetchData('http://localhost:8000/login');
     const [formData, setFormData] = useState({ email: '', password: '' });
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -17,6 +18,18 @@ const LogIn = () => {
     if (data) {
         navigate('/');
     }
+
+    useEffect(() => {
+        if (data) {
+            console.log(data);
+        }
+    }, [data]);
+// Compare this snippet from live-event/src/composants/login/login.jsx:
+
+    /*IF user is not logged in THEN
+    on successful login
+    display toast
+  END IF*/
 
     return (
         <div className="login">

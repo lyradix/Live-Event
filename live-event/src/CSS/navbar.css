@@ -181,6 +181,7 @@ ul{
         animation-name: slide;
         animation-duration: 500ms;
         animation-direction:reverse;
+        
     }
 
 
@@ -218,8 +219,7 @@ ul{
 
     .navli{
         font-size: 16px;
-        padding: 0.2rem 0.5rem; /* Add padding for spacing */
-      
+        padding: 0.2rem 0.5rem; /* Add padding for spacing */  
     }
 
     .navli{
@@ -237,9 +237,9 @@ ul{
         height: 200vh;
         padding-left: 0rem;
         padding-right: 3rem;
-         width: 60%;
-         left:-10px;
-         padding-top: 5rem;
+        width: 60%;
+        left:-10px;
+        padding-top: 5rem;
         z-index: 3;
         animation-name: slide;
         animation-duration: 500ms;
