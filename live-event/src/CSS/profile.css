@@ -1,0 +1,98 @@
+.profileContainer {
+  
+    display: inline-block;
+}
+
+.dropdownMenu {
+    position:absolute;
+    display: flex;
+    flex-direction: row;
+    top:80px;
+    right:0;
+    width:auto;
+    height: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+
+}
+
+.dropDownItem, .li{
+    color: #333;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.dropDownItem:hover{
+    opacity: 1;
+}
+
+.sidebarMenuProfile{
+display:none;
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .dropdownMenu {
+       display: none;
+    }
+
+    .sidebarMenuProfile{
+        padding-top: 50%;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #096662;
+        width:57.3%;
+        height: 100rem;
+        top:0px;
+        z-index: 4;
+    }
+
+    .navliProfil{
+        list-style: none;
+        color:#ffffff;
+        font-size:18px ; 
+        font-family: bungee,Arial, sans-serif;
+        padding: 0.3rem 1rem; /* Add padding for spacing */
+        margin-top: 0 0.5rem; /* Add margin for spacing between items */
+        background-color: #096662;
+        text-align: center; /* Center the text */
+        opacity: 0.8;
+        border-radius: 0.5rem;
+        width: 100%;
+        top: 10rem;
+        right: 10px;
+        z-index: 4;
+    }
+
+    .navliProfil:focus, .navliProfil:hover{
+        opacity: 1;
+    }
+
+    .overlayMenuProfile{
+        position: fixed;
+        right:0px;
+        opacity: 0;
+        width: 50%;
+        height: 200vh;
+        background-color: rgb(184, 114, 23);
+        z-index: 3;
+
+    }
+
+  
+}

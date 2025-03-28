@@ -102,7 +102,7 @@ h6::-webkit-scrollbar-track {
 .btnretour{
     margin-top: 20px;
     position: relative; /* Ensure it stays in the normal flow */
-    z-index: 1;
+    z-index: 0;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Add a shadow for better visibility */
 }
 
