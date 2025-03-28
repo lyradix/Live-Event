@@ -182,7 +182,7 @@ ul{
         animation-name: slide;
         animation-duration: 500ms;
         animation-direction:reverse;
-        
+        overflow: hidden;
     }
 
 
