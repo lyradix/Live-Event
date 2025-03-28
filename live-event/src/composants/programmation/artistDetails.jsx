@@ -17,13 +17,13 @@ const ArtistDetails = (description) => {
     // const[data, setData] = useState ([]);
 
     const {id} = useParams();
-    const {data:concert} = FetchData('http://localhost:8000/concert'+id);
+    const {data:concert} = FetchData('https://bisque-dotterel-606944.hostingersite.com/concert'+ id);
 
 
 //    useEffect(() => {
     
     // go and fetch the json data in the localhost
-// fetch('http://localhost:8000/concerts/'+id).then(res => {
+// fetch('https://bisque-dotterel-606944.hostingersite.com/concerts/'+id).then(res => {
 //     return res.json();
 // }).then((concerts) => {
 //  setConcerts(concerts);
