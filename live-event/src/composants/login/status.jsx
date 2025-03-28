@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 
 function Status(props) {
     const [isOnline, setIsOnline] = useState(null); // Track login status
-    const { pending, error, postData } = FetchData('http://localhost:8000/login');
+    const { pending, error, postData } = FetchData('https://bisque-dotterel-606944.hostingersite.com/login');
 
     // Notify the user when they are logged in
     useEffect(() => {
@@ -24,7 +24,7 @@ function Status(props) {
     const handleLogin = async () => {
         try {
             const payload = { username: 'user', password: 'password' }; // Replace with actual credentials
-            await postData('http://localhost:8000/login', payload);
+            await postData('https://bisque-dotterel-606944.hostingersite.com/login', payload);
             setIsOnline(true); // Set login status
             sessionStorage.setItem('isOnline', 'true'); // Save session state
         } catch (err) {
