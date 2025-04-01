@@ -21,6 +21,7 @@ const SignUp = () => {
     const navigate = useNavigate();
     if (data) {
         navigate('/login');
+        alert('Vous êtes enregistré')
     }
 
     return (
