@@ -45,6 +45,8 @@
     transform: translateY(-7rem);
    left: -3rem;
     }
+    
+
 
 
     .concertpreview {
@@ -56,7 +58,25 @@
         gap: 0px; /* Add spacing between boxes */
         padding: 0px; 
         height: 100%;
+        animation-name: fadeIn; /* Name of the animation */
+        animation-duration: 1s; /* Duration of the animation */
+        animation-timing-function: ease-in-out; /* Smooth easing */
+        animation-iteration-count: 1; /* Run the animation only once */
+        animation-fill-mode: forwards; /* Retain the final state after animation */
+        opacity: 0; 
         }
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start fully transparent */
+        transform: translateY(20px); /* Start slightly below its position */
+    }
+    to {
+        opacity: 1; /* End fully visible */
+        transform: translateY(0); /* End at its original position */
+    }
+}
 
   @media(max-width:600px){
 
@@ -76,7 +96,17 @@
     justify-content: center; /* Center-align the boxes horizontally */
     gap: 0; /* Add spacing between boxes */
     padding: 0; 
-    
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0; /* Start fully transparent */
+            transform: translateY(20px); /* Start slightly below its position */
+        }
+        to {
+            opacity: 1; /* End fully visible */
+            transform: translateY(0rem); /* End at its original position */
+        }
     }
 
 
@@ -115,6 +145,7 @@
     transform: none;
    left: 0rem;
        }
+
   }
 
   
