@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FetchData from '../fetchData';
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -6,23 +6,33 @@ import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const { data, pending, error, postData } = FetchData('http://localhost:8000/register');
-    const [formData, setFormData] = useState({});
+    const [formData, setFormData] = useState({ email: '', password: '' });
     const [confirmPassword, setConfirmPassword] = useState('');
+    const [userMessage, setUserMessage] = useState(null); // Track user-friendly messages
+    const navigate = useNavigate();
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setUserMessage(null); // Reset user message
         if (formData.password !== confirmPassword) {
-            alert("Passwords do not match");
+            setUserMessage("Les mots de passe ne correspondent pas");
             return;
         }
         postData('http://localhost:8000/register', formData);
     };
 
-    const navigate = useNavigate();
-    if (data) {
-        navigate('/login');
-        alert('Vous êtes enregistré')
-    }
+    // Handle server response after form submission
+    useEffect(() => {
+        console.log("Data updated:", data); // Debugging: Log the data state
+        if (data && typeof data.success !== 'undefined') {
+            if (data.success) {
+                setUserMessage("Vous êtes bien enregistré");
+                setTimeout(() => navigate('/login'), 2000); // Redirect after 2 seconds
+            } else {
+                setUserMessage(data.message || "Une erreur est survenue lors de l'enregistrement");
+            }
+        }
+    }, [data, navigate]);
 
     return (
         <div className="sign-up">
@@ -50,17 +60,18 @@ const SignUp = () => {
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 </div>
+
                 <div className="boxForm">
                     <Button className="btnretour" type="submit">
-                        Soumettre</Button>
+                        Soumettre
+                    </Button>
                     <Button className="btnretour">
-                        <Link className="nav-link" to="/login">retour</Link>
+                        <Link className="nav-link" to="/login">Retour</Link>
                     </Button>
                 </div>
             </form>
-            {pending && <p>en chargement...</p>}
-            {error && <p>{error}</p>}
-            {data && <p>Vous êtes bien enregistré</p>}
+            {pending && <p className="text">En chargement...</p>}
+            {userMessage && <p className="text">{userMessage}</p>}
         </div>
     );
 };

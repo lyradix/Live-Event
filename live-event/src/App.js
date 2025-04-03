@@ -11,6 +11,8 @@ import Footer from './composants/footer';
 import Partners from './composants/partner/partners';
 import LogIn from './composants/login/login';
 import SignUp from './composants/login/signUp';
+import Formdays from './composants/form/formdays';
+import Admin from './composants/admin/admin';
 
 
 function App() {
@@ -32,8 +34,10 @@ function App() {
      <NavBar/>
       <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="/admin" element={<Admin/>}/>
       <Route path="/login" element={<LogIn/>}/>
       <Route path="/signUp" element={<SignUp/>}/>
+      <Route path="/formdays" element={<Formdays/>}/>
       <Route path="/Programmation" element={<Programmation/>}/>
       <Route path="/Map" element={<MapWrap/>}/>
       <Route path="/Artist/:id" element={<ArtistDetails/>}/>

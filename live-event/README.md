@@ -38,4 +38,8 @@ npm install react-leaflet
 npm install leaflet/dist/leaflet.css
 geojson was used : poi.json
 
+## For form
+npm install react-toastify
+npm install axios
+
 ## Thank you and hope you enjoy it !

@@ -1,0 +1,21 @@
+.boxconcert {
+    display: inline-block; /* Display as inline block */
+    text-align: center; /* Center-align text */
+    background-color: #3eb885;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.wrapbox {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 0;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto; /* Center the box */
+
+}

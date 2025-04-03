@@ -3,28 +3,18 @@
 
 /* base styles */
 @import 'CSS/normalize.css';
-
 @import 'CSS/font.css';
-
 @import 'CSS/posters.css';
-
 @import 'CSS/newCarousel.css';
-
 @import 'CSS/partner.css';
-
 @import 'CSS/info.css';
-
 @import 'CSS/timetable.css';
-
 @import 'CSS/button.css';
-
 @import 'CSS/slide.css';
-
 @import 'CSS/navbar.css';
-
 @import 'CSS/map.css';
-
 @import 'CSS/profile.css';
+@import 'CSS/admin.css';
 
 
 

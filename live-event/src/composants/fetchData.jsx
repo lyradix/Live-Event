@@ -1,51 +1,51 @@
 import { useState, useEffect } from "react";
-
+import axios from "axios";
 
 const FetchData = (url) => {
     const [data, setData] = useState(null);
-    const [pending, setPending] = useState(null);
+    const [pending, setPending] = useState(false);
     const [error, setError] = useState(null);
 
-
+    // Fetch data on component mount
     useEffect(() => {
-        setTimeout(() => {
-            // go and fetch the json data in the localhost
-            fetch(url).then(res => {
-                if (!res.ok) {
-                    throw Error('Impossible de charger la page');
-                }
-                return res.json();
-            }).then((data) => {
-                setData(data);
-                setPending(false);
+        const fetchData = async () => {
+            setPending(true);
+            try {
+                const response = await axios.get(url, {
+                    headers: {
+                        Accept: "application/json", // Ensure the server returns JSON
+                    },
+                });
+                setData(response.data);
                 setError(null);
-            }).catch(err => {
+            } catch (err) {
+                setError(err.response?.data?.message || "Impossible de charger la page");
+            } finally {
                 setPending(false);
-                setError(err.message);
-            });
-        });
+            }
+        };
+
+        fetchData();
     }, [url]);
 
+    // Post data to the server
     const postData = async (url, payload) => {
         setPending(true);
+        setError(null);
         try {
-            const response = await fetch(url, {
-                method: 'POST',
+            const response = await axios.post(url, payload, {
                 headers: {
-                    'Content-Type': 'application/json'
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
                 },
-                body: JSON.stringify(payload)
+                
             });
-            if (!response.ok) {
-                throw new Error('Failed to post data');
-            }
-            const result = await response.json();
-            setData(result);
-            setPending(false);
+            setData(response.data); // Update the data state with the server's response
             setError(null);
         } catch (err) {
+            setError(err.response?.data?.message || "Failed to post data");
+        } finally {
             setPending(false);
-            setError(err.message);
         }
     };
 

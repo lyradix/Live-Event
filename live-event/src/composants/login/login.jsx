@@ -1,35 +1,70 @@
 import React, { useEffect, useState } from 'react';
-import FetchData from '../fetchData'; // Adjust the import path if necessary
+import axios from 'axios';
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const LogIn = () => {
-    const { data, pending, error, postData } = FetchData('http://localhost:8000/login');
+    const [data, setData] = useState(null);
+    const [pending, setPending] = useState(false);
+    const [error, setError] = useState(null);
     const [formData, setFormData] = useState({ email: '', password: '' });
+    const [loginError, setLoginError] = useState(null);
+    const navigate = useNavigate();
 
+    const postData = async (url, payload) => {
+        setPending(true);
+        setError(null);
+        try {
+            console.log('Sending POST request to:', url); // Debugging
+            console.log('Payload:', payload); // Debugging
+
+            const response = await axios.post(url, payload, {
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+            });
+
+            setData(response.data); // Update the data state with the server's response
+            setError(null);
+        } catch (err) {
+            console.error('Error posting data:', err.response?.data || err.message); // Debugging
+            setError(err.response?.data?.message || "Failed to post data");
+        } finally {
+            setPending(false);
+        }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        postData('http://localhost:8000/login', formData);
+        setLoginError(null); // Reset login error
+
+        // Transform formData to match the server's expected structure
+        const payload = {
+            _username: formData.email,
+            _password: formData.password,
+        };
+
+        console.log('Submitting payload:', payload); // Debugging
+        postData('http://localhost:8000/login', payload);
     };
 
-    const navigate = useNavigate();
-    if (data) {
-        navigate('/');
-    }
-
     useEffect(() => {
-        if (data) {
-            console.log(data);
+        if (data && typeof data.success !== 'undefined') {
+            if (data.success) {
+                // If login is successful
+                toast.success('Connexion réussie !');
+                navigate('/formdays');
+            } else {
+                // If login fails
+                setLoginError(data.message || 'Identifiants incorrects');
+                toast.error(data.message || 'Identifiants incorrects');
+            }
         }
-    }, [data]);
-// Compare this snippet from live-event/src/composants/login/login.jsx:
-
-    /*IF user is not logged in THEN
-    on successful login
-    display toast
-  END IF*/
+    }, [data, navigate]);
 
     return (
         <div className="login">
@@ -52,16 +87,16 @@ const LogIn = () => {
                 </div>
                 <div className="boxForm">
                     <Button className="btnretour" type="submit">
-                    <Link className="nav-link" to="/"> S'identifier</Link>
-                  </Button>
+                      S'identifier
+                    </Button>
                     <Button className="btnretour">
                         <Link className="nav-link" to="/signUp">S'enregistrer</Link>
                     </Button>
                 </div>
             </form>
-            {pending && <p>en chargement...</p>}
-            {error && <p>{error}</p>}
-            {data && <p>Connexion réussie</p>}
+            {pending && <p className="text">En chargement...</p>}
+            {loginError && <p className="text">{loginError}</p>}
+            {error && <p className="text">{error}</p>}
         </div>
     );
 };
