@@ -15,6 +15,8 @@
 @import 'CSS/map.css';
 @import 'CSS/profile.css';
 @import 'CSS/admin.css';
+@import 'CSS/home.css';
+@import 'CSS/concert.css';
 
 
 
@@ -65,20 +67,6 @@ article{
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
 }
 
-.logoXtra{
-  position: relative;
-  z-index: 1;
-  top:0rem;
-  right:0rem;
-  cursor: pointer;
-  
-}
-
-.logoNetwork{
- height: 1.5rem;
- width: 1.5rem;
- font-weight: bold;
-}
 
 /* .card {
   position:relative;
@@ -189,17 +177,6 @@ li{
  display: flex;
 }
 
-.descriptif{
-  position: relative;
-  height: 230px;
-  width: 90%;
-  padding-bottom: 1px;
-  display: inline-flex;
-  flex-wrap: wrap;
-align-items: center;
-justify-content: center;
-margin: 5px;
-}
 
 .descripText{
   color: #E5C8C8;
@@ -209,17 +186,7 @@ margin: 5px;
   font-size: 0.9rem;
 }
 
-.concert{
-  overflow-x: hidden;
-  position: relative;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
-}
 
-.div.concert-preview{
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-}
 
 .artistName{
   color:#E5C8C8;
@@ -244,13 +211,7 @@ margin: 5px;
   text-shadow: 2px 2px 5px black;
 }
 
-.imgConcert{
-border-radius: 28px;
-align-items: center;
-object-fit: cover;
-width:90%;
 
-}
 
 .imgConcertDetail{
   border-radius: 28px;
@@ -271,16 +232,7 @@ width:90%;
 
 }
 
-.btnDays{
-  position:relative; 
-  display: flex;
-  align-items: center;
-  align-content:space-around;
-  align-items: center;
-  margin-left: 5%;
-  margin-right: 20%;
 
-}
 
 
 .filterScene{
@@ -380,18 +332,9 @@ color: white;
 height: 15rem;
 }
 
-@media(max-width:600px){
-  .imgConcert{
-     height:600px;
-    width:90%;
-    }
-  }
 
 @media(max-width:480px) {
-  .imgConcert{
-    height:600px;
-    width:380px;
-    }
+
    
     .box{
       position: relative;

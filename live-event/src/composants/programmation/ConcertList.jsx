@@ -7,12 +7,12 @@ const ConcertList = ({concerts, nom,jour,date,horaire,scene, description,source,
     return ( 
 
 
-    <div className="concert">
+    <div className="programwrap">
       
         <h2>{nom}</h2>
          {concerts.map((concert) => (
-            <Link className="nav-link" to={`/Artist/${concert.id}`}>
-            <div className="concert-preview" key = {concert.id}>                
+            <Link className="boxConcertlink" to={`/Artist/${concert.id}`}>
+            <div className="concertpreview" key = {concert.id}>                
             <h2 className="artistName">{concert.nom}</h2>
             {/* pour récuperer la date seulement */}
             <p className="detailsPicture">{concert.startTime.substring(0, 10)}</p>
