@@ -13,7 +13,6 @@ const ArtistDetails = () => {
 
     return (
         <div className="artistDetails">
-            <h1 className="text">Détails de l'artiste</h1>
 
             {/* Show loading message while data is being fetched */}
             {pending && <p className="text">Chargement des détails...</p>}
