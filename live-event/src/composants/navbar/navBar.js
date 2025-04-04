@@ -96,7 +96,7 @@ const sidebarProfil = () => {
                   setOverlay(!overlayMenu);
               }}
                 >
-                        <img alt="profil" src={profilimg} style={{ width: "50px", height: "50px", cursor: "pointer" }}>
+                        <img className="profile" alt="profil" src={profilimg} style={{ width: "50px", height: "50px", cursor: "pointer"}}>
                         </img>
                         {dropdown && <Profil />}
                       </div>

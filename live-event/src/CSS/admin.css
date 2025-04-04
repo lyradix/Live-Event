@@ -19,3 +19,17 @@
     margin: 0 auto; /* Center the box */
 
 }
+
+@media screen and (max-width: 600px) {
+    .boxconcert {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0px 0; /* Adjust margin for smaller screens */
+    }
+    .wrapbox {
+        display: inline-block;
+        position: relative;
+        flex-direction: column; /* Stack boxes vertically on small screens */
+        align-items: center; /* Center-align the boxes */
+    }
+    
+}

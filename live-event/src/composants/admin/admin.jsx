@@ -9,6 +9,8 @@ const Admin = () => {
     // Fetch user data
     const { data: users, pending: usersPending, error: usersError } = FetchData('http://localhost:8000/users');
 
+    console.log("ConcertForm component rendered");
+
     return (
         <div>
             <h1 className="text">Administration</h1>

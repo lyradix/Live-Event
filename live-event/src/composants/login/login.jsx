@@ -31,8 +31,9 @@ const LogIn = () => {
             setData(response.data); // Update the data state with the server's response
             setError(null);
         } catch (err) {
-            console.error('Error posting data:', err.response?.data || err.message); // Debugging
-            setError(err.response?.data?.message || "Failed to post data");
+            console.error('Error posting data:', err); // Debugging
+            console.error('Error details:', err.response); // Log the full response
+            setError(err.response?.data?.message || "Impossible de charger la page");
         } finally {
             setPending(false);
         }

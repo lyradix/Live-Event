@@ -1,0 +1,42 @@
+.concert-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.concert-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.concert-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.concert-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.concert-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3eb885;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.concert-form button:hover {
+    background-color: #36a374;
+}

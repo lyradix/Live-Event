@@ -44,8 +44,21 @@
     margin-bottom: 10px;
     transform: translateY(-7rem);
    left: -3rem;
+   z-index: -2;
+   opacity: 0.8; /* Default opacity for all images */
+    transition: opacity 0.3s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
     }
     
+    .imgConcert:hover {
+        opacity: 1;
+        transform: scale(1.05); /* Slightly enlarge the hovered image */
+        
+        z-index: -1;
+        box-shadow: rgb(0,0,1);
+        gap:4rem;
+     
+        position: relative;
+    }
 
 
 
@@ -144,6 +157,7 @@
     margin-bottom: 0;
     transform: none;
    left: 0rem;
+   opacity: 1;
        }
 
   }

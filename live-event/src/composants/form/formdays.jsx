@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const Formdays = () => {
-    const { data, pending, error, postData } = FetchData('http://localhost:8000/');
+    const { data, pending, error, postData } = FetchData('http://localhost:8000/days');
     const [formData, setFormData] = useState({ samedi: false }); // Initialize with default value
 
     const handleSubmit = (e) => {

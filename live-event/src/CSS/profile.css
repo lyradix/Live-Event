@@ -1,6 +1,25 @@
 .profileContainer {
-  
-    display: inline-block;
+    position: relative; /* Ensure the dropdown is positioned relative to this container */
+    display: inline-block; /* Prevent layout shifts */
+    cursor: pointer; /* Show a pointer cursor when hovering */
+    vertical-align: middle; /* Align the container vertically */
+}
+
+.profileContainer img.profile {
+    width: 50px; /* Set a fixed width for the profile image */
+    height: 50px; /* Set a fixed height for the profile image */
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure the image fits within the container */
+    transition: transform 0.2s ease; /* Add a smooth hover effect */
+}
+
+.profileContainer img.profile:active {
+    transform: scale(1); /* Prevent the image from shrinking or moving on click */
+    outline: none; /* Remove focus outline */
+}
+
+.profileContainer img.profile:focus {
+    outline: none; /* Remove focus outline when the image is focused */
 }
 
 .dropdownMenu {
@@ -8,14 +27,13 @@
     display: flex;
     flex-direction: row;
     top:80px;
-    right:0;
     width:auto;
     height: auto;
-    background-color: #fff;
+    background-color: #E5C8C8;
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
-    z-index: 2;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     gap:10px;
@@ -41,8 +59,14 @@ display:none;
 }
 
 
+
 @media screen and (max-width: 500px) {
 
+
+    .profileContainer {
+        display: inline-block;
+    }
+    
     .dropdownMenu {
        display: none;
     }
@@ -86,13 +110,14 @@ display:none;
     .overlayMenuProfile{
         position: fixed;
         right:0px;
-        opacity: 0;
+        opacity: 0.3;
         width: 50%;
         height: 200vh;
-        background-color: rgb(184, 114, 23);
+        background-color: rgb(0, 0, 0);
         z-index: 3;
 
     }
+
 
   
 }
