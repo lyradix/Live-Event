@@ -13,6 +13,7 @@ import LogIn from './composants/login/login';
 import SignUp from './composants/login/signUp';
 import Formdays from './composants/form/formdays';
 import Admin from './composants/admin/admin';
+import ConcertForm from './composants/admin/concertform';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/admin" element={<Admin/>}/>
+      <Route path="/concertform" element={<ConcertForm/>}/>      
       <Route path="/login" element={<LogIn/>}/>
       <Route path="/signUp" element={<SignUp/>}/>
       <Route path="/formdays" element={<Formdays/>}/>

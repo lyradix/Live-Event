@@ -1,5 +1,6 @@
 import React from 'react';
 import FetchData from "../fetchData";
+import { Link } from 'react-router-dom';
 
 const Admin = () => {
     // Fetch concert data
@@ -21,15 +22,19 @@ const Admin = () => {
 
                 {concert && (
                     <ul className="wrapbox">
-                        {concert.map((concert) => (
+                       
+                        {concert.map((concert, nom, starTime) => (
                             <li key={concert.id}>
                                 <div className="boxconcert">
+                                <Link to={`/concertform/${concert.id}`} key={concert.id}>
                                     <p>date: {concert.startTime.substring(0, 10)}</p>
                                     <p>heure: {concert.startTime.substring(11, 16)}</p>
                                     <p>Nom: {concert.nom}</p>
+                                    </Link>
                                 </div>
                             </li>
                         ))}
+                 
                     </ul>
                 )}
             </section>
