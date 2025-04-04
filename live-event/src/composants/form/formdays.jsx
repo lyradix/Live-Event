@@ -4,12 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 
 const Formdays = () => {
-    const { data, pending, error, postData } = FetchData('http://localhost:8000/days');
+    const { data, pending, error, postData } = FetchData('https://bisque-dotterel-606944.hostingersite.com/days');
     const [formData, setFormData] = useState({ samedi: false }); // Initialize with default value
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        postData('http://localhost:8000/days', formData); // Send formData to the server
+        postData('https://bisque-dotterel-606944.hostingersite.com/days', formData); // Send formData to the server
     };
 
     const navigate = useNavigate();

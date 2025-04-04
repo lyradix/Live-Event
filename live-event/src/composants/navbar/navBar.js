@@ -88,7 +88,7 @@ const sidebarProfil = () => {
                <li className="navli"> <Link to="/info" className="nav-link" >&#9432;<br/>infos</Link></li>
 
                <li className="navli">
-                <div className={menuOpen?"profilContainer":""} 
+                <div className={menuOpen?"profilContainer":"" } 
                 onClick={() => {
                   toggleDropdown();
                   sidebarProfil();

@@ -3,7 +3,7 @@
 const PartnerList = ({partners, partner,partner1, title, partnerId}) => {
 
     // const {id} = useParams();
-    // const {data:partner} = FetchData('http://localhost:8000/partners/' + id );
+    // const {data:partner} = FetchData('https://bisque-dotterel-606944.hostingersite.com/partners/' + id );
 
     console.log(partners.partnerId);
 
