@@ -47,15 +47,21 @@ const ConcertForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.put(`http://localhost:8000/concert/${id}`, {
+            console.log("les mis à jours sont en cours...");
+            await axios.put(`http://localhost:8000/updateconcert/${id}`, {
                 startTime: `${date}T${hourStart}:00`, // Combine date and start hour into ISO format
                 endTime: `${date}T${hourEnd}:00`, // Combine date and end hour into ISO format
+            });
+    
+            // Update scene
+            console.log("les mis à jours sont en cours...");
+            await axios.put(`http://localhost:8000/updatescenes/${id}`, {
                 sceneFK: scene, // Send the selected scene ID
             });
             alert("Les détails du concert ont été mis à jour avec succès !");
         } catch (err) {
             console.error("Error updating concert details:", err);
-            setError("Veuillez vérifier les détails du concert.");
+            setError("Une erreur s'est produite");
         }
     };
 
