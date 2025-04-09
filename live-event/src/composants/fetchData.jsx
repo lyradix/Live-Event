@@ -38,12 +38,20 @@ const FetchData = (url) => {
                     "Content-Type": "application/json",
                     Accept: "application/json",
                 },
-                
             });
+
             setData(response.data); // Update the data state with the server's response
             setError(null);
         } catch (err) {
-            setError(err.response?.data?.message || "Failed to post data");
+            if (err.response) {
+                // Server-side error
+                console.error('Server error:', err.response.data);
+                setError(err.response.data.message || "Erreur côté serveur");
+            } else {
+                // Network or client-side error
+                console.error('Network error:', err.message);
+                setError("Erreur réseau ou côté client");
+            }
         } finally {
             setPending(false);
         }

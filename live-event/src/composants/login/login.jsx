@@ -45,12 +45,12 @@ const LogIn = () => {
 
         // Transform formData to match the server's expected structure
         const payload = {
-            _username: formData.email,
-            _password: formData.password,
+            email: formData.email,
+            password: formData.password,
         };
 
         console.log('Submitting payload:', payload); // Debugging
-        postData('https://bisque-dotterel-606944.hostingersite.com/login', payload);
+        postData('http://localhost:8000/login', payload);
     };
 
     useEffect(() => {
@@ -87,10 +87,10 @@ const LogIn = () => {
                     />
                 </div>
                 <div className="boxForm">
-                    <Button className="btnretour" type="submit">
+                    <Button type="submit">
                       S'identifier
                     </Button>
-                    <Button className="btnretour">
+                    <Button >
                         <Link className="nav-link" to="/signUp">S'enregistrer</Link>
                     </Button>
                 </div>
