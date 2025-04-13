@@ -1,0 +1,54 @@
+.map-wrap {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
+    transform: scale(1.2) translateX(-2rem) translateY(10rem); /* Adjust scaling and positioning */
+  }
+
+  .mapContainer {
+    width: 90%; /* Set the width to 90% of the parent container */
+    height: 70vh; /* Set the height to 70% of the viewport height */
+    margin: 0 auto; /* Center the map horizontally */
+}
+
+  
+  .custom-popup, .leaflet-popup-content-wrapper, .label {
+    background:#2c3e50;
+    color:#096662;
+    font-size:18px;
+    line-height:10px;
+    border-radius: 10px;
+    font-family: bungee,Arial, sans-serif;
+    background-color: #E5C8C8;
+    }
+
+/* .custom-popup, .leaflet-popup-content-wrapper a {
+    color:rgba(36, 7, 134, 0.1);
+    } */
+
+    /* .CustomIcon{
+      display: flex;
+    } */
+
+    /* Customize the LayersControl container */
+.leaflet-control-layers {
+  font-family:bungee, 'Arial', sans-serif; /* Change font */
+  font-size: 20px; /* Adjust font size */
+  color: #E5C8C8; /* Change text color */
+  border-radius: 8px;
+}
+
+/* Customize the labels inside LayersControl */
+.leaflet-control-layers label {
+  color: #096662; /* Change text color */
+  background-color: #E5C8C8;
+  border-radius: 8px;
+}
+
+/* Customize the checkboxes inside LayersControl */
+.leaflet-control-layers input[type="checkbox"] {
+  transform: scale(1.2); /* Make checkboxes larger */
+  margin-right: 5px; /* Add spacing between checkbox and text */
+}
+    
