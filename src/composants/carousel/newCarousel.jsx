@@ -8,7 +8,7 @@ const NewCarousel = ({innerContainer, containerWrap}) => {
 
 
 
-    const {data:concerts} = FetchData('http://localhost:8000/concert'); 
+    const {data:concerts} = FetchData('https://bisque-dotterel-606944.hostingersite.com/concert'); 
 
     const newCarouselList = concerts && <NewCarouselList concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtravaganza !')} scene = "filtre pour jour"/>
 

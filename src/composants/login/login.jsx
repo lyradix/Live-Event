@@ -54,7 +54,7 @@ const LogIn = () => {
 
         console.log('Submitting payload:', payload); // Debugging
 
-        postData('http://localhost:8000/login', payload)
+        postData('https://bisque-dotterel-606944.hostingersite.com/login', payload)
             .then((response) => {
                 if (response.token) {
                     // Store the token in localStorage

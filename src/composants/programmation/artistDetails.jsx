@@ -9,7 +9,7 @@ import xLogo from '../../image/x.png';
 
 const ArtistDetails = () => {
     const { id } = useParams(); // Get the artist ID from the URL
-    const { data: concert, pending, error } = FetchData(`http://localhost:8000/concert/${id}`); // Fetch artist details
+    const { data: concert, pending, error } = FetchData(`https://bisque-dotterel-606944.hostingersite.com/concert/${id}`); // Fetch artist details
 
     return (
         <div className="artistDetails">
@@ -51,7 +51,7 @@ const ArtistDetails = () => {
                     {concert.image && (
                         <img
                             className="imgConcertDetail"
-                            src={`http://localhost:8000/images/${concert.image}`}
+                            src={`https://bisque-dotterel-606944.hostingersite.com/images/${concert.image}`}
                             alt={concert.name}
                             height="600px"
                             width="380px"
