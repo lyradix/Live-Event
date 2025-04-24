@@ -186,6 +186,12 @@ li{
   line-height: 1.6; /* Ajuste l'espacement entre les lignes */
   letter-spacing: 0.11rem; /* Ajuste l'espacement entre les lettres */
   font-size: 0.9rem;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -324,10 +330,11 @@ ol{
 /* text-align: center; */
 /* position: relative; */
 /* justify-content:center; */
-padding: auto;
-padding-top: 5%;
-padding-left: 5%;
-padding-right: 5%;
+display: flex;
+justify-content: center;
+align-items: center; 
+flex-direction: column; 
+padding: 0;
 color: white;
 height: 15rem;
 }
