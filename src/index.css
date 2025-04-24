@@ -351,17 +351,7 @@ height: 15rem;
       object-fit:fill;
  
     }
-    
-    .footer{ 
 
-  
-      /* text-align: center; */
-      /* position: relative; */
-      /* justify-content:center; */
-      /* padding: auto; */
-      color: white;
-      height: 15rem;
-      }
 
       ol{
         transform: translateY(2rem);
