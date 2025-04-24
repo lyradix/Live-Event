@@ -324,11 +324,10 @@ ol{
 /* text-align: center; */
 /* position: relative; */
 /* justify-content:center; */
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-padding:0;
+padding: auto;
+padding-top: 5%;
+padding-left: 5%;
+padding-right: 5%;
 color: white;
 height: 15rem;
 }
@@ -349,7 +348,17 @@ height: 15rem;
       object-fit:fill;
  
     }
+    
+    .footer{ 
 
+  
+      /* text-align: center; */
+      /* position: relative; */
+      /* justify-content:center; */
+      /* padding: auto; */
+      color: white;
+      height: 15rem;
+      }
 
       ol{
         transform: translateY(2rem);
