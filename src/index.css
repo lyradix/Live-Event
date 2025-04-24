@@ -324,6 +324,9 @@ ol{
 /* text-align: center; */
 /* position: relative; */
 /* justify-content:center; */
+display: flex;
+justify-content: center;
+align-items: center;
 padding: auto;
 padding-top: 5%;
 padding-left: 5%;
