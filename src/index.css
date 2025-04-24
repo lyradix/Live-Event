@@ -327,10 +327,8 @@ ol{
 display: flex;
 justify-content: center;
 align-items: center;
-padding: auto;
-padding-top: 5%;
-padding-left: 5%;
-padding-right: 5%;
+flex-direction: column;
+padding:0;
 color: white;
 height: 15rem;
 }
