@@ -34,7 +34,7 @@ const Info = () => {
                             onClick={() => toggleSection(index)}
                         >
                             {section.title}
-                            <button className="btnPlus">+</button>
+                            <span className="btnPlus">+</span>
                         </button>
                         <h6 className={openSection === index ? "open" : ""}>
                             <li>
