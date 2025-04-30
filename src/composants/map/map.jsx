@@ -1,8 +1,8 @@
 import React from 'react';
+import { useState, useEffect} from 'react';
 import { MapContainer,TileLayer, GeoJSON, LayersControl} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import poi from '../../poi.json'
 import stageIcon from '../../image/star.png'
 import toiletIcon from '../../image/toilet.png'
 import exitIcon from '../../image/exit.png'
@@ -16,10 +16,23 @@ import parkingIcon from '../../image/parking.png'
 
 
 
-
-
 const MapWrap = ({features, image}) => {
 
+    const [poi, setPoi] = useState(null); // State to store fetched data
+
+    useEffect(() => {
+        const fetchPoi = async () => {
+          try {
+            const response = await fetch('http://localhost:8000/poi');
+            const data = await response.json();
+            setPoi(data); // Set the fetched data to state
+          } catch (error) {
+            console.error('Error fetching POI data:', error);
+          }
+        };
+    
+        fetchPoi();
+      }, []);
            
     const customIcon = new L.Icon ({
         iconUrl:stageIcon,
@@ -70,6 +83,10 @@ const MapWrap = ({features, image}) => {
         iconSize:[38,38]
     })
 
+    if (!poi) {
+      
+        return <div>En chargement...</div>;
+      }
 
     return (
       
