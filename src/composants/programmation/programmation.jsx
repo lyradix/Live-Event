@@ -11,6 +11,7 @@ const Programmation = () => {
  //Les usessates pour afficher les contenus, les boutons, le menu-déroulant
     const[toggle, setToggle] = useState (null);
     const[button, setButton] = useState (null);
+    const[buttonScene, setButtonScene] = useState (null);
     const[stages, setStages] = useState (null);
     const[SceneOverlay, setSceneSceneOverlay] = useState(null);
 
@@ -49,6 +50,19 @@ const Programmation = () => {
     const filterSaturday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2025-09-13'))} jour = "filtre pour jour"/>
     const filterSunday = concerts && <ConcertList concerts={concerts.filter((concert)=> concert.startTime.startsWith('2025-09-14'))} jour = "filtre pour jour"/>
 
+    const btnscenes = <div class="dropdown">
+    <Button className="dropbtn" onClick={() => {
+        
+        /*appuie sur le bouton scenes, affiche scenes, click back => n'affiche pas de scenes
+        setStage de stage non-null, return scenes, else return scenes false*/
+        setStages(!stages?scenes:!scenes);
+        setSceneSceneOverlay(SceneOverlayBox)
+
+        }}><div>
+                
+        </div>scenes</Button>
+            <div className="dropdown-content">{stages}</div> 
+        </div>
      
 //Les boutons selon les jours vendredi, samedi et dimanche + le Line-Up
   const buttonDays =     <Stack  className="btnDays" direction="horizontal" gap={2}>
@@ -60,6 +74,7 @@ const Programmation = () => {
                         </Stack>
 
 const btnDaysOff = <Stack className = "btnDays" style={{opacity:"0"}}></Stack>
+const btnScenesOff = <Stack className = "dropbtn" style={{opacity:"0"}}></Stack>
 
 
 const timetable = <div className="timetable">
@@ -139,14 +154,17 @@ const scenes =  <div className="filterScene" onClick={()=>{
      
       <Stack className="btnFilters" direction="horizontal" gap={2}>
         <Stack className="btnbox" direction="horizontal" gap={2}>
-            <Button   className={`btnArtist ${button === buttonDays ? 'active' : ''}`}  onClick={() => { setButton(buttonDays);
+            <Button   className={`btnArtist ${button === buttonDays ? 'active' : ''}`}  onClick={() => { 
+            setButton(buttonDays);
              setToggle(filterLineUp);
+             setButtonScene(null);
              setStages(null);
              setSceneSceneOverlay(null)
              }}>Artistes</Button>
     <div className="">
-    <Button className={`btnHoraires ${button === btnDaysOff ? 'active' : ''}`} onClick={() => {
+    <Button className={`btnHoraires ${buttonScene === btnscenes ? 'active' : ''}`} onClick={() => {
                 setButton(btnDaysOff);
+                setButtonScene(btnscenes)
                 setToggle(timetable);
                 setStages(!scenes);
                 setSceneSceneOverlay(!SceneOverlayBox);               
@@ -156,22 +174,8 @@ const scenes =  <div className="filterScene" onClick={()=>{
             
         </Stack>
       
-                 
-
         </Stack>
-        <div class="dropdown">
-            <Button className="dropbtn" onClick={() => {
-                
-                /*appuie sur le bouton scenes, affiche scenes, click back => n'affiche pas de scenes
-                setStage de stage non-null, return scenes, else return scenes false*/
-                setStages(!stages?scenes:!scenes);
-                setSceneSceneOverlay(SceneOverlayBox)
-   
-                }}><div>
-                        
-                </div>scenes</Button>
-                    <div className="dropdown-content">{stages}</div> 
-                </div>
+        <div>{buttonScene?btnscenes:buttonScene}</div>
         <div className="btntop">
         <div>{!button?buttonDays:button}</div>
        

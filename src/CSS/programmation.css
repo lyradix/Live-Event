@@ -1,0 +1,146 @@
+
+.textMenu{
+    display: flex;
+   }
+   
+   article{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to the top */
+  align-items: center;
+  padding: 1rem; /* Add padding for better spacing */
+   }
+
+   .logo{
+
+     justify-content: center;
+     align-items: center;
+
+   }
+   .descripText{
+     color: #E5C8C8;
+     font-family: bungee,Arial, sans-serif;
+   }
+
+   .descripText, .artistDetailtext{
+    line-height: 1.6; /* Ajuste l'espacement entre les lignes */
+    letter-spacing: 0.11rem; /* Ajuste l'espacement entre les lettres */
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   .artistDetails{
+    height: auto;
+    overflow: visible;
+  
+  }
+   .artistDetailtext{
+    position: relative;
+    width: 50rem;
+   }
+
+   
+   .artistName{
+     color:#E5C8C8;
+     -webkit-text-stroke-width: 1px;
+     -webkit-text-stroke-color: #F8FD04;
+     font-family: Bungee,Arial, sans-serif;
+     font-size: 2rem;
+     text-align: center;
+     justify-content: center;
+     transform: translateY(36rem);
+     text-shadow: 2px 2px 5px black;
+   }
+   
+   .detailsPicture, .scenePicture{
+     color:#F8FD04;
+     text-align: center;
+     /* justify-content: center; */
+     font-size: 1rem;
+     font-weight: bold;
+     font-family: Montserrat+Alternates,Arial, sans-serif;
+     transform: translateY(36rem);
+     text-shadow: 2px 2px 5px black;
+   }
+   
+   .imgConcertDetail{
+     border-radius: 28px;
+     align-items: center;
+     padding: 10px;
+     object-fit: cover;
+     z-index:1;
+     opacity: 0.5;
+   }
+   
+   .btnFilters{
+     position:relative; 
+     display: flex;
+     align-items: center;
+     margin:30px 10px;
+     margin-left: 30%;
+     margin-right: 30%;
+   
+   }
+   
+   
+   
+   
+   .filterScene{
+    position: absolute;
+    display: inline-block;
+    padding: 50px;
+    margin: 50px;
+   transform: translateX(-63%)translateY(-3.2rem);
+   box-shadow: 0px 8px 50px 0px rgba(15, 15, 15, 0.2);
+   background-color: #143d3b;
+   border-radius: 2px;
+   opacity: 0.9;
+   z-index: 1;
+   transition: ease;
+   }
+   
+   /* .dropdown:active .filterScene{
+     display: block;
+   } */
+   .dropbtn{
+     color:#096662 !important;
+     background-color:#E5C8C8 !important;
+   }
+   
+   .dropbtn:focus{
+     color:#E5C8C8 !important;
+     background-color:#096662 !important;
+   }
+   
+   .overlayBoxDropbtn{
+     position: absolute;
+     bottom: anchor(top);
+     background-color:red;
+     opacity: 0.5;
+     height:3rem;
+     width: 5rem;
+     z-index: 3;
+    transform: translateX(33rem) translateY(-5rem);
+   }
+   
+   .overlayBox{
+     position: absolute;
+     background-color:blue;
+     opacity: 0;
+     height:100vh;
+     width: 100vh;
+     z-index: 4;
+     transform: translateY(2rem);
+   }
+
+   @media(max-width: 500px) {
+    .artistDetailtext{
+      height: 10rem!important;
+      width: 20rem;
+      overflow-y: scroll;
+      margin-bottom: 5px;
+     }
+   }

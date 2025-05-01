@@ -24,12 +24,12 @@ const ArtistDetails = () => {
             {concert && (
                 <article>
                     <h2 className="text">{concert.nom}</h2>
-                    <p className="text">{concert.description}</p>
+                    <p className="artistDetailtext">{concert.description}</p>
                     <p className="descripText">Source: {concert.source}</p>
                     <p className="descripText">Chanson connue: {concert.famousSong}</p>
 
                     {/* Social Media Links */}
-                    <Stack direction="horizontal" gap={3}>
+                    <Stack className="logo" direction="horizontal" gap={3}>
                         <li>
                             <a href={concert.facebook} target="_blank" rel="noopener noreferrer">
                                 <img className="logoNetwork" src={fbLogo} alt="Facebook logo" />
@@ -50,8 +50,8 @@ const ArtistDetails = () => {
                     {/* Optional: Artist Image */}
                     {concert.image && (
                         <img
-                            className="imgConcertDetail"
-                            src={`https://bisque-dotterel-606944.hostingersite.com/images/${concert.image}`}
+                            className=""
+                            src={`image-${concert.id}.jpg`}
                             alt={concert.name}
                             height="600px"
                             width="380px"
@@ -61,7 +61,7 @@ const ArtistDetails = () => {
             )}
 
             {/* Back Button */}
-            <Button>
+            <Button className="btnretour" >
                 <Link className="nav-link" to="/Programmation">Retour</Link>
             </Button>
         </div>

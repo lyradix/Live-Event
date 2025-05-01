@@ -45,6 +45,10 @@ align-items: center;
  /* align-items:flex-start; */
 }
 
+.partnerDetails{
+  height: 50vh;
+}
+
 .partnerBox{
   height: 7rem;
   width: 80%;
