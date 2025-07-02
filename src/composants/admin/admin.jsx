@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Admin = () => {
     // Fetch concert data
-    const { data: concert, pending: concertPending, error: concertError } = FetchData('https://bisque-dotterel-606944.hostingersite.com/concert');
+    const { data: concert, pending: concertPending, error: concertError } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/concert');
 
     // Fetch user data
-    const { data: users, pending: usersPending, error: usersError } = FetchData('https://bisque-dotterel-606944.hostingersite.com/users');
+    const { data: users, pending: usersPending, error: usersError } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/users');
 
     console.log("ConcertForm component rendered");
 

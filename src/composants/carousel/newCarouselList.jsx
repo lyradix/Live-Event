@@ -1,4 +1,4 @@
-const NewCarouselList = ({concerts}) => {
+const NewCarouselList = ({concerts, concert}) => {
 
   const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]  
     return (  

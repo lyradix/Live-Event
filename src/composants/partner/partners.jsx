@@ -4,7 +4,7 @@ import PartnerList from "./partnerList";
 import { Stack, Button } from "react-bootstrap";
 const Partners = () => {
 
-    const {data:partners} = FetchData('https://bisque-dotterel-606944.hostingersite.com/partners'); 
+    const {data:partners} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/partners'); 
   
     const partnerList1 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Restauration")} />
     const partnerList2 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Sponsor")} />

@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import axios from 'axios';
 
 const Formdays = () => {
-    const { data, pending, error } = FetchData('https://bisque-dotterel-606944.hostingersite.com/formdays');
+    const { data, pending, error } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/formdays');
     const [formData, setFormData] = useState({
         vendredi: false,
         samedi: false,
@@ -18,7 +18,7 @@ const Formdays = () => {
         console.log('Using token for POST request:', token);
 
         try {
-            const response = await axios.post('https://bisque-dotterel-606944.hostingersite.com/choosedays', { days: selectedDays }, {
+            const response = await axios.post('https://cornflowerblue-otter-463564.hostingersite.com/choosedays', { days: selectedDays }, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     'Content-Type': 'application/json',

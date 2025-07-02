@@ -5,7 +5,7 @@ import InfoList from "./infoList";
 import { Button } from "react-bootstrap";
 
 const Info = () => {
-    const { data: info } = FetchData('https://bisque-dotterel-606944.hostingersite.com/info'); 
+    const { data: info } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/info'); 
 
     // Define an array of sections with their types and titles
     const sections = [
