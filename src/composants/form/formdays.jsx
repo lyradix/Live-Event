@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import axios from 'axios';
 
 const Formdays = () => {
-    const { data, pending, error } = FetchData('https://bisque-dotterel-606944.hostingersite.com/formdays');
+    const { data, pending, error } = FetchData('http://localhost:8000/formdays');
     const [formData, setFormData] = useState({
         vendredi: false,
         samedi: false,

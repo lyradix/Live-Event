@@ -54,7 +54,7 @@ const LogIn = () => {
 
         console.log('Submitting payload:', payload); // Debugging
 
-        postData('https://cornflowerblue-otter-463564.hostingersite.com/login', payload)
+        postData('http://localhost:8000/login', payload)
             .then((response) => {
                 if (response.token) {
                     // Store the token in localStorage
