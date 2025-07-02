@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
-    const { data, pending, error, postData } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/register');
+    const { data, pending, error, postData } = FetchData('http://localhost:8000/register');
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [confirmPassword, setConfirmPassword] = useState('');
     const [userMessage, setUserMessage] = useState(null); // Track user-friendly messages
@@ -18,7 +18,7 @@ const SignUp = () => {
             setUserMessage("Les mots de passe ne correspondent pas");
             return;
         }
-        postData('https://cornflowerblue-otter-463564.hostingersite.com/register', formData);
+        postData('http://localhost:8000/register', formData);
     };
 
     // Handle server response after form submission

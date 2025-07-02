@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 
 const Admin = () => {
     // Fetch concert data
-    const { data: concert, pending: concertPending, error: concertError } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/concert');
+    const { data: concert, pending: concertPending, error: concertError } = FetchData('http://localhost:8000/concert');
 
     // Fetch user data
-    const { data: users, pending: usersPending, error: usersError } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/users');
+    const { data: users, pending: usersPending, error: usersError } = FetchData('http://localhost:8000/users');
 
     console.log("ConcertForm component rendered");
 

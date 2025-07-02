@@ -8,7 +8,7 @@ const NewCarousel = () => {
 
 
 
-    const {data:concerts, pending, error} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/concert'); 
+    const {data:concerts, pending, error} = FetchData('http://localhost:8000/concert'); 
 
     const newCarouselList = concerts && <NewCarouselList concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtravaganza !')} scene = "filtre pour jour"/>
 
