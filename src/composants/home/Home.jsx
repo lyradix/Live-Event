@@ -6,9 +6,9 @@ import Descriptif from './descriptif';
 
 const Home = () => {
 
-    const {data:partners} = FetchData('https://bisque-dotterel-606944.hostingersite.com/partners'); 
+    const {data:partners} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/partners'); 
     // const {data:concerts, pending, error} = FetchData('http://localhost:8000/concert'); 
-    const {data:info} = FetchData('https://bisque-dotterel-606944.hostingersite.com/info'); 
+    const {data:info} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/info'); 
     
 
     const partnersList = partners && <MainPartners partners={partners.filter((partner)=>partner.frontPage === true)} />
