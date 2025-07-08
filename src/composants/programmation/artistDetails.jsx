@@ -9,7 +9,7 @@ import xLogo from '../../image/x.png';
 
 const ArtistDetails = () => {
     const { id } = useParams(); // Get the artist ID from the URL
-    const { data: concert, pending, error } = FetchData(`http://localhost:8000/concert/${id}`); // Fetch artist details
+    const { data: concert, pending, error } = FetchData(`http://localhost:8000/concerts/${id}`); // Fetch artist details
 
     console.log("ArtistDetails component rendered");
     return (
