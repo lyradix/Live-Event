@@ -23,8 +23,17 @@ const ArtistDetails = () => {
 
             {/* Show artist details if data is available */}
             {concert && (
-                <article>
+                <article className="artistDetailsContent">
                     <h2 className="text">{concert.nom}</h2>
+                       {concert.image && (
+                        <img
+                            className="imgConcertDetail"
+                            src={`http://localhost:8000/images/${concert.image}`}
+                            alt={concert.name}
+                            height="600px"
+                            width="380px"
+                        />
+                    )}
                     <p className="artistDetailtext">{concert.description}</p>
                     <p className="descripText">Source: {concert.source}</p>
                     <p className="descripText">Chanson connue: {concert.famousSong}</p>
@@ -49,15 +58,7 @@ const ArtistDetails = () => {
                     </Stack>
 
                     {/* Optional: Artist Image */}
-                    {concert.image && (
-                        <img
-                            className=""
-                            src={`image-${concert.id}.jpg`}
-                            alt={concert.name}
-                            height="600px"
-                            width="380px"
-                        />
-                    )}
+                 
                 </article>
             )}
 

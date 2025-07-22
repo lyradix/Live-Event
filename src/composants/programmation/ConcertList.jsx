@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const ConcertList = ({concerts, nom,jour,date,horaire,scene, description,source, lien, famousSong }) => {
+const ConcertList = ({concerts, nom,jour,date,horaire,scene, description,source, lien, famousSong, image }) => {
     
 
     return ( 
@@ -21,7 +21,7 @@ const ConcertList = ({concerts, nom,jour,date,horaire,scene, description,source,
                     {/* Template string to extract the corresponding image */}
                     <img
                         className="imgConcert"
-                        src={`image-${concert.id}.jpg`}
+                        src={`http://localhost:8000/images/${concert.image}`}
                         alt="artist"
                     />
                 </div>

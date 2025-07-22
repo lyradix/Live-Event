@@ -23,11 +23,20 @@
 
 
 
-/* @media only screen and (min-width: 576px) {  
-  background-color:red ;
-} */
-
-
+body {
+  background-color: #012B29; /* or whatever color suits your design */
+  margin: 0;
+}
+.container{
+  background-color: #012B29;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+min-width: 100vw;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0;
+}
 
 /* 
 *{
@@ -49,11 +58,7 @@
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
 }
 
-.container-sd{
-  background-color: #012B29;
-  background-position: center;
- height: 100%;
-}
+
 /* @media screen and (max-width: 530px){
     .body{
         background-color: #012B28;
@@ -100,14 +105,7 @@ article{
 }
 
 
-.programmationText{
-  z-index:1;
-  font-size: 45px;
-  font-family: Black And White Picture,Arial, sans-serif;
-  color:#4CB8DA;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #673CAE; 
-}
+
 
 .programmationBox{
   position: relative;
@@ -115,7 +113,7 @@ article{
   height: 56px;
 }
 
-.text, .textMenu, .artistDetailtext{
+.text, .textMenu{
   text-align: center;
   margin:5px 30px 5px 30px;
   font-family: bungee,Arial, sans-serif;
@@ -145,21 +143,7 @@ article{
   margin-bottom: 5px;
 }
 
-.imgTimetable{
-border-radius: 50%;
-}
 
-.box{
-  position: relative;
-
-  width:20rem;
-  text-align: center;
-  margin:5px 30px 5px 30px;
-  font-family: bungee,Arial, sans-serif;
-  color: #ffffff;
-  background-color: #E5C8C8;
-  border-radius: 8px;
-}
 
 
 h2{
@@ -230,14 +214,11 @@ height: 15rem;
 
 
 @media(max-width:480px) {
+.container{
+  /* background-color: #012B29; */
+  background-position: center;
+}
 
-   
-    .box{
-      position: relative;
-      height: inherit;
-      width:20rem;
-     
-    }
     
     .imgPartner{
       /* position: inherit; */
