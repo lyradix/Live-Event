@@ -21,7 +21,7 @@ const ConcertList = ({concerts, nom,jour,date,horaire,scene, description,source,
                     {/* Template string to extract the corresponding image */}
                     <img
                         className="imgConcert"
-                        src={`http://localhost:8000/images/${concert.image}`}
+                        src={`https://cornflowerblue-otter-463564.hostingersite.com/images/${concert.image}`}
                         alt="artist"
                     />
                 </div>

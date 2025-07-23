@@ -17,7 +17,7 @@ const Programmation = () => {
 
 
 
-    const {data:concerts, pending, error} = FetchData('http://localhost:8000/concert'); 
+    const {data:concerts, pending, error} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/concert'); 
   
   
 

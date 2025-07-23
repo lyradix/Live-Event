@@ -23,7 +23,7 @@ const MapWrap = ({features, image}) => {
     useEffect(() => {
         const fetchPoi = async () => {
           try {
-            const response = await fetch('https://bisque-dotterel-606944.hostingersite.com/poi');
+            const response = await fetch('https://cornflowerblue-otter-463564.hostingersite.com/poi');
             const data = await response.json();
             setPoi(data); // Set the fetched data to state
           } catch (error) {

@@ -27,7 +27,7 @@ const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Sa
             <div>
               <div className='timetablebox'>
               <div className="imglist" direction="horizontal" gap={2}>
-              <img src={`http://localhost:8000/images/${concert.image}`} alt="artist" className='imgTimetable' height='36px' width='36px' />
+              <img src={`https://cornflowerblue-otter-463564.hostingersite.com/images/${concert.image}`} alt="artist" className='imgTimetable' height='36px' width='36px' />
               <p className='text'>{concert.nom}</p>
               </div>
                 

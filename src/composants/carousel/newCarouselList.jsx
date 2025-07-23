@@ -6,7 +6,7 @@ const NewCarouselList = ({concerts, concert}) => {
       
    
         {concerts.map((concert) => {
-            console.log('Image path:', `http://localhost:8000/images/${concert.image}`);
+            console.log('Image path:', `https://cornflowerblue-otter-463564.hostingersite.com/images/${concert.image}`);
             return (
                 <div key={concert.id}>
                     <div className="item">
@@ -15,7 +15,7 @@ const NewCarouselList = ({concerts, concert}) => {
                             <p className="dayPoster">{days[new Date(`${concert.startTime}`).getDay()]}</p>
                             <p className="datePoster">{concert.startTime.substring(0, 10)}</p>
                         </div>
-                        <img className="imgConcertFront" src={`http://localhost:8000/images/${concert.image}`} alt="artist" /> 
+                        <img className="imgConcertFront" src={`https://cornflowerblue-otter-463564.hostingersite.com/images/${concert.image}`} alt="artist" /> 
                     </div>
                 </div>
             );
