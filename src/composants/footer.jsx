@@ -10,7 +10,7 @@ const Footer = () => {
     return ( 
         <footer className='footer'>
          <div>
-            <Stack  direction="horizontal" gap={0}>          
+            <Stack  direction="horizontal" className="footerStack">          
               <li><Link to="/Parteraires" className="nav-link" >Partenaires</Link></li>
               <li href="#">Mentions Légales</li>
               <Stack  direction="horizontal" gap={0}>
