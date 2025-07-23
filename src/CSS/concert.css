@@ -11,7 +11,7 @@
 
 .programwrap{
     display: flex; 
-    flex-shrink: calc(100% - 20rem); /* Allow the programwrap to shrink */
+    flex-shrink: calc(100% - 20rem); 
     flex-wrap: wrap;
     flex-direction: row;
     position: relative;
@@ -20,38 +20,38 @@
 
 
   .boxConcertlink {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center-align the content horizontally */
-    justify-content: center; /* Center-align the content vertically */
-    text-align: center; /* Center-align text */
-    background-color: transparent; /* Add a light background color */
-    border-radius: 5px; /* Rounded corners */
-    padding: 20px; /* Add padding inside the box */
-    margin: 10px; /* Add spacing between boxes */
-    height: auto; /* Allow the height to adjust automatically */
-    width: 250px; /* Set a fixed width for consistency */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    background-color: transparent; 
+    border-radius: 5px; 
+    padding: 20px; 
+    margin: 10px; 
+    height: auto; 
+    width: 250px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
   
     
 }
 
 .imgConcert{
-    border-radius: 10px; /* Slightly rounded corners for the image */
-    width:inherit; /* Set a maximum width for the image */
-    height: 500px; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the image fits nicely within its container */
+    border-radius: 10px;
+    width:inherit; 
+    height: 500px;
+    object-fit: cover; 
     margin-bottom: 10px;
     transform: translateY(-7rem);
    left: -3rem;
    z-index: -2;
-   opacity: 0.8; /* Default opacity for all images */
-    transition: opacity 0.3s ease, transform 0.5s ease; /* Smooth transition for opacity and transform */
+   opacity: 0.8; 
+    transition: opacity 0.3s ease, transform 0.5s ease; 
     }
     
     .imgConcert:hover {
         opacity: 1;
-        transform: scale(1.05); /* Slightly enlarge the hovered image */
+        transform: scale(1.05);
         
         z-index: -1;
         box-shadow: rgb(0,0,1);
@@ -64,30 +64,79 @@
 
     .concertpreview {
         flex-direction: none; 
-        display: grid; /* Use flexbox for layout */
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Create responsive columns */
-        flex-wrap: wrap; /* Allow items to wrap to the next line */
-        justify-content: center; /* Center-align the boxes horizontally */
-        gap: 0px; /* Add spacing between boxes */
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 0px; 
         padding: 0px; 
         height: 100%;
-        animation-name: fadeIn; /* Name of the animation */
-        animation-duration: 1s; /* Duration of the animation */
-        animation-timing-function: ease-in-out; /* Smooth easing */
-        animation-iteration-count: 1; /* Run the animation only once */
-        animation-fill-mode: forwards; /* Retain the final state after animation */
+        animation-name: fadeIn; 
+        animation-duration: 1s; 
+        animation-timing-function: ease-in-out; 
+        animation-iteration-count: 1; 
+        animation-fill-mode: forwards; 
         opacity: 0; 
+        }
+.artistDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    width: 50rem;
+    overflow-x: hidden;
+    overflow-y: visible; 
+    scrollbar-width: none;
+    
+}
+        .artistDetailsContent{
+            display: flex;
+            padding: 20px;
+            width: 80%;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+           overflow: visible;
+            box-sizing: border-box;
+            margin: 1rem auto;
+            position: static;
+            border-radius: 5px;
+             height: auto;
+        }
+
+        .imgConcertDetail {
+            width:25rem;
+            height: 25rem;
+            object-fit: cover;
+            margin-bottom: 20px; 
+            opacity: 1;
+        }
+
+        .artistDetailtext {
+            text-align: center;
+            /* font-size: 0.5rem; */
+            color: #ffffff;
+            margin-bottom: 1px;
+            padding: 1px;
+            width: 35rem;
+            font-family: bungee,Arial, sans-serif;
+            line-height: 1.6; 
+            letter-spacing: 0.11rem; 
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
 /* Define the fade-in animation */
 @keyframes fadeIn {
     from {
-        opacity: 0; /* Start fully transparent */
-        transform: translateY(20px); /* Start slightly below its position */
+        opacity: 0; 
+        transform: translateY(20px); 
     }
     to {
-        opacity: 1; /* End fully visible */
-        transform: translateY(0); /* End at its original position */
+        opacity: 1; 
+        transform: translateY(0); 
     }
 }
 
@@ -96,29 +145,29 @@
     .programwrap{
         position: relative;
         display: flex; 
-        flex-shrink: none; /* Allow the programwrap to shrink */
+        flex-shrink: none; 
         flex-wrap: none;
         flex-direction: none;
-        flex-shrink: none; /* Allow the programwrap to shrink */
+        flex-shrink: none;
       }
 
       .concertpreview {
-    display: flex; /* Use flexbox for layout */
+    display: flex;
     grid-template-columns: none; 
-    flex-wrap: none; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center-align the boxes horizontally */
-    gap: 0; /* Add spacing between boxes */
+    flex-wrap: none; 
+    justify-content: center; 
+    gap: 0;
     padding: 0; 
     }
 
     @keyframes fadeIn {
         from {
-            opacity: 0; /* Start fully transparent */
-            transform: translateY(20px); /* Start slightly below its position */
+            opacity: 0; 
+            transform: translateY(20px); 
         }
         to {
-            opacity: 1; /* End fully visible */
-            transform: translateY(0rem); /* End at its original position */
+            opacity: 1;
+            transform: translateY(0rem); 
         }
     }
 
@@ -129,9 +178,9 @@
         height: 100%;
         width: 100%;
         justify-content: center;
-        display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center-align the text horizontally */
+        display: flex; 
+        flex-direction: column; 
+        align-items: center;
         gap: 5px; 
         flex-direction: none; 
     }
@@ -152,8 +201,8 @@
         height:600px;
        width:90%;
        margin: 0; 
-       width: 80%; /* Make the image responsive to the box width */
-    max-width: none; /* Set a maximum width for the image */
+       width: 80%; 
+    max-width: none; 
     margin-bottom: 0;
     transform: none;
    left: 0rem;
@@ -162,11 +211,36 @@
 
   }
 
-  
+
   
   @media(max-width:480px) {
     .imgConcert{
       height:600px;
       width:380px;
       }
+
+         .imgConcertDetail {
+            width:15rem;
+            height: 15rem;
+            object-fit: cover;
+            margin-bottom: 20px; 
+            opacity: 1;
+        }
+
+        .artistDetailtext {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #eee2bc;
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 25rem;
+             font-family: bungee,Arial, sans-serif;
+              line-height: 1.6; 
+            letter-spacing: 0.11rem; 
+            font-size: 0.9rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
   }

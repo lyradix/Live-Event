@@ -6,30 +6,51 @@
    article{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content to the top */
+  justify-content: flex-start; 
   align-items: center;
-  padding: 1rem; /* Add padding for better spacing */
+  padding: 1rem;
    }
 
    .logo{
-
      justify-content: center;
      align-items: center;
-
-   }
-   .descripText{
-     color: #E5C8C8;
-     font-family: bungee,Arial, sans-serif;
    }
 
-   .descripText, .artistDetailtext{
-    line-height: 1.6; /* Ajuste l'espacement entre les lignes */
-    letter-spacing: 0.11rem; /* Ajuste l'espacement entre les lettres */
+   .programmationText{
+  z-index:1;
+  font-size: 45px;
+  font-family: Black And White Picture,Arial, sans-serif;
+  color:#4CB8DA;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #673CAE; 
+  position: absolute;
+  top: -150px;
+  right: 200px;
+}
+  .artistDetailtext{
+    line-height: 1.6; 
+    letter-spacing: 0.11rem;
     font-size: 0.9rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   }
+   
+   
+   .descriptif,
+   .descripText {
+    line-height: 1.6; 
+    letter-spacing: 0.11rem; 
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     color: #E5C8C8;
+     font-family: bungee,Arial, sans-serif;
+     overflow: visible;
+     box-sizing: border-box;
    }
    
    .artistDetails{
@@ -136,11 +157,13 @@
      transform: translateY(2rem);
    }
 
-   @media(max-width: 500px) {
-    .artistDetailtext{
-      height: 10rem!important;
-      width: 20rem;
-      overflow-y: scroll;
-      margin-bottom: 5px;
-     }
+
+   @media screen and (max-width: 480px) {
+      .programmationText{
+  position: relative;
+  top: -0px;
+  right: 0px;
+}
+    
    }
+

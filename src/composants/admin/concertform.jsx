@@ -19,7 +19,7 @@ const ConcertForm = () => {
         const fetchConcertAndScenes = async () => {
             try {
                 console.log("Fetching concert details...");
-                const concertResponse = await axios.get(`https://bisque-dotterel-606944.hostingersite.com/concert/${id}`);
+                const concertResponse = await axios.get(`http://localhost:8000/concert/${id}`);
                 console.log("Concert API Response:", concertResponse.data);
                 setConcert(concertResponse.data);
                 setScene(concertResponse.data.sceneFK.id); // Set the current scene ID
@@ -28,7 +28,7 @@ const ConcertForm = () => {
                 setHourEnd(concertResponse.data.endTime.substring(11, 16)); // Extract end hour
 
                 console.log("Fetching available scenes...");
-                const scenesResponse = await axios.get("https://bisque-dotterel-606944.hostingersite.com/scenes");
+                const scenesResponse = await axios.get("http://localhost:8000/scenes");
                 console.log("Scenes API Response:", scenesResponse.data);
                 setScenes(scenesResponse.data);
 
@@ -48,7 +48,7 @@ const ConcertForm = () => {
         e.preventDefault();
         try {
             console.log("les mis à jours sont en cours...");
-            const response = await axios.put(`https://bisque-dotterel-606944.hostingersite.com/updateconcert`, {
+            const response = await axios.put(`http://localhost:8000/updateconcert`, {
                 id, // Send the concert ID
                 startTime: `${date}T${hourStart}:00`, // Combine date and start hour into ISO format
                 endTime: `${date}T${hourEnd}:00`, // Combine date and end hour into ISO format

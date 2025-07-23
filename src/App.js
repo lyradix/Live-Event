@@ -26,7 +26,7 @@ function App() {
     <Router>
     
   
-      <Container fluid="sd">
+      <Container>
  
     <div className="App">
     
