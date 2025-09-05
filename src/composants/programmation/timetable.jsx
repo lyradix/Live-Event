@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom';
+import Url from "../../url"
+
 const Timetable = ({concerts}) => {
+
+const url = Url(); 
+console.log(url);
 const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]  
 
     return ( 
@@ -27,7 +32,7 @@ const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Sa
             <div>
               <div className='timetablebox'>
               <div className="imglist" direction="horizontal" gap={2}>
-              <img src={`https://cornflowerblue-otter-463564.hostingersite.com/images/${concert.image}`} alt="artist" className='imgTimetable' height='36px' width='36px' />
+              <img src={`${url}/images/${concert.image}`} alt="artist" className='imgTimetable' height='36px' width='36px' />
               <p className='text'>{concert.nom}</p>
               </div>
                 

@@ -13,17 +13,19 @@ import entryIcon from '../../image/entry.png'
 import campIcon from '../../image/camping.png'
 import bigStarIcon from '../../image/bigstar.png'
 import parkingIcon from '../../image/parking.png'
+import Url from "../../url"
 
 
 
 const MapWrap = ({features, image}) => {
 
+    const url = Url();
     const [poi, setPoi] = useState(null); // State to store fetched data
 
     useEffect(() => {
         const fetchPoi = async () => {
           try {
-            const response = await fetch('https://cornflowerblue-otter-463564.hostingersite.com/poi');
+            const response = await fetch(`${url}/poi`);
             const data = await response.json();
             setPoi(data); // Set the fetched data to state
           } catch (error) {

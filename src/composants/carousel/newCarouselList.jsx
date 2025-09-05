@@ -1,12 +1,15 @@
+import Url from "../../url";
+
 const NewCarouselList = ({concerts, concert}) => {
 
+const url = Url();
   const days = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"]  
     return (  
         <div className="inner-container" >
       
    
         {concerts.map((concert) => {
-            console.log('Image path:', `https://cornflowerblue-otter-463564.hostingersite.com/images/${concert.image}`);
+            console.log('Image path:', `${url}/images/${concert.image}`);
             return (
                 <div key={concert.id}>
                     <div className="item">
@@ -15,7 +18,7 @@ const NewCarouselList = ({concerts, concert}) => {
                             <p className="dayPoster">{days[new Date(`${concert.startTime}`).getDay()]}</p>
                             <p className="datePoster">{concert.startTime.substring(0, 10)}</p>
                         </div>
-                        <img className="imgConcertFront" src={`https://cornflowerblue-otter-463564.hostingersite.com/images/${concert.image}`} alt="artist" /> 
+                        <img className="imgConcertFront" src={`${url}/images/${concert.image}`} alt="artist" /> 
                     </div>
                 </div>
             );
