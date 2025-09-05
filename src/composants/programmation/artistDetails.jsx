@@ -6,10 +6,13 @@ import { Stack } from "react-bootstrap";
 import fbLogo from '../../image/fb.png';
 import iLogo from '../../image/i.png';
 import xLogo from '../../image/x.png';
+import Url from "../../url";
 
 const ArtistDetails = () => {
+    const url = Url(); 
+    console.log(url);
     const { id } = useParams(); // Get the artist ID from the URL
-    const { data: concert, pending, error } = FetchData(`https://cornflowerblue-otter-463564.hostingersite.com/concerts/${id}`); // Fetch artist details
+    const { data: concert, pending, error } = FetchData(`${url}/concerts/${id}`); // Fetch artist details
 
     console.log("ArtistDetails component rendered");
     return (
@@ -35,8 +38,8 @@ const ArtistDetails = () => {
                         />
                     )}
                     <p className="artistDetailtext">{concert.description}</p>
-                    <p className="descripText">Source: {concert.source}</p>
-                    <p className="descripText">Chanson connue: {concert.famousSong}</p>
+                    <p className="text">Source: {concert.source}</p>
+                    <p className="text">Chanson connue: {concert.famousSong}</p>
 
                     {/* Social Media Links */}
                     <Stack className="logo" direction="horizontal" gap={3}>

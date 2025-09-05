@@ -3,6 +3,7 @@ import { Button,Stack} from 'react-bootstrap';
 import ConcertList from "./ConcertList";
 import Timetable from "./timetable";
 import FetchData from "../fetchData";
+import Url from "../../url";
 
 
 const Programmation = () => {
@@ -16,8 +17,9 @@ const Programmation = () => {
     const[SceneOverlay, setSceneSceneOverlay] = useState(null);
 
 
-
-    const {data:concerts, pending, error} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/concert'); 
+    const url = Url(); // Call the function to get the string
+    console.log(url);
+    const {data:concerts, pending, error} = FetchData(`${url}/concert`); 
   
   
 

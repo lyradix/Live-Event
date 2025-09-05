@@ -1,10 +1,13 @@
 import React from 'react';
 import FetchData from "../fetchData";
 import { Link } from 'react-router-dom';
+import Url from '../../url';
+
 
 const Admin = () => {
     // Fetch concert data
-    const { data: concert, pending: concertPending, error: concertError } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/concert');
+    const url = <Url/>;
+    const { data: concert, pending: concertPending, error: concertError } = FetchData(`${url}/concert`);
 
     // Fetch user data
     const { data: users, pending: usersPending, error: usersError } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/users');

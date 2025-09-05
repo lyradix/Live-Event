@@ -3,9 +3,11 @@ import { useState } from "react";
 import FetchData from "../fetchData";
 import InfoList from "./infoList";
 import { Button } from "react-bootstrap";
+import Url from "../../url";
 
 const Info = () => {
-    const { data: info } = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/info'); 
+    const url = Url();
+    const { data: info } = FetchData(`${url}/info`); 
 
     // Define an array of sections with their types and titles
     const sections = [

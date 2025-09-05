@@ -1,14 +1,18 @@
 import { useRef} from "react";
 import FetchData from "../fetchData";
 import NewCarouselList from "./newCarouselList";
+import Url from "../../url";
 
 const NewCarousel = () => {
+
+    const url = Url(); 
+    console.log(url);
     const myRef = useRef()
 
 
 
 
-    const {data:concerts, pending, error} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/concert'); 
+    const {data:concerts, pending, error} = FetchData(`${url}/concert`); 
 
     const newCarouselList = concerts && <NewCarouselList concerts={concerts.filter((concert)=> concert.sceneFK.nom === 'eXtravaganza !')} scene = "filtre pour jour"/>
 

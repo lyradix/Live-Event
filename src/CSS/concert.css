@@ -1,25 +1,31 @@
-
 .concertpreview {
     display: flex;
     flex-wrap: wrap; 
     justify-content: center; 
     padding: 0;
     height: 100%;
-    width: 20rem;
-
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .programwrap{
-    display: flex; 
-    flex-shrink: calc(100% - 20rem); 
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: flex;
     position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-  }
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow: visible; 
+}
 
-
-  .boxConcertlink {
+.boxConcertlink {
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -31,63 +37,37 @@
     margin: 10px; 
     height: auto; 
     width: 250px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  
-    
+    position: relative;
 }
 
 .imgConcert{
     border-radius: 10px;
-    width:inherit; 
-    height: 500px;
+    width: 200px;
+    height: 300px;
     object-fit: cover; 
     margin-bottom: 10px;
-    transform: translateY(-7rem);
-   left: -3rem;
-   z-index: -2;
-   opacity: 0.8; 
+    transform: translateY(0); 
+    opacity: 0.8; 
     transition: opacity 0.3s ease, transform 0.5s ease; 
-    }
+}
     
-    .imgConcert:hover {
-        opacity: 1;
-        transform: scale(1.05);
-        
-        z-index: -1;
-        box-shadow: rgb(0,0,1);
-        gap:4rem;
-     
-        position: relative;
-    }
+.imgConcert:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    z-index: 1; 
+}
 
-
-
-    .concertpreview {
-        flex-direction: none; 
-        display: grid; 
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-        flex-wrap: wrap;
-        justify-content: center; 
-        gap: 0px; 
-        padding: 0px; 
-        height: 100%;
-        animation-name: fadeIn; 
-        animation-duration: 1s; 
-        animation-timing-function: ease-in-out; 
-        animation-iteration-count: 1; 
-        animation-fill-mode: forwards; 
-        opacity: 0; 
-        }
 .artistDetails{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-self: center;
-    width: 50rem;
+    width: 100%; 
+    max-width: 50rem;
     overflow-x: hidden;
     overflow-y: visible; 
     scrollbar-width: none;
-    
+    margin: 0 auto; 
 }
         .artistDetailsContent{
             display: flex;
@@ -128,7 +108,7 @@
             align-items: center;
         }
 
-/* Define the fade-in animation */
+
 @keyframes fadeIn {
     from {
         opacity: 0; 
@@ -147,9 +127,19 @@
         display: flex; 
         flex-shrink: none; 
         flex-wrap: none;
-        flex-direction: none;
+        flex-direction: column;
         flex-shrink: none;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        overflow-x: unset;
       }
+
+      .boxConcertlink {
+        width: 100%; 
+        max-width: 300px; 
+        height: auto; 
+        margin: 10px auto;
+    }
 
       .concertpreview {
     display: flex;

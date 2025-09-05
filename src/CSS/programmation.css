@@ -1,4 +1,3 @@
-
 .textMenu{
     display: flex;
    }
@@ -24,8 +23,8 @@
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #673CAE; 
   position: absolute;
-  top: -150px;
-  right: 200px;
+  /* top: -150px;
+  right: 200px; */
 }
   .artistDetailtext{
     line-height: 1.6; 
@@ -51,6 +50,9 @@
      font-family: bungee,Arial, sans-serif;
      overflow: visible;
      box-sizing: border-box;
+     width: 100%; 
+     max-width: 50rem; 
+     padding: 1rem; 
    }
    
    .artistDetails{
@@ -64,27 +66,40 @@
    }
 
    
-   .artistName{
-     color:#E5C8C8;
+   .artistName {
+     color: #E5C8C8;
      -webkit-text-stroke-width: 1px;
      -webkit-text-stroke-color: #F8FD04;
-     font-family: Bungee,Arial, sans-serif;
+     font-family: Bungee, Arial, sans-serif;
      font-size: 2rem;
      text-align: center;
-     justify-content: center;
-     transform: translateY(36rem);
+     position: absolute; /* Change from relative to absolute */
+     bottom: 100px; /* Position from bottom instead of transform */
+     left: 0;
+     right: 0;
+     margin: 0 auto; /* Center horizontally */
      text-shadow: 2px 2px 5px black;
-   }
+     z-index: 2; /* Ensure it appears above the image */
+}
    
-   .detailsPicture, .scenePicture{
-     color:#F8FD04;
+   .detailsPicture, .scenePicture {
+     color: #F8FD04;
      text-align: center;
-     /* justify-content: center; */
      font-size: 1rem;
      font-weight: bold;
-     font-family: Montserrat+Alternates,Arial, sans-serif;
-     transform: translateY(36rem);
+     font-family: Montserrat+Alternates, Arial, sans-serif;
+     position: absolute; /* Change from relative to absolute */
+     bottom: 70px; /* Position from bottom instead of transform */
+     left: 0;
+     right: 0;
+     margin: 0 auto; /* Center horizontally */
      text-shadow: 2px 2px 5px black;
+     z-index: 2; /* Ensure it appears above the image */
+}
+
+.scenePicture{
+    bottom: 40px; /* Adjust for mobile */
+    font-size: 0.9rem; /* Smaller font on mobile */
    }
    
    .imgConcertDetail{
@@ -114,6 +129,8 @@
     display: inline-block;
     padding: 50px;
     margin: 50px;
+    top:-170px;
+    left:520px;
    transform: translateX(-63%)translateY(-3.2rem);
    box-shadow: 0px 8px 50px 0px rgba(15, 15, 15, 0.2);
    background-color: #143d3b;
@@ -164,6 +181,58 @@
   top: -0px;
   right: 0px;
 }
-    
+
+.descripText{
+  width: 100%; 
+  font-size: 0.8rem;
+  transform: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* margin: 0 auto; 
+  padding: 1rem; */
+  box-sizing: border-box;
+  overflow-y: visible; 
+  height: 15rem; 
+  max-width: 100%; 
+  overflow-y: scroll;
    }
 
+    .filterScene{
+        position: relative;
+        display: inline-block;
+        padding: 20px;
+        margin: 20px;
+        top:0px;
+        left:0px;
+        transform: translateX(0%)translateY(0rem);
+    }
+
+    .dropdown-content{
+      position: relative;
+      top:-28px;
+      left:0px;
+      transform: translateX(0%)translateY(0rem);
+    }
+
+    .artistName {
+        bottom: 70px; /* Adjust for mobile */
+        font-size: 1.5rem; /* Smaller font on mobile */
+    }
+    
+    .detailsPicture, .scenePicture {
+        bottom: 40px; /* Adjust for mobile */
+        font-size: 0.9rem; /* Smaller font on mobile */
+    }
+    .scenePicture{
+        bottom: 20px; /* Adjust for mobile */
+        font-size: 0.8rem; /* Smaller font on mobile */
+       }
+    
+    .imgConcert {
+        height: 600px;
+        width: 380px;
+        transform: none;
+        left: 0;
+    }
+}

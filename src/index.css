@@ -106,13 +106,30 @@ article{
 }
 
 
-
-
 .programmationBox{
+  display: flex;
   position: relative;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top:-70px;
+  /* padding-left: 400px; */
+  /* left:0px; */
   margin: 10px;
   height: 56px;
 }
+
+   /* .programmationText{
+  z-index:1;
+  font-size: 45px;
+  font-family: Black And White Picture,Arial, sans-serif;
+  color:#4CB8DA;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #673CAE; 
+  position: absolute;
+  top: -150px;
+  right: 200px;
+} */
 
 .text, .textMenu{
   text-align: center;
@@ -268,5 +285,14 @@ box-sizing: border-box;
   align-items: center;
   flex-direction: row;
   gap: 0rem;
+}
+
+.programmationBox{
+  position: relative;
+  padding:0;
+  top:0px;
+  left:0px;
+  margin: 10px;
+  height: 56px;
 }
 }

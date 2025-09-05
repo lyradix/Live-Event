@@ -3,12 +3,14 @@ import NewCarousel from '../carousel/newCarousel';
 import { Link } from 'react-router-dom';
 import FetchData from '../fetchData';
 import Descriptif from './descriptif';
+import Url from '../../url';
 
 const Home = () => {
 
-    const {data:partners} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/partners'); 
+    const url = Url();
+    const {data:partners} = FetchData(`${url}/partners`); 
     // const {data:concerts, pending, error} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/concert'); 
-    const {data:info} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/info'); 
+    const {data:info} = FetchData(`${url}/info`); 
     
 
     const partnersList = partners && <MainPartners partners={partners.filter((partner)=>partner.frontPage === true)} />
@@ -21,7 +23,7 @@ const Home = () => {
 
         <div className="Home">
           
-        <div className='programmationBox'>
+        <div className='programmationBox p-0 m-0'>
         <h1 className='programmationText'>Programmation</h1>
         </div>
         {/* <Poster /> */}

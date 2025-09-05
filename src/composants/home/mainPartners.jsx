@@ -1,5 +1,6 @@
+import Url from "../../url";
 
-
+const url = Url();
 const MainPartners = ({partners,frontPage,partner, id, partner1, title, link, partnerId}) => {
 
     return ( 
@@ -10,7 +11,7 @@ const MainPartners = ({partners,frontPage,partner, id, partner1, title, link, pa
            <button  className='btnPartner' key = {partner.id}>
             <a href={partner.link} rel="noreferrer" target="_blank"> 
                 <img className="imgPartnerFront" 
-                src={`https://cornflowerblue-otter-463564.hostingersite.com/images/${partner.image}`} 
+                src={`${url}/images/${partner.image}`} 
                 alt="annonceurs">
             </img>
             </a>
