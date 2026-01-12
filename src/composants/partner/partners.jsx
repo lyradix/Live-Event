@@ -18,11 +18,11 @@ const Partners = () => {
 
   <div className="partner-preview">
       <Stack className="ulpartner">
-        <h1 className="text">Restauration</h1>
+        <h1 className="text">Restaurations</h1>
         {partnerList1}
-        <h1 className="text">Sponsor</h1>
+        <h1 className="text">Sponsors</h1>
         {partnerList2}
-        <h1 className="text">Media</h1>
+        <h1 className="text">Medias</h1>
         {partnerList3}
       </Stack>
       
