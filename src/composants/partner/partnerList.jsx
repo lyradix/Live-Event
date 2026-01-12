@@ -17,7 +17,7 @@ const PartnerList = ({partners, partner,partner1, title, partnerId}) => {
            <button  className='btnPartnerList' >
             <a href={partner.link} rel="noreferrer" target="_blank">
             <img className="imgPartner" 
-             src={`https://cornflowerblue-otter-463564.hostingersite.com/images/${partner.image}`} 
+             src={`https://cornflowerblue-otter-463564.hostingersite.com/${partner.image}`} 
               alt="annonceurs">
             </img>
             </a>

@@ -102,7 +102,7 @@ const sidebarProfil = () => {
                       </div>
                     </li>   */}
                 </ul>  
-           <Link to="/" alt="logo accueil" className='logoXtra'><img src="Preview.png"  alt="logo" >
+           <Link to="/" alt="logo accueil" className='logoXtra'><img src="logo.jpg"  alt="logo" >
            </img> </Link> 
          {overlay && (
                     <div
