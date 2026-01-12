@@ -6,7 +6,9 @@ import Url from '../../url';
 
 const Partners = () => {
 
-    const {data:partners} = FetchData(`${Url}/partners`); 
+  const url = Url();
+
+    const {data:partners} = FetchData(`${url}/partners`); 
   
     const partnerList1 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Restauration")} />
     const partnerList2 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Sponsor")} />
