@@ -43,7 +43,7 @@ function App() {
       <Route path="/Programmation" element={<Programmation/>}/>
       <Route path="/Map" element={<MapWrap/>}/>
       <Route path="/Artist/:id" element={<ArtistDetails/>}/>
-      <Route path="/Parteraires" element={<Partners/>}/>
+      <Route path="/Partenaires" element={<Partners/>}/>
       <Route path="/info" element={<Info/>}/>
       </Routes>  
      </div>

@@ -18,7 +18,7 @@ const Home = () => {
             <div className='carousel-preview'>
                 <NewCarousel/>
             </div>
-        <Link to="/Parteraires"><h2 className='textPartners'>Partenaires</h2></Link>
+        <Link to="/Partenaires"><h2 className='textPartners'>Partenaires</h2></Link>
         {partnersList}
             <div>
                 <h2 className='descriptifTitle'>Qui nous sommes...</h2>
