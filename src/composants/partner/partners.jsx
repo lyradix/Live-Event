@@ -2,9 +2,11 @@ import FetchData from "../fetchData";
 import { Link } from "react-router-dom";
 import PartnerList from "./partnerList";
 import { Stack, Button } from "react-bootstrap";
+import Url from '../../url';
+
 const Partners = () => {
 
-    const {data:partners} = FetchData('https://cornflowerblue-otter-463564.hostingersite.com/partners'); 
+    const {data:partners} = FetchData(`${Url}/partners`); 
   
     const partnerList1 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Restauration")} />
     const partnerList2 = partners && <PartnerList partners={partners.filter((partner)=>partner.type === "Sponsor")} />

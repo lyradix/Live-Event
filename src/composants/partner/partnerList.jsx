@@ -1,4 +1,4 @@
-
+import Url from '../../url';
 
 const PartnerList = ({partners, partner,partner1, title, partnerId}) => {
 
@@ -17,7 +17,7 @@ const PartnerList = ({partners, partner,partner1, title, partnerId}) => {
            <button  className='btnPartnerList' >
             <a href={partner.link} rel="noreferrer" target="_blank">
             <img className="imgPartner" 
-             src={`https://cornflowerblue-otter-463564.hostingersite.com/${partner.image}`} 
+             src={`${Url}/${partner.image}`} 
               alt="annonceurs">
             </img>
             </a>
