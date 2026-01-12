@@ -1,19 +1,18 @@
 import { Link } from "react-router-dom";
 import { Stack } from "react-bootstrap";
 import { useState } from "react";
-import profilimg from '../../image/profil.png';
-import Profil from "../login/profil";
-import SideProfil from "../login/profileSidebar";
+
+
 
 
 const NavBar = () => {
 
 const [menuOpen, setmenuOpen] = useState(null);
-const [menuProfile, setmenuProfile] = useState(null);
+// const [menuProfile, setmenuProfile] = useState(null);
 const [overlay, setOverlay] = useState(null);
 // const [dropdown, setDropdownOpen] = useState(false);
 // const [profil, setProfile] = useState(false);
-const [overlayprofile, setOverlayprofile] = useState(false);
+// const [overlayprofile, setOverlayprofile] = useState(false);
 
 const overlayMenu = (
   <div className="overlayMenu" 
@@ -24,27 +23,27 @@ const overlayMenu = (
   </div>
 );
 
-const overlayMenuprofile = (
-  <div className="overlayMenuProfile" 
-      onClick={()=>{
-      setOverlayprofile(!overlayMenu);
-      setmenuProfile(menuProfile);
-      // setProfile(profil);
-    }}>
-  </div>
-);
+// const overlayMenuprofile = (
+//   <div className="overlayMenuProfile" 
+//       onClick={()=>{
+//       setOverlayprofile(!overlayMenu);
+//       setmenuProfile(menuProfile);
+//       // setProfile(profil);
+//     }}>
+//   </div>
+// );
 
 
-const toggleDropdown = () => {
-    setmenuOpen(false);
-    setOverlay(true);
-    // setDropdownOpen(!dropdown);
-}
+// const toggleDropdown = () => {
+//     setmenuOpen(false);
+//     setOverlay(true);
+//     // setDropdownOpen(!dropdown);
+// }
 
-const sidebarProfil = () => { 
-      // setProfile(!profil);
-      setOverlayprofile(!overlayprofile);
-}
+// const sidebarProfil = () => { 
+//       // setProfile(!profil);
+//       setOverlayprofile(!overlayprofile);
+// }
 
 
     return (
