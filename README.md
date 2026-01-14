@@ -24,10 +24,13 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Title : Nation Sound
 
 ## Usage
-npm run pour démarrer le localHost sur le port 3000
+Type cmd:
+npm start
+to run localhost on port 3000
 
 ## To launch the server containing the datas
-npx json-server --watch ./src/db.json --port 8001
+Go in src\url.jsx
+Interchange url from localhost to remote server
 
 ## Installation of external libraries
 npm install bootstrap/dist/css/bootstrap.min.css
